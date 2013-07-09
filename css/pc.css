@@ -1,0 +1,27 @@
+.demo-headline {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.bigger-image {
+	height: 120px;
+	width: 120px;
+}
+
+div.qa {
+	margin-bottom: 20px;
+}
+
+section h4 {
+	font-weight: bold;
+}
+
+div.qa p {
+	padding-left: 20px;
+	margin-left: 5px;
+	border-left: 1px solid #cecece;
+}
+
+body {
+	padding-bottom: 50px;
+}

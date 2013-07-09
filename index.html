@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pathway Commons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/pc.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="demo-headline">
+        <h1 class="demo-logo">
+          Pathway Commons
+          <small>Search and visualize public biological pathway information. Single point of access.</small>
+        </h1>
+      </div> <!-- /demo-headline -->
+
+      <div class="row demo-tiles">
+        <div class="span4">
+          <div class="tile">
+            <img class="tile-image" alt="" src="images/pc2.png" />
+            <h3 class="tile-title">PC2: New web service</h3>
+            <p>BioPAX Level 3. Advanced graph queries. Better normalization. Up-to-date data.</p>
+	    <a class="btn btn-large btn-block" href="http://www.pathwaycommons.org/pc2/">Pathway Commons <sup>2</sup></a>
+          </div>
+        </div>
+
+        <div class="span4">
+          <div class="tile">
+            <img class="tile-image bigger-image" alt="" src="images/pcviz.png" />
+            <h3 class="tile-title">PCViz: Visualize pathways</h3>
+	    <p>Interactive, browser-based visualization of PC2 networks. Export/embed network options. Support for working with different contexts, <i>e.g.</i> cancer.</p>
+            <a class="btn btn-primary btn-large btn-block" href="http://awabi.cbio.mskcc.org/cpath2-demo/">PCViz</a>
+          </div>
+        </div>
+
+        <div class="span4">
+          <div class="tile">
+            <img class="tile-image" alt="" src="images/pc.gif" />
+	    <h3 class="tile-title">PC: <strike>Old</strike> web service</h3>
+            <p>BioPAX Level 2. Out-dated web service. Freezed data.</p>
+            <a class="btn btn-info btn-large btn-block" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+	      <div class="span3">
+              <div data-spy="affix">
+                  <ul class="nav nav-list">
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#faq">F.A.Q.</a></li>
+                      <li><a href="#about">Contact</a></li>
+                  </ul>
+              </div>
+	      </div>
+	      <div class="span9">
+            <section id="about">
+                <h1>About</h1>
+                <p>
+                    Pathway Commons is a convenient point of access to biological pathway information
+                    collected from public pathway databases, which you can browse or search.
+                </p>
+
+                <p>
+                    <ul>
+                        <li><b>Biologists</b> can browse and search Pathway Commons pathways.</li>
+                        <li><b>Computational biologists</b> can download all pathways in BioPAX format for global analysis.</li>
+                        <li><b>Software developers</b> can build software on top of Pathway Commons using
+                            our <a href='webservice.do?cmd=help'>web service API</a>. You can also download and install
+                            the <a href="http://cbio.mskcc.org/dev_site/cpath/">cPath software</a> to create a
+                            local mirror of Pathway Commons.
+                        </li>
+                    </ul>
+                </p>
+
+                <p>
+                    All data is freely available, under the license terms of each contributing database.
+                </p>
+
+            </section>
+              <hr>
+            <section id="faq">
+                <h1>Frequently Asked Questions</h1>
+                <div class="qa">
+                    <h4>What is Pathway Commons?</h4>
+                    <p>
+                        Pathway Commons is a collection of publicly available pathways from multiple organisms.
+                        It provides researchers with convenient access to a comprehensive collection of pathways from
+                        multiple sources represented in a common language. Access is via a web portal for browsing,
+                        query and download. Database providers can share their pathway data via a common repository
+                        and avoid duplication and reduce software development costs. Bioinformatics software developers
+                        can increase efficiency by sharing software components.  Pathways include biochemical reactions,
+                        complex assembly, transport and catalysis events, and physical interactions involving proteins, DNA,
+                        RNA, small molecules and complexes.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>Is Pathway Commons free?</h4>
+                    <p>
+                        Yes, it's free! Pathway Commons distributes pathway content with the intellectual
+                        property restrictions of the source database.  However, only databases that are freely available
+                        or free to academics are included.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>Does Pathway Commons compete with other pathway databases?</h4>
+                    <p>
+                        No. Pathway Commons does not compete with or duplicate efforts of pathway databases or
+                        software tool providers. Pathway Commons will add value to these existing efforts by providing
+                        a shared resource for publishing, distributing and querying pathway information. Existing
+                        database groups will provide pathway curation, Pathway Commons will provide a mechanism and
+                        the technology for sharing. A vital aspect of Pathway Commons is clear author attribution.
+                        Curation teams at existing databases must be supported as much as possible by researchers to
+                        ensure they can keep performing their valuable work.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>What are the future plans for Pathway Commons?</h4>
+                    <p>
+                        The Pathway Commons work group will provide software systems to collect, store and integrate
+                        pathway data from database groups, with clear author attribution; store, validate, index and
+                        maintain the information to enable efficient, maximum quality access; distribute pathway
+                        information to the scientific public; and, provide a basic set of end user software for
+                        browsing and analysis.  We will be adding more databases over time. Pathway Commons will also
+                        support additional types
+                        of pathway data, such as gene regulation, molecular states and genetic interactions as
+                        these features are added to BioPAX.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>What is BioPAX?</h4>
+                    <p>
+                        BioPAX, or Biological Pathway Exchange, is a standard exchange format for biological pathways.
+                        Pathway databases that make their data available in this format can be imported into Pathway Commons.
+                        BioPAX is developed through a collaborative effort by many pathway databases.
+                        More information is available at <a href="http://biopax.org">http://biopax.org</a>.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>What will Pathway Commons not do?</h4>
+                    <p>
+                        Pathway Commons will not duplicate advanced features of source databases that are
+                        often optimized for the type of data and users specific to a source database. Examples
+                        include pathway visualization, certain advanced queries and all types of analysis tools.
+                        Users are encouraged to explore these features by following hyperlinks from Pathway
+                        Commons.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>What can I do with this information?</h4>
+                    <p>
+                        You can browse available pathway information and answer questions such as:
+                    <ul>
+                        <li>What proteins interact with my favorite protein?</li>
+                        <li>What pathways involve my favorite protein?</li>
+                        <li>Is my favorite protein involved in transport events or biochemical reactions?</li>
+                        <li>What enzymes use my favorite metabolite as a substrate?</li>
+                        <li>And many more...</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>How were the pathways collected?</h4>
+                    <p>
+                        Pathways were downloaded directly from source databases. Each source pathway database has
+                        been created differently, some by manual extraction of pathway information from the literature
+                        and some by computational prediction. Pathway Commons provides a filtering mechanism to allow
+                        the user to view only chosen subsets of information, such as only the manually curated subset.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>What kind of information is part of each pathway?</h4>
+                    <p>
+                        Pathways from different databases are defined by different levels of detail. Details that
+                        may be included are proteins, small molecules, DNA, RNA, complexes and their cellular locations,
+                        different types of physical interactions, such as molecular interaction, biochemical reaction,
+                        catalysis, complex assembly and transport, post-translational protein modifications, original
+                        citations, experimental evidence and links to other databases e.g. of protein sequence annotation.
+                        Some information is only available in the downloaded BioPAX files.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h4>How good is the quality of Pathway Commons?</h4>
+                    <p>
+                        The quality of Pathway Commons pathways is dependent on the quality of the pathways from
+                        source databases. Pathway Commons allows users to filter data by various criteria, including
+                        data source, which should allow viewing a restricted subset of high quality data. In the future,
+                        Pathway Commons will implement published algorithms to automatically assess data quality and allow
+                        this as an additional filter.
+                    </p>
+                </div>
+            </section>
+              
+              <hr>
+
+              <section id="contact">
+                <h1>Contact</h1>
+
+                <p>
+                    Pathway Commons is built and maintained by
+                    <a href="http://www.cbio.mskcc.org">Memorial Sloan-Kettering Cancer Center</a> and
+                    the <a href="http://baderlab.org/">University of Toronto</a>
+                </p>
+
+                <h4>About cBio @ MSKCC</h4>
+                <p>
+                    The <a href="http://cbio.mskcc.org">Computational Biology Center</a> at
+                    <a href="http://www.mskcc.org">Memorial Sloan-Kettering Cancer Center</a>
+                    pursues computational biology research projects and the development of bioinformatics
+                    resources in the areas of:
+
+                    <ul>
+                        <li> sequence-structure analysis </li>
+                        <li> gene regulation </li>
+                        <li> molecular pathways and networks </li>
+                        <li> diagnostic and prognostic indicators </li>
+                    </ul>
+
+                    The mission of cBio is to move the theoretical methods and genome-scale data resources of
+                    computational biology into everyday laboratory practice and use, and is reflected in the
+                    organization of cBio into research and service components -- the intention being that
+                    new computational methods created through the process of scientific inquiry should be
+                    generalized and supported as open-source and shared community resources.
+                </p>
+
+                <h4>About the University of Toronto</h4>
+                <p>The University of Toronto is Canada's largest university, with a strong focus on research.
+                    Pathway Commons work is done in the <a href="http://baderlab.org">Bader Lab</a>.</p>
+
+            </section>
+	      </div>
+	     
+	      <p class="pull-right"><a href="#">^ Go back to the top</a></p>
+      </div>
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <!--[if lt IE 8]>
+      <script src="js/icon-font-ie7.js"></script>
+      <script src="js/icon-font-ie7-24.js"></script>
+    <![endif]-->
+  </body>
+</html>

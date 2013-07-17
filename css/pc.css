@@ -33,3 +33,16 @@ hr.sticky-hr {
 div.twitter-wrapper {
    width: 90%;
 }
+
+.sticky-nav li {
+    line-height: 25px;
+    font-size: 18px;
+}
+
+#contact {
+    margin-bottom: 80px;
+}
+
+.sticky {
+    width: 300px;
+}

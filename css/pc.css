@@ -25,3 +25,11 @@ div.qa p {
 body {
 	padding-bottom: 50px;
 }
+
+hr.sticky-hr {
+    width: 90%;
+}
+
+div.twitter-wrapper {
+   width: 90%;
+}

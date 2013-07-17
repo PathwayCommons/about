@@ -49,29 +49,37 @@
           <div class="tile">
             <img class="tile-image" alt="" src="images/pc.gif" />
 	    <h3 class="tile-title">PC: <strike>Old</strike> web service</h3>
-            <p>BioPAX Level 2. Out-dated web service. Freezed data.</p>
+            <p>BioPAX Level 2. Obsolete web service. Freezed data.</p>
             <a class="btn btn-info btn-large btn-block" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
           </div>
         </div>
       </div>
 
       <div class="row">
-	      <div class="span3">
-              <div data-spy="affix-top">
-                  <ul class="nav nav-list">
+	      <div class="span4 left-menu">
+              <div class="sticky">
+                  <hr class="sticky-hr">
+
+                  <ul class="nav nav-list sticky-nav">
                       <li><a href="#about">About</a></li>
                       <li><a href="#faq">F.A.Q.</a></li>
                       <li><a href="#about">Contact</a></li>
                   </ul>
 
-                  <hr>
+                  <hr class="sticky-hr">
 
                   <p>
                       Please <a href="http://www.pathwaycommons.org/pc/get_feedback.do">send us</a> questions and feedback.
                   </p>
+
+                  <hr class="sticky-hr">
+                  <div class="twitter-wrapper">
+                      <a class="twitter-timeline" href="https://twitter.com/PathwayCommons" data-widget-id="357572148157624320">Tweets by @PathwayCommons</a>
+                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  </div>
               </div>
 	      </div>
-	      <div class="span9">
+	      <div class="span8">
             <section id="about">
                 <h1>About</h1>
                 <p>
@@ -84,8 +92,8 @@
                         <li><b>Biologists</b> can browse and search Pathway Commons pathways.</li>
                         <li><b>Computational biologists</b> can download all pathways in BioPAX format for global analysis.</li>
                         <li><b>Software developers</b> can build software on top of Pathway Commons using
-                            our <a href='webservice.do?cmd=help'>web service API</a>. You can also download and install
-                            the <a href="http://cbio.mskcc.org/dev_site/cpath/">cPath software</a> to create a
+                            our web service API. You can also download and install
+                            <a href="http://code.google.com/p/pathway-commons/">our software</a> to create a
                             local mirror of Pathway Commons.
                         </li>
                     </ul>
@@ -261,7 +269,7 @@
 	     
 	      <p class="pull-right"><a href="#">^ Go back to the top</a></p>
       </div>
-
+    </div>
 
     <!-- Load JS here for greater good =============================-->
     <script src="js/jquery-1.8.2.min.js"></script>
@@ -272,5 +280,6 @@
       <script src="js/icon-font-ie7.js"></script>
       <script src="js/icon-font-ie7-24.js"></script>
     <![endif]-->
+    <script src="js/pc.js"></script>
   </body>
 </html>

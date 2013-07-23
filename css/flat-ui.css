@@ -264,7 +264,7 @@ h6 {
       background-color: #16a085; }
   .btn.btn-info {
     background-color: #3498db; }
-    .btn.btn-info:hover, .btn.btn-info:focus {
+    .btn.btn-info:hover, ..btn-info:focus {
       background-color: #5dade2; }
     .btn.btn-info:active, .btn.btn-info.active {
       background-color: #2383c4; }

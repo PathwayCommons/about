@@ -4,10 +4,16 @@ $(function(){ // document ready
         $(window).scroll(function(){ // scroll event
             var windowTop = $(window).scrollTop(); // returns number
             if (stickyTop < windowTop) {
-                $('.sticky').css({ position: 'fixed', top: 15 });
+                $('.sticky').css({ position: 'fixed', top: 5 });
             } else {
                 $('.sticky').css('position','static');
             }
         });
     }
+
+    $("#explore-form").submit(function() {
+        window.location
+            = "http://awabi.cbio.mskcc.org/cpath2-demo/#neighborhood/" + $("#gene-text").val().replace(/ /g, "");
+        return false;
+    });
 });

@@ -39,10 +39,35 @@ div.twitter-wrapper {
     font-size: 18px;
 }
 
+.subnav li {
+    font-size: 15px;
+}
+
 #contact {
     margin-bottom: 80px;
 }
 
 .sticky {
     width: 300px;
+}
+
+#gene-text {
+    height: 25px;
+    margin: 0;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 115%;
+    padding-left: 0;
+}
+
+#other-tools h1 {
+    text-align: center;
+}
+
+h2.tile-title {
+    font-size: 25px;
+}
+
+#other-tools .tile {
+    background-color: #f0f0f0;
 }

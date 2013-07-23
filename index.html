@@ -27,32 +27,83 @@
       </div> <!-- /demo-headline -->
 
       <div class="row demo-tiles">
-        <div class="span4">
+        <div class="span5 offset1">
           <div class="tile">
-            <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
-            <h3 class="tile-title">PC2: New web service</h3>
-            <p>BioPAX Level 3. Advanced graph queries. Better normalization. Up-to-date data.</p>
-	    <a class="btn btn-large btn-block" href="http://www.pathwaycommons.org/pc2/">Pathway Commons <sup>2</sup></a>
+            <img class="tile-image bigger-image" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
+            <h1 class="tile-title">PC2: Web service</h1>
+            <p>BioPAX Level 3. Advanced graph queries. Normalized and up-to-date data. Programmatic access. Batch downloads.</p>
+	    <a class="btn btn-large btn-block" href="http://www.pathwaycommons.org/pc2/">Pathway Commons 2</a>
           </div>
         </div>
 
-        <div class="span4">
+        <div class="span5">
           <div class="tile">
             <img class="tile-image bigger-image" alt="PCViz Logo" src="images/pcviz.png" />
-            <h3 class="tile-title">PCViz: Visualize pathways</h3>
+            <h1 class="tile-title">PCViz: Visualize pathways</h1>
 	    <p>Interactive, browser-based visualization of PC2 networks. Export/embed network options. Support for working with different contexts, <i>e.g.</i> cancer.</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://awabi.cbio.mskcc.org/cpath2-demo/">PCViz</a>
+            <a class="btn btn-large btn-block btn-primary" href="http://awabi.cbio.mskcc.org/cpath2-demo/">PCViz</a>
           </div>
         </div>
 
-        <div class="span4">
-          <div class="tile">
-            <img class="tile-image" alt="Pathway Commons Logo" src="images/pc.gif" />
-	    <h3 class="tile-title">PC: <strike>Old</strike> web service</h3>
-            <p>BioPAX Level 2. Obsolete web service. Freezed data.</p>
-            <a class="btn btn-info btn-large btn-block" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
+      </div>
+
+      <hr>
+      <div class="row" id="explore-row">
+          <div class="span9 offset3">
+              <form id="explore-form">
+                  <div class="span8">
+                      <input type="text" id="gene-text" value="BRCA1, BRCA2, MDM2" class="input-large span3" placeholder="Enter a gene (e.g. MDM2)">
+                      <button class="btn btn-large btn-primary" href="#" id="explore-button">Start exploring &raquo;</button>
+                  </div>
+              </form>
+
           </div>
-        </div>
+      </div>
+      <hr>
+
+      <div class="row demo-tiles" id="other-tools">
+          <div class="span12">
+            <h1>Other tools</h1>
+          </div>
+
+          <div class="span3">
+              <div class="tile">
+                  <img class="tile-image" alt="Pathway Commons Logo" src="images/pc.gif" />
+                  <h3 class="tile-title">PC: <strike>Old</strike> Web service</h3>
+                  <p>BioPAX Level 2. Obsolete web service. Freezed data.</p>
+                  <a class="btn btn-block btn-large btn-info" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
+              </div>
+          </div>
+
+          <div class="span3">
+              <div class="tile">
+                  <img class="tile-image" alt="Cytoscape 3 Logo" src="images/cytoscape3.png" />
+                  <h3 class="tile-title">CyPath2</h3>
+                  <p>Cytoscape App for accessing PC2 web service</p>
+                  <a class="btn btn-block btn-large btn-danger" href="http://www.pathwaycommons.org/pc/">CyPath2</a>
+              </div>
+          </div>
+
+          <div class="span3">
+              <div class="tile">
+                  <img class="tile-image" alt="ChiBE" src="images/chibe.png" />
+                  <h3 class="tile-title">ChiBE</h3>
+                  <p>Chisio BioPAX Editor with PC2 access</p>
+                  <a class="btn btn-block btn-large btn-warning" href="http://code.google.com/p/chibe/">ChiBE</a>
+              </div>
+          </div>
+
+          <div class="span3">
+              <div class="tile">
+                  <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/paxtools.png" />
+                  <h3 class="tile-title">Paxtools</h3>
+                  <p>Library for accessing and manipulating data in BioPAX</p>
+                  <a class="btn btn-block btn-large btn-success" href="http://www.biopax.org/paxtools/">Paxtools</a>
+              </div>
+          </div>
+
+
+
       </div>
 
       <div class="row">
@@ -62,7 +113,12 @@
 
                   <ul class="nav nav-list sticky-nav">
                       <li><a href="#about">About</a></li>
-                      <li><a href="#faq">F.A.Q.</a></li>
+                      <li><a href="#faq">F.A.Q.</a>
+                          <ul class="nav nav-list sticky-nav subnav">
+                              <li><a href="#bio">for biologists</a></li>
+                              <li><a href="#compbio">for computational biologists</a></li>
+                          </ul>
+                      </li>
                       <li><a href="#contact">Contact</a></li>
                   </ul>
 
@@ -77,6 +133,9 @@
                       <a class="twitter-timeline" href="https://twitter.com/PathwayCommons" data-widget-id="357572148157624320">Tweets by @PathwayCommons</a>
                       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                   </div>
+
+                  <hr class="sticky-hr">
+                  <p class="text-center"><a href="#">^ Go back to the top</a></p>
               </div>
 	      </div>
 	      <div class="span8">
@@ -106,7 +165,7 @@
             </section>
               <hr>
             <section id="faq">
-                <h1>Frequently Asked Questions</h1>
+                <h1>Frequently Asked Questions (F.A.Q.)</h1>
                 <div class="qa">
                     <h4>What is Pathway Commons?</h4>
                     <p>
@@ -177,56 +236,98 @@
                         Commons.
                     </p>
                 </div>
-
-                <div class="qa">
-                    <h4>What can I do with this information?</h4>
-                    <p>
-                        You can browse available pathway information and answer questions such as:
-                    <ul>
-                        <li>What proteins interact with my favorite protein?</li>
-                        <li>What pathways involve my favorite protein?</li>
-                        <li>Is my favorite protein involved in transport events or biochemical reactions?</li>
-                        <li>What enzymes use my favorite metabolite as a substrate?</li>
-                        <li>And many more...</li>
-                    </ul>
-                    </p>
-                </div>
-
-                <div class="qa">
-                    <h4>How were the pathways collected?</h4>
-                    <p>
-                        Pathways were downloaded directly from source databases. Each source pathway database has
-                        been created differently, some by manual extraction of pathway information from the literature
-                        and some by computational prediction. Pathway Commons provides a filtering mechanism to allow
-                        the user to view only chosen subsets of information, such as only the manually curated subset.
-                    </p>
-                </div>
-
-                <div class="qa">
-                    <h4>What kind of information is part of each pathway?</h4>
-                    <p>
-                        Pathways from different databases are defined by different levels of detail. Details that
-                        may be included are proteins, small molecules, DNA, RNA, complexes and their cellular locations,
-                        different types of physical interactions, such as molecular interaction, biochemical reaction,
-                        catalysis, complex assembly and transport, post-translational protein modifications, original
-                        citations, experimental evidence and links to other databases e.g. of protein sequence annotation.
-                        Some information is only available in the downloaded BioPAX files.
-                    </p>
-                </div>
-
-                <div class="qa">
-                    <h4>How good is the quality of Pathway Commons?</h4>
-                    <p>
-                        The quality of Pathway Commons pathways is dependent on the quality of the pathways from
-                        source databases. Pathway Commons allows users to filter data by various criteria, including
-                        data source, which should allow viewing a restricted subset of high quality data. In the future,
-                        Pathway Commons will implement published algorithms to automatically assess data quality and allow
-                        this as an additional filter.
-                    </p>
-                </div>
             </section>
               
               <hr>
+
+              <section id="bio">
+                  <h1>F.A.Q. for Biologists</h1>
+
+                  <div class="qa">
+                    <h4>What can I do with this information?</h4>
+                      <p>You can browse available pathway information and answer questions such as:
+                        <ul>
+                          <li>What proteins interact with my favorite protein?</li>
+                          <li>What pathways involve my favorite protein?</li>
+                          <li>Is my favorite protein involved in transport events or biochemical reactions?</li>
+                          <li>What enzymes use my favorite metabolite as a substrate?</li>
+                          <li>And many more...</li>
+                        </ul>
+                      </p>
+                  </div>
+
+                  <div class="qa">
+                      <h4>What kind of information is part of each pathway?</h4>
+                      <p>
+                          Pathways from different databases are defined by different levels of detail. Details that
+                          may be included are proteins, small molecules, DNA, RNA, complexes and their cellular locations,
+                          different types of physical interactions, such as molecular interaction, biochemical reaction,
+                          catalysis, complex assembly and transport, post-translational protein modifications, original
+                          citations, experimental evidence and links to other databases e.g. of protein sequence annotation.
+                          Some information is only available in the downloaded BioPAX files..
+                      </p>
+                  </div>
+
+                  <div class="qa">
+                      <h4>How were the pathways collected?</h4>
+                      <p>
+                          Pathways were downloaded directly from source databases. Each source pathway database has
+                          been created differently, some by manual extraction of pathway information from the literature
+                          and some by computational prediction. Pathway Commons provides a filtering mechanism to allow
+                          the user to view only chosen subsets of information, such as only the manually curated subset.
+                      </p>
+                  </div>
+
+                  <div class="qa">
+                      <h4>How good is the quality of Pathway Commons?</h4>
+                      <p>
+                          The quality of Pathway Commons pathways is dependent on the quality of the pathways from
+                          source databases. Pathway Commons allows users to filter data by various criteria, including
+                          data source, which should allow viewing a restricted subset of high quality data. In the future,
+                          Pathway Commons will implement published algorithms to automatically assess data quality and allow
+                          this as an additional filter.
+                      </p>
+                  </div>
+
+              </section>
+
+            <hr>
+
+            <section id="compbio">
+                  <h1>F.A.Q. for Computational Biologists</h1>
+
+                  <div class="qa">
+                      <h4>What can I do with this information?</h4>
+                      <p>
+                          You can download the pathways in BioPAX Level 3 format for global analysis.
+                          <a href="http://www.biopax.org">Details about the BioPAX format</a>
+                      </p>
+                  </div>
+
+                  <div class="qa">
+                      <h4>How many pathways are part of Pathway Commons?</h4>
+                      <p>
+                          Please see the <a href="http://www.pathwaycommons.org/pc2/#data_sources">statistics page</a> for up to the minute information.
+                      </p>
+                  </div>
+
+                  <div class="qa">
+                      <h4>What is cPath/cPath2?</h4>
+                      <p>
+                          cPath/cPath2 is open source managment software that runs Pathway Commons website. You can download it
+                          for your own use from <a href="http://code.google.com/p/pathway-commons/">the developer site</a>.
+                      </p>
+                  </div>
+
+                  <div class="qa">
+                      <h4>Can I access Pathway Commons data via a web service?</h4>
+                      <p>
+                          Yes! A <a href="http://www.pathwaycommons.org/pc2/">web service</a> is available to answer specific
+                          queries with computer readable responses. This is designed to enable third party software and
+                          scripts to easily access the information.
+                      </p>
+                  </div>
+              </section>
 
               <section id="contact">
                 <h1>Contact</h1>
@@ -267,7 +368,6 @@
             </section>
 	      </div>
 	     
-	      <p class="pull-right"><a href="#">^ Go back to the top</a></p>
       </div>
     </div>
 

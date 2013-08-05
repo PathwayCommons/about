@@ -175,6 +175,8 @@
 .fui-camera-24:before {
   content: "\e004"; }
 
+
+
 body {
   color: #34495e;
   font: 14px/1.231 "Lato", sans-serif; }
@@ -510,6 +512,7 @@ h6 {
 
   .demo-browser {
     background-image: url("../images/demo/browser-2x.png"); } }
+
 .navbar {
   font-size: 18px; }
   .navbar .brand {
@@ -2531,3 +2534,5 @@ body.vjs-full-window {
 
 .mll, .mhl, .mal {
   margin-left: 20px; }
+
+*/

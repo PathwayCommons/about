@@ -1,6 +1,6 @@
 .demo-headline {
 	padding-top: 20px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 
 .bigger-image {
@@ -23,7 +23,8 @@ div.qa p {
 }
 
 body {
-	padding-bottom: 50px;
+    padding-top: 50px;
+	padding-bottom: 30px;
 }
 
 hr.sticky-hr {
@@ -60,14 +61,33 @@ div.twitter-wrapper {
     padding-left: 0;
 }
 
-#other-tools h1 {
-    text-align: center;
-}
-
 h2.tile-title {
     font-size: 25px;
 }
 
 #other-tools .tile {
     background-color: #f0f0f0;
+}
+
+
+.demo-logo small {
+    font-size: 24px;
+    color: rgba(52, 73, 94, 0.4);
+}
+
+.documentation {
+    padding-left: 25px;
+}
+
+section {
+    padding-top: 40px;
+
+}
+
+.container {
+    z-index: 10;
+}
+
+.navbar-inner .container {
+    z-index: 1000;
 }

@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Pathway Commons</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -18,34 +17,39 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <div class="nav-collapse collapse">
+                  <ul class="nav">
+                      <li class="active pc-logo-text"><a href="#">Pathway Commons</a></li>
+                  </ul>
+              </div>
+
+              <div class="nav-collapse collapse pull-right">
+                  <ul class="nav">
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#faq">F.A.Q.</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </div><!--/.nav-collapse -->
+          </div>
+      </div>
+  </div>
+
+    <div class="container" id="main-container">
       <div class="demo-headline">
         <h1 class="demo-logo">
           Pathway Commons
           <small>Search and visualize public biological pathway information. Single point of access.</small>
         </h1>
       </div> <!-- /demo-headline -->
-
-      <div class="row demo-tiles">
-        <div class="span5 offset1">
-          <div class="tile">
-            <img class="tile-image bigger-image" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
-            <h1 class="tile-title">PC2: Web service</h1>
-            <p>BioPAX Level 3. Advanced graph queries. Normalized and up-to-date data. Programmatic access. Batch downloads.</p>
-	    <a class="btn btn-large btn-block" href="http://www.pathwaycommons.org/pc2/">Pathway Commons 2</a>
-          </div>
-        </div>
-
-        <div class="span5">
-          <div class="tile">
-            <img class="tile-image bigger-image" alt="PCViz Logo" src="images/pcviz.png" />
-            <h1 class="tile-title">PCViz: Visualize pathways</h1>
-	    <p>Interactive, browser-based visualization of PC2 networks. Export/embed network options. Support for working with different contexts, <i>e.g.</i> cancer.</p>
-            <a class="btn btn-large btn-block btn-primary" href="http://awabi.cbio.mskcc.org/cpath2-demo/">PCViz</a>
-          </div>
-        </div>
-
-      </div>
 
       <hr>
       <div class="row" id="explore-row">
@@ -61,86 +65,84 @@
       </div>
       <hr>
 
-      <div class="row demo-tiles" id="other-tools">
+      <div class="row demo-tiles">
           <div class="span12">
-            <h1>Other tools</h1>
+              <h1>For biologists <small>(visualize, search and browse pathways)</small></h1>
           </div>
 
-          <div class="span3">
+          <div class="span4">
               <div class="tile">
-                  <img class="tile-image" alt="Pathway Commons Logo" src="images/pc.gif" />
-                  <h3 class="tile-title">PC: <strike>Old</strike> Web service</h3>
-                  <p>BioPAX Level 2. Obsolete web service. Freezed data.</p>
-                  <a class="btn btn-block btn-large btn-info" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
+                  <img class="tile-image" alt="PCViz Logo" src="images/pcviz.png" />
+                  <h1 class="tile-title">PCViz: Visualize pathways</h1>
+                  <p>Interactive, browser-based visualization of biological networks</p>
+                  <a class="btn btn-large btn-block btn-primary" href="http://awabi.cbio.mskcc.org/cpath2-demo/">PCViz</a>
               </div>
           </div>
 
-          <div class="span3">
+          <div class="span4">
               <div class="tile">
                   <img class="tile-image" alt="Cytoscape 3 Logo" src="images/cytoscape3.png" />
                   <h3 class="tile-title">CyPath2</h3>
-                  <p>Cytoscape App for accessing PC2 web service</p>
+                  <p>Cytoscape App for accessing Pathway Commons web service</p>
                   <a class="btn btn-block btn-large btn-danger" href="http://apps.cytoscape.org/apps/cypath2">CyPath2</a>
               </div>
           </div>
 
-          <div class="span3">
+          <div class="span4">
               <div class="tile">
                   <img class="tile-image" alt="ChiBE" src="images/chibe.png" />
                   <h3 class="tile-title">ChiBE</h3>
-                  <p>Chisio BioPAX Editor with PC2 access</p>
+                  <p>Chisio BioPAX Editor with Pathway Commons access.</p>
                   <a class="btn btn-block btn-large btn-warning" href="http://code.google.com/p/chibe/">ChiBE</a>
               </div>
           </div>
+      </div>
 
-          <div class="span3">
+      <div class="row demo-tiles" id="other-tools">
+          <div class="span12">
+              <h1>For computational biologists <small>(download data and build software)</small></h1>
+          </div>
+
+          <div class="span4">
+              <div class="tile">
+                  <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
+                  <h1 class="tile-title">PC2: Web service</h1>
+                  <p>BioPAX Level 3. Advanced graph queries. Normalized and up-to-date data. Programmatic access. Batch downloads.</p>
+                  <a class="btn btn-large btn-block" href="http://www.pathwaycommons.org/pc2/">Pathway Commons 2</a>
+              </div>
+          </div>
+
+          <div class="span4">
               <div class="tile">
                   <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/paxtools.png" />
-                  <h3 class="tile-title">Paxtools</h3>
-                  <p>Library for accessing and manipulating data in BioPAX</p>
-                  <a class="btn btn-block btn-large btn-success" href="http://www.biopax.org/paxtools.php">Paxtools</a>
+                  <h3 class="tile-title">BioPAX &amp; Paxtools</h3>
+                  <p>
+                      Standard language for <abbr title="Biological">Bio</abbr>logical
+                      <abbr title="Pathway">Pa</abbr>thway E<abbr title="Exchange">x</abbr>change and
+                      a library for handling data in BioPAX.</p>
+                  <a class="btn btn-block btn-large btn-success" href="http://www.biopax.org/">BioPAX &amp; Paxtools</a>
               </div>
           </div>
 
 
+          <div class="span4">
+              <div class="tile">
+                  <img class="tile-image" alt="Pathway Commons Logo" src="images/pc.gif" />
+                  <h3 class="tile-title">PC: <strike>Old</strike> Web service</h3>
+                  <p>BioPAX Level 2. Obsolete web service. Freezed data.<br><br></p>
+
+                  <a class="btn btn-block btn-large btn-info" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
+              </div>
+          </div>
 
       </div>
 
       <div class="row">
-	      <div class="span4 left-menu">
-              <div class="sticky">
-                  <hr class="sticky-hr">
-
-                  <ul class="nav nav-list sticky-nav">
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#faq">F.A.Q.</a>
-                          <ul class="nav nav-list sticky-nav subnav">
-                              <li><a href="#bio">for biologists</a></li>
-                              <li><a href="#compbio">for computational biologists</a></li>
-                          </ul>
-                      </li>
-                      <li><a href="#contact">Contact</a></li>
-                  </ul>
-
-                  <hr class="sticky-hr">
-
-                  <p>
-                      Please <a href="http://www.pathwaycommons.org/pc/get_feedback.do">send us</a> questions and feedback.
-                  </p>
-
-                  <hr class="sticky-hr">
-                  <div class="twitter-wrapper">
-                      <a class="twitter-timeline" href="https://twitter.com/PathwayCommons" data-widget-id="357572148157624320">Tweets by @PathwayCommons</a>
-                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                  </div>
-
-                  <hr class="sticky-hr">
-                  <p class="text-center"><a href="#">^ Go back to the top</a></p>
-              </div>
-	      </div>
-	      <div class="span8">
-            <section id="about">
+	      <div class="span10 offset1 documentation">
+          <section id="about">
                 <h1>About</h1>
+              <hr>
+
                 <p>
                     Pathway Commons is a convenient point of access to biological pathway information
                     collected from public pathway databases, which you can browse or search.
@@ -163,9 +165,10 @@
                 </p>
 
             </section>
-              <hr>
             <section id="faq">
                 <h1>Frequently Asked Questions (F.A.Q.)</h1>
+                <hr>
+
                 <div class="qa">
                     <h4>What is Pathway Commons?</h4>
                     <p>
@@ -238,10 +241,9 @@
                 </div>
             </section>
               
-              <hr>
-
               <section id="bio">
                   <h1>F.A.Q. for Biologists</h1>
+                  <hr>
 
                   <div class="qa">
                     <h4>What can I do with this information?</h4>
@@ -291,12 +293,12 @@
 
               </section>
 
-            <hr>
 
             <section id="compbio">
                   <h1>F.A.Q. for Computational Biologists</h1>
+                <hr>
 
-                  <div class="qa">
+                <div class="qa">
                       <h4>What can I do with this information?</h4>
                       <p>
                           You can download the pathways in BioPAX Level 3 format for global analysis.
@@ -329,41 +331,41 @@
                   </div>
               </section>
 
+
               <section id="contact">
                 <h1>Contact</h1>
+                  <hr>
 
-                <p>
+                  <p>
                     Pathway Commons is built and maintained by
                     <a href="http://www.cbio.mskcc.org">Memorial Sloan-Kettering Cancer Center</a> and
                     the <a href="http://baderlab.org/">University of Toronto</a>.
                 </p>
 
 
+                <div class="qa">
+                    <h4>About cBio @ MSKCC</h4>
+                    <p>
+                        The <a href="http://cbio.mskcc.org">Computational Biology Center</a> at
+                        <a href="http://www.mskcc.org">Memorial Sloan-Kettering Cancer Center</a>
+                        pursues computational biology research projects and the development of bioinformatics
+                        resources in the areas of: sequence-structure analysis; gene regulation; molecular pathways and networks;
+                        diagnostic and prognostic indicators.
+                    </p>
+                    <p>
+                        The mission of cBio is to move the theoretical methods and genome-scale data resources of
+                        computational biology into everyday laboratory practice and use, and is reflected in the
+                        organization of cBio into research and service components -- the intention being that
+                        new computational methods created through the process of scientific inquiry should be
+                        generalized and supported as open-source and shared community resources.
+                    </p>
+                </div>
 
-                <h4>About cBio @ MSKCC</h4>
-                <p>
-                    The <a href="http://cbio.mskcc.org">Computational Biology Center</a> at
-                    <a href="http://www.mskcc.org">Memorial Sloan-Kettering Cancer Center</a>
-                    pursues computational biology research projects and the development of bioinformatics
-                    resources in the areas of:
-
-                    <ul>
-                        <li> sequence-structure analysis </li>
-                        <li> gene regulation </li>
-                        <li> molecular pathways and networks </li>
-                        <li> diagnostic and prognostic indicators </li>
-                    </ul>
-
-                    The mission of cBio is to move the theoretical methods and genome-scale data resources of
-                    computational biology into everyday laboratory practice and use, and is reflected in the
-                    organization of cBio into research and service components -- the intention being that
-                    new computational methods created through the process of scientific inquiry should be
-                    generalized and supported as open-source and shared community resources.
-                </p>
-
-                <h4>About the University of Toronto</h4>
-                <p>The University of Toronto is Canada's largest university, with a strong focus on research.
-                    Pathway Commons work is done in the <a href="http://baderlab.org">Bader Lab</a>.</p>
+                  <div class="qa">
+                      <h4>About the University of Toronto</h4>
+                    <p>The University of Toronto is Canada's largest university, with a strong focus on research.
+                        Pathway Commons work is done in the <a href="http://baderlab.org">Bader Lab</a>.</p>
+                  </div>
 
             </section>
 	      </div>

@@ -16,7 +16,7 @@
       <script src="js/html5shiv.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar">
 
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -28,15 +28,15 @@
               </button>
               <div class="nav-collapse collapse">
                   <ul class="nav">
-                      <li class="active pc-logo-text"><a href="#">Pathway Commons</a></li>
+                      <li class="active pc-logo-text"><a href="#main-container" class="top-scroll">Pathway Commons</a></li>
                   </ul>
               </div>
 
               <div class="nav-collapse collapse pull-right">
                   <ul class="nav">
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#faq">F.A.Q.</a></li>
-                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#about" class="smooth-scroll">About</a></li>
+                      <li><a href="#faq" class="smooth-scroll">F.A.Q.</a></li>
+                      <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                   </ul>
               </div><!--/.nav-collapse -->
           </div>
@@ -67,7 +67,7 @@
 
       <div class="row demo-tiles">
           <div class="span12">
-              <h1>For biologists <small>(visualize, search and browse pathways)</small></h1>
+              <h1>For biologists <small class="read-more">(<a href="#bio" class="smooth-scroll">read more</a>)</small></h1>
           </div>
 
           <div class="span4">
@@ -100,7 +100,7 @@
 
       <div class="row demo-tiles" id="other-tools">
           <div class="span12">
-              <h1>For computational biologists <small>(download data and build software)</small></h1>
+              <h1>For computational biologists <small class="read-more">(<a href="#compbio" class="smooth-scroll">read more</a>)</small></h1>
           </div>
 
           <div class="span4">
@@ -163,6 +163,8 @@
                 <p>
                     All data is freely available, under the license terms of each contributing database.
                 </p>
+
+              <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
 
             </section>
             <section id="faq">
@@ -239,6 +241,9 @@
                         Commons.
                     </p>
                 </div>
+
+                <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
+
             </section>
               
               <section id="bio">
@@ -291,6 +296,8 @@
                       </p>
                   </div>
 
+                  <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
+
               </section>
 
 
@@ -329,7 +336,10 @@
                           scripts to easily access the information.
                       </p>
                   </div>
-              </section>
+
+                <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
+
+            </section>
 
 
               <section id="contact">
@@ -341,6 +351,10 @@
                     <a href="http://www.cbio.mskcc.org">Memorial Sloan-Kettering Cancer Center</a> and
                     the <a href="http://baderlab.org/">University of Toronto</a>.
                 </p>
+
+                  <p>
+                      Please <a href="http://www.pathwaycommons.org/pc/get_feedback.do">send us</a> questions and feedback.
+                  </p>
 
 
                 <div class="qa">
@@ -367,9 +381,10 @@
                         Pathway Commons work is done in the <a href="http://baderlab.org">Bader Lab</a>.</p>
                   </div>
 
-            </section>
+                  <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
+
+              </section>
 	      </div>
-	     
       </div>
     </div>
 

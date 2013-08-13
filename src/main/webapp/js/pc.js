@@ -20,4 +20,14 @@ $(function(){ // document ready
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 300);
     });
+
+    $(".tile .btn").each(function() {
+        var button = this;
+        var btnLink = $(this).attr("href");
+
+        $(button).parent().click(function(e) {
+            e.preventDefault();
+            window.open(btnLink, "_blank");
+        });
+    });
 });

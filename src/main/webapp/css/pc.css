@@ -103,3 +103,11 @@ img.main-logo {
 .pc-logo-text {
     font-size: 22px;
 }
+
+.tile p {
+    height: 55px;
+}
+
+.tile {
+    cursor: pointer;
+}

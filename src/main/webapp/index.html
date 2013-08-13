@@ -33,7 +33,7 @@
 
               <div class="nav-collapse collapse pull-right">
                   <ul class="nav">
-                      <li><a href="#about" class="smooth-scroll">About</a></li>
+                      <li><a href="http://www.pathwaycommons.org/pc2/downloads.html">Download</a></li>
                       <li><a href="#faq" class="smooth-scroll">F.A.Q.</a></li>
                       <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                   </ul>
@@ -42,31 +42,51 @@
       </div>
   </div>
 
-    <div class="container" id="main-container">
-      <div class="demo-headline">
-        <h1 class="demo-logo">
-          Pathway Commons
-          <small>Search and visualize public biological pathway information. Single point of access.</small>
-        </h1>
-      </div> <!-- /demo-headline -->
+    <div class="grey-band">
+        <div class="container" id="main-container">
+          <div class="demo-headline">
+            <h1 class="demo-logo">
+              Pathway Commons
+              <small>Search and visualize public biological pathway information. Single point of access.</small>
+            </h1>
+          </div> <!-- /demo-headline -->
 
-      <hr>
-      <div class="row" id="explore-row">
-          <div class="span9 offset3">
-              <form id="explore-form">
-                  <div class="span8">
-                      <input type="text" id="gene-text" value="BRCA1, BRCA2, MDM2" class="input-large span3" placeholder="Enter a gene (e.g. MDM2)">
-                      <button class="btn btn-large btn-primary" href="#" id="explore-button">Start exploring &raquo;</button>
-                  </div>
-              </form>
-
+          <hr>
+          <div class="row" id="explore-row">
+              <div class="span9 offset3">
+                  <form id="explore-form">
+                      <div class="span8">
+                          <input type="text" id="gene-text" value="BRCA1, BRCA2, MDM2" class="input-large span3" placeholder="Enter a gene (e.g. MDM2)">
+                          <button class="btn btn-large btn-primary" href="#" id="explore-button">Start exploring &raquo;</button>
+                      </div>
+                  </form>
+              </div>
           </div>
-      </div>
-      <hr>
+          <hr>
 
-      <div class="row demo-tiles">
+          <div class="row" id="about-container">
+              <div class="span10 offset1">
+                  <div id="about">
+                      <p>
+                          Pathway Commons is a convenient point of access to biological pathway information collected
+                          from public pathway databases, which you can search, visualize and download.
+                          All data is freely available, under the license terms of each contributing database.
+                      </p>
+                  </div>
+              </div>
+          </div>
+         </div>
+    </div>
+
+
+  <div class="container" id="tiles-container">
+        <div class="row demo-tiles">
           <div class="span12">
-              <h1>For biologists <small class="read-more">(<a href="#bio" class="smooth-scroll">read more</a>)</small></h1>
+              <h1>For biologists</h1>
+              <blockquote>
+                  <p>Search, visualize and download Pathway Commons pathways <span class="read-more">(<a href="#bio" class="smooth-scroll">more</a>)</span>
+                  </p>
+              </blockquote>
           </div>
 
           <div class="span4">
@@ -99,7 +119,13 @@
 
       <div class="row demo-tiles" id="other-tools">
           <div class="span12">
-              <h1>For computational biologists and software developers <small class="read-more">(<a href="#compbio" class="smooth-scroll">read more</a>)</small></h1>
+              <h1>For computational biologists and software developers</h1>
+              <blockquote>
+                  <p>Download all pathways in BioPAX, SIF and other formats for global analysis.
+                  Build software on top of Pathway Commons using our web service API
+                  <span class="read-more">(<a href="#compbio" class="smooth-scroll">more</a>)</span>
+                  </p>
+              </blockquote>
           </div>
 
           <div class="span4">
@@ -138,34 +164,7 @@
 
       <div class="row">
 	      <div class="span10 offset1 documentation">
-          <section id="about">
-                <h1>About</h1>
-              <hr>
 
-                <p>
-                    Pathway Commons is a convenient point of access to biological pathway information
-                    collected from public pathway databases, which you can browse or search.
-                </p>
-
-                <p>
-                    <ul>
-                        <li><b>Biologists</b> can browse and search Pathway Commons pathways.</li>
-                        <li><b>Computational biologists</b> can download all pathways in BioPAX format for global analysis.</li>
-                        <li><b>Software developers</b> can build software on top of Pathway Commons using
-                            our web service API. You can also download and install
-                            <a href="http://code.google.com/p/pathway-commons/">our software</a> to create a
-                            local mirror of Pathway Commons.
-                        </li>
-                    </ul>
-                </p>
-
-                <p>
-                    All data is freely available, under the license terms of each contributing database.
-                </p>
-
-              <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
-
-            </section>
             <section id="faq">
                 <h1>Frequently Asked Questions (F.A.Q.)</h1>
                 <hr>

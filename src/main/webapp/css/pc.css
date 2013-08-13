@@ -20,6 +20,7 @@ div.qa p {
 	padding-left: 20px;
 	margin-left: 5px;
 	border-left: 1px solid #cecece;
+    text-align: justify;
 }
 
 body {
@@ -81,11 +82,10 @@ h2.tile-title {
 
 section {
     padding-top: 40px;
-
 }
 
 .read-more {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .navbar {
@@ -111,3 +111,31 @@ img.main-logo {
 .tile {
     cursor: pointer;
 }
+
+#tiles-container {
+    margin-top: 50px;
+}
+
+blockquote {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+blockquote p {
+    font-style: italic;
+}
+
+#about p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.grey-band {
+    background-color: #ecf0f5;
+    padding-bottom: 30px;
+}
+
+.grey-band hr {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #eeeeee;
+}
+

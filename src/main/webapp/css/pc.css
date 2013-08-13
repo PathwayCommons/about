@@ -93,3 +93,13 @@ section {
     color: white;
     z-index: 2000;
 }
+
+img.main-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.pc-logo-text {
+    font-size: 22px;
+}

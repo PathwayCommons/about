@@ -30,7 +30,6 @@
           $(function() {
               $("a").on('click',function(e){
                   var url = $(this).attr("href");
-                  console.log('Link: ' + url);
                   _gaq.push(['_trackEvent', 'Outbound Links', window.location.href, url, 0]);
               });
           });

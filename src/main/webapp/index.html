@@ -24,6 +24,17 @@
           ga('create', 'UA-43341809-1', 'pathwaycommons.org');
           ga('send', 'pageview');
       </script>
+
+      <!-- Track Outbound Links in Google Analytics -->
+      <script type='text/javascript'>
+          $(function() {
+              $("a").on('click',function(e){
+                  var url = $(this).attr("href");
+                  console.log('Link: ' + url);
+                  _gaq.push(['_trackEvent', 'Outbound Links', window.location.href, url, 0]);
+              });
+          });
+      </script>
   </head>
   <body data-spy="scroll" data-target=".navbar">
 

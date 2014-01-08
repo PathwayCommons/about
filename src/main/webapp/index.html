@@ -23,17 +23,10 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
           ga('create', 'UA-43341809-1', 'pathwaycommons.org');
           ga('send', 'pageview');
+          window.ga = ga;
       </script>
 
-      <!-- Track outbound links in Google Analytics -->
-      <script type='text/javascript'>
-          $(function() {
-              $("a").on('click',function(e){
-                  var url = $(this).attr("href");
-                  _gaq.push(['_trackEvent', 'Outbound Links', window.location.href, url, 0]);
-              });
-          });
-      </script>
+
   </head>
   <body data-spy="scroll" data-target=".navbar">
 

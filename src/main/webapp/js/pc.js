@@ -30,4 +30,12 @@ $(function(){ // document ready
             window.open(btnLink, "_blank");
         });
     });
+
+    // Track outbound links in Google Analytics
+    $(function() {
+        $("a").on('click',function(e){
+            var url = $(this).attr("href");
+            ga('send', 'event', 'link', 'click', { url: url });
+        });
+    });
 });

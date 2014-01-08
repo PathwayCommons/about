@@ -35,7 +35,7 @@ $(function(){ // document ready
     $(function() {
         $("a").on('click',function(e){
             var url = $(this).attr("href");
-            ga('send', 'event', 'link', 'click', { url: url });
+            ga('send', 'event', 'link', window.location.href, url);
         });
     });
 });

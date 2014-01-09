@@ -1,0 +1,141 @@
+.demo-headline {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.bigger-image {
+	height: 120px;
+	width: 120px;
+}
+
+div.qa {
+	margin-bottom: 20px;
+}
+
+section h4 {
+	font-weight: bold;
+}
+
+div.qa p {
+	padding-left: 20px;
+	margin-left: 5px;
+	border-left: 1px solid #cecece;
+    text-align: justify;
+}
+
+body {
+    padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+hr.sticky-hr {
+    width: 90%;
+}
+
+div.twitter-wrapper {
+   width: 90%;
+}
+
+.sticky-nav li {
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.subnav li {
+    font-size: 15px;
+}
+
+#contact {
+    margin-bottom: 80px;
+}
+
+.sticky {
+    width: 300px;
+}
+
+#gene-text {
+    height: 25px;
+    margin: 0;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 115%;
+    padding-left: 0;
+}
+
+h2.tile-title {
+    font-size: 25px;
+}
+
+#other-tools .tile {
+    background-color: #f0f0f0;
+}
+
+
+.demo-logo small {
+    font-size: 24px;
+    color: rgba(52, 73, 94, 0.4);
+}
+
+.documentation {
+    padding-left: 25px;
+}
+
+section {
+    padding-top: 40px;
+}
+
+.read-more {
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: #34495e !important;
+    color: white;
+    z-index: 2000;
+}
+
+img.main-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.pc-logo-text {
+    font-size: 22px;
+}
+
+.tile p {
+    height: 55px;
+}
+
+.tile {
+    cursor: pointer;
+}
+
+#tiles-container {
+    margin-top: 50px;
+}
+
+blockquote {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+blockquote p {
+    font-style: italic;
+}
+
+#about p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.grey-band {
+    background-color: #ecf0f5;
+    padding-bottom: 30px;
+}
+
+.grey-band hr {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #eeeeee;
+}
+

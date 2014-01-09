@@ -33,7 +33,7 @@ $(function(){ // document ready
 
     // Track outbound links in Google Analytics
     $(function() {
-        $("a").on('click',function(e){
+        $("a, button").on('click',function(e){
             var url = $(this).attr("href");
             ga('send', 'event', 'link', window.location.href, url);
         });

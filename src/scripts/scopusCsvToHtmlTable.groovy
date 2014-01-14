@@ -33,7 +33,10 @@ for(line in data) {
 	//DEBUG
 	//println "    <td class='author'>$line.Authors</td>"
 
-	println "    <td class='title'><a href='http://www.ncbi.nlm.nih.gov/pubmed/?term=$line.Title'>$line.Title</a></td>"
+    // Clean the titles of any characters causing errors in the links
+    def cleanTitle = line.Title.replaceAll("'", "")
+
+	println "    <td class='title'><a href='http://www.ncbi.nlm.nih.gov/pubmed/?term=$cleanTitle'>$line.Title</a></td>"
 	println "    <td class='journal'>$line.SourceTitle</td>"
 	println "    <td class='year'>$line.Year</td>"
 	println "  </tr>" 

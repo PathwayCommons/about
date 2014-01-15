@@ -10,6 +10,7 @@
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/pc.css" rel="stylesheet">
+    <link href="css/jquery.dataTables.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -47,6 +48,7 @@
                   <ul class="nav">
                       <li><a href="http://www.pathwaycommons.org/pc2/downloads.html" target="_blank">Download</a></li>
                       <li><a href="#faq" class="smooth-scroll">F.A.Q.</a></li>
+                      <li><a href="#citations" class="smooth-scroll">Publications</a></li>
                       <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                   </ul>
               </div><!--/.nav-collapse -->
@@ -344,17 +346,28 @@
             </section>
 
             <section id="citations">
-                <h1>Citations</h1>
+                <h1>Publications</h1>
                 <hr>
-                <p>Pathway Commons has been cited in the following articles:</p>
+		<blockquote class="pcpapers">
+			<p>
+				Cerami et al. <a href="http://www.ncbi.nlm.nih.gov/pubmed/21071392" target="_blank">Pathway Commons, a web resource for biological pathway data</a> (Nucleic Acid Research, 2011) 
+			</p>
+		</blockquote>
 
-                <table>
+		<h4>Pathway Commons citations</h4>
+                <hr>
+
+		<!-- citations table start -->
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="citation-table">
+		<thead>
                 <tr>
                     <th class='author'>Authors</th>
                     <th class='title'>Title</th>
                     <th class='journal'>Journal</th>
                     <th class='year'>Year</th>
                 </tr>
+		</thead>
+		<tbody>
                 <tr>
                     <td class='author'>Babur O., et al.</td>
                     <td class='title'><a href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Pattern search in biopax models'>Pattern search in biopax models</a></td>
@@ -991,7 +1004,9 @@
                     <td class='journal'>Genes and Development</td>
                     <td class='year'>2011</td>
                 </tr>
+		</tbody>
                 </table>
+		<!-- citations table end -->
             </section>
 
               <section id="contact">
@@ -1045,6 +1060,8 @@
     <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.dataTables.bootstrap.js"></script>
     <!--[if lt IE 8]>
       <script src="js/icon-font-ie7.js"></script>
       <script src="js/icon-font-ie7-24.js"></script>

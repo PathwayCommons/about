@@ -38,4 +38,16 @@ $(function(){ // document ready
             ga('send', 'event', 'link', window.location.href, url);
         });
     });
+
+    // Initialize data-tables
+    $.extend( $.fn.dataTableExt.oStdClasses, {
+        "sWrapper": "dataTables_wrapper form-inline"
+    });
+
+    $('#citation-table').dataTable({
+        "sDom": "<'row'<'span5'l><'span5'f>r>t<'row'<'span5'i><'span5'p>>",
+	"aaSorting": [[ 3, "desc" ], [1, "asc"] ],
+	"sPaginationType": "bootstrap"
+    });
+
 });

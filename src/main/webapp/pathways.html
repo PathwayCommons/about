@@ -1,110 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Pathway Commons: A Resource for Biological Pathway Analysis</title>
+<head>
+<meta charset="utf-8">
+<title>Pathway Commons: A Resource for Biological Pathway Analysis</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/flat-ui.css" rel="stylesheet">
+<link href="css/pc.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-43341809-1', 'pathwaycommons.org');
+	ga('send', 'pageview');
+	window.ga = ga;
+</script>
+</head>
+<body data-spy="scroll" data-target=".navbar">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active pc-logo-text"><a href="index.html">Pathway Commons</a></li>
+					</ul>
+				</div>			
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                        <li><a href="pathways.html">Reset</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->					
+			</div>		
+		</div>		
+	</div>
+	<div class="grey-band">
+		<div class="container" id="main-container">
+			<hr>
+			<div class="row" id="find-row">
+				<div class="span9 offset3">
+					<form id="find-form">
+						<div class="span8">
+							<input type="text" id="keyword-text" value="" 
+								class="input-large span3"
+								placeholder="Enter a keyword (e.g. MDM2)">
+							<button class="btn btn-large btn-primary" 
+								id="find-button">Find Pathways &raquo;</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span10 offset1 documentation">
+					<section id="pathwys">
+						<!-- a list to be filled by script-->
+						<dl id="pathways-list">
+						</dl>
+					</section>
+					<p class="text-center">
+						<a href="#" title="go back to the top" class="top-scroll">^top</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Loading Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Loading Flat UI -->
-    <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/pc.css" rel="stylesheet">
-    <link href="css/jquery.dataTables.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
-
-      <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-43341809-1', 'pathwaycommons.org');
-          ga('send', 'pageview');
-          window.ga = ga;
-      </script>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".navbar">
-
-  <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-          <div class="container">
-              <div class="nav-collapse collapse">
-                  <ul class="nav">
-                      <li class="active pc-logo-text">
-                          <a href="#main-container" class="top-scroll">
-                              Pathway Commons
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="nav-collapse collapse pull-right">
-                  <ul class="nav">
-                      <li><a href="http://www.pathwaycommons.org/pc2/downloads.html" target="_blank">Download</a></li>
-                      <li><a href="#faq" class="smooth-scroll">F.A.Q.</a></li>
-                      <li><a href="#citations" class="smooth-scroll">Publications</a></li>
-                      <li><a href="#contact" class="smooth-scroll">Contact</a></li>
-                  </ul>
-              </div><!--/.nav-collapse -->
-          </div>
-      </div>
-  </div>
-
-    <div class="grey-band">
-        <div class="container" id="main-container">
-          <div class="demo-headline">
-            <h1 class="demo-logo">
-              Pathway Commons
-              <small>Search and visualize public biological pathway information. Single point of access.</small>
-            </h1>
-          </div> 
-
-          <hr>
-          <div class="row" id="find-row">
-              <div class="span9 offset3">
-                  <form id="find-form">
-                      <div class="span8">
-                          <input type="text" id="keyword-text" value="MDM2" class="input-large span3" placeholder="Enter a keyword (e.g. MDM2)">
-                          <button class="btn btn-large btn-primary" href="#explore" id="explore-button">Find Pathways &raquo;</button>
-                      </div>
-                  </form>
-              </div>
-          </div>
-          <hr>
-         </div>
-    </div>
-
-    <div class="container" id="tiles-container">
-      <div class="row">
-	      <div class="span10 offset1 documentation">
-
-            <section id="pathwys">
-              <h1>Pathways</h1>
-
-			  <dl  id="pathways-table">
-			  </dl>
-			
-			</section>          
-            <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
-	      </div>
-      </div>
-    </div>
-
-    <!-- Load JS here for greater good =============================-->
-    <script src="js/jquery-1.8.2.min.js"></script>
-    <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.placeholder.js"></script>
-    <!--[if lt IE 8]>
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<!--[if lt IE 8]>
       <script src="js/icon-font-ie7.js"></script>
       <script src="js/icon-font-ie7-24.js"></script>
     <![endif]-->
-    <script src="js/pw.js"></script>
-  </body>
+	<script src="js/pw.js"></script>
+</body>
 </html>

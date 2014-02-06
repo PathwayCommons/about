@@ -1,7 +1,11 @@
 $(function(){ // document ready
 
     $("#find-form").submit(function() {
-        //TODO
+    	var keyword = $("#keyword-text").val();
+    	
+    	if(keyword)
+    		window.location = "pathways.html?find=" + encodeURIComponent(keyword);
+    	
         return false;
     });
 
@@ -37,5 +41,23 @@ $(function(){ // document ready
             ga('send', 'event', 'link', window.location.href, url);
         });
     });
+    
+    
+    // Query PC2 web service - search for pathways
+    $(function() {
+    	var keyword = urlParam('find');
+    	$("#keyword-text").val(keyword);
+    	
+    	//TODO get top_pathways or search for pathways, and update '#pathways-list'
+    	
+    	return false;
+    });
 
 });
+
+function urlParam(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}

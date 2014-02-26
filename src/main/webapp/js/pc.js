@@ -1,8 +1,17 @@
 $(function(){ // document ready
 
     $("#explore-form").submit(function() {
+        var geneTxt = $("#gene-text").val();
+        if(geneTxt.search(",") > 0) {
+            // comma separators, clean-up the spaces
+            geneTxt = geneTxt.replace(/ /g, " ");
+        } else if (geneTxt.search(" ") > 0) {
+            // space separators, replace them with commas
+            geneTxt = geneTxt.replace(/ /g, ",");
+        } else { /* nothing */ }
+
         window.location
-            = "http://www.pathwaycommons.org/pcviz/#neighborhood/" + $("#gene-text").val().replace(/ /g, "");
+            = "http://www.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt;
         return false;
     });
 

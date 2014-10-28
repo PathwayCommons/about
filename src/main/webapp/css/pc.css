@@ -66,10 +66,18 @@ h2.tile-title {
     font-size: 25px;
 }
 
+h4.tile-title {
+	font-weight: bold;
+}
+
 #other-tools .tile {
     background-color: #f0f0f0;
 }
 
+#other-tools .tile p
+{
+	margin-bottom: 50px;
+}
 
 .demo-logo small {
     font-size: 24px;

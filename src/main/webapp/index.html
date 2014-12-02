@@ -47,7 +47,16 @@
               <div class="nav-collapse collapse pull-right">
                   <ul class="nav">
                       <li><a href="#download" class="smooth-scroll">Download</a></li>
-                      <li><a href="#faq" class="smooth-scroll">F.A.Q.</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">F.A.Q.<b class="caret"></b></a>
+                        <span class="dropdown-arrow"></span>
+                  		<ul class="dropdown-menu">
+                  		 <li><a href="#faq" class="smooth-scroll">Frequently Asked Questions</a></li>
+                  		 <li class="divider"></li>
+                  		 <li><a href="#bio" class="smooth-scroll">for biologists</a></li>
+                  		 <li><a href="#compbio" class="smooth-scroll">for computational biologists</a></li>
+                      	</ul>
+                      </li>
                       <li><a href="#citations" class="smooth-scroll">Publications</a></li>
                       <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                   </ul>
@@ -193,12 +202,11 @@
             <section id="download">
             	<h1>Downloads</h1>
 				<hr>
-				
-				<ul>
-           		<li>Current <a href="http://www.pathwaycommons.org/pc2/downloads" target="_blank">Pathway Commons 2 downloads</a></li>
-           		<li>PC2 and other <a href="http://www.pathwaycommons.org/archives/" target="_blank">archives</a></li>
-           		<li>Old <a href="http://www.pathwaycommons.org/pc-snapshot/" target="_blank">Pathway Commons snapshots</a> (before 2012)</li>
-           		<li><a href="http://www.biopax.org/downloads/" target="_blank">BioPAX downloads</a></li>
+				<p>All Pathway Commons data are available for download in a range of formats 
+				made to be compatible with a range of software tools.</p>
+				<ul style="font-size: larger;">
+           		  <li><a  href="http://www.pathwaycommons.org/pc2/downloads" target="_blank">Download current Pathway Commons 2 data</a></li>
+           		  <li><a  href="http://www.pathwaycommons.org/archives/" target="_blank">View our download archives of all previous releases</a></li>
            		</ul>
            		
             	<p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
@@ -263,6 +271,39 @@
                         BioPAX is developed through a collaborative effort by many pathway databases.
                         More information is available at <a href="http://biopax.org">http://biopax.org</a>.
                     </p>
+                </div>
+                
+                <div class="qa">
+                	<h4>What are the benefits of exporting BioPAX formatted data for data providers?</h4>
+                	<p>Benefits of exporting your data to BioPAX and distributing it via Pathway Commons include:</p>
+                	<ul>
+                	 <li>Your data will be used more: Through BioPAX and Pathway Commons, your data can reach more places, 
+                	 including many projects that rely on BioPAX for pathway data import and analysis. We pay attention 
+                	 to ensuring that you are clearly identified as the original data source so that you can receive credit. 
+                	 We log our website usage per data source and provide it back to you for your reporting needs.</li>
+                	 <li>You will get more feedback and help with quality control: You can use the 
+                	 <a href="http://www.biopax.org/validator">BioPAX validator</a> 
+                	 to check your data against more than a hundred rules. We also automatically and manually check 
+                	 your exported data every release. Users of Pathway Commons often offer great feedback and whenever 
+                	 relevant we pass them back to you.</li>
+                	 <li>Your data will be compatible with a range of software tools: There are more than 40 active tools 
+                	 that support BioPAX. Do you need web based visualization? You can use PCViz. 
+                	 Do you need graph and pattern searches? There are existing libraries for that. 
+                	 Do you want to use your data in Cytoscape or R? There are multiple apps that support BioPAX.</li>
+                	 <li>We help you build your website and software tools: You will be able to automatically export 
+                	 your data to many other standard formats through BioPAX to e.g. SBGN, SBML, GSEA, SIF and 
+                	 linked data (RDF). Multiple software components are available to support more rapid application 
+                	 development, such as the powerful <a href="http://www.biopax.org/paxtools">PaxTools</a> Java library.</li>
+                	 <li>Engage with a community of Pathway Informatics researchers: A key component of the BioPAX community 
+                	 is Pathway Data Providers like you. Through our online forums and face to face meetings, we were able 
+                	 to catalyze excellent convergence and interoperability between pathway databases and software tools. 
+                	 Comparing your data schema against others can give you excellent insights and an opportunity 
+                	 to introduce your ideas to other researchers.</li>
+                	 <li>We will support your grant applications: Grant agencies often value support for open standard 
+                	 formats as evidenced by several previous grant evaluations. We will provide detailed support letters 
+                	 that explain your involvement and commitment to disseminate your data. 
+                	 We will also provide statistics of your data usage.</li>                	 
+                	</ul>                          
                 </div>
 
                 <div class="qa">
@@ -375,11 +416,11 @@
             <section id="citations">
                 <h1>Publications</h1>
                 <hr>
-		<blockquote class="pcpapers">
-			<p>
+			  <blockquote class="pcpapers">
+			  <p>
 				Cerami et al. <a href="http://www.ncbi.nlm.nih.gov/pubmed/21071392" target="_blank">Pathway Commons, a web resource for biological pathway data</a> (Nucleic Acid Research, 2011) 
-			</p>
-		</blockquote>
+			  </p>
+			  </blockquote>
 
 		<h4>Pathway Commons citations</h4>
                 <hr>

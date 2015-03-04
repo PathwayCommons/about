@@ -159,6 +159,16 @@ blockquote p {
     height: 35px;
 }
 
+div.announcement p {
+    font-size: 15px;
+    padding: 5px;
+}
+
+div.announcement p a {
+    color: darkgreen;
+}
+
+
 
 /* Data table fixes */
 table.table thead .sorting,

@@ -74,4 +74,10 @@ $(function(){ // document ready
    		$('.pc2_tip').text(tip);
    	}).error(function() {$('.pc2_tip').text(0);});
 
+
+    $("#announcement").hide().delay(1500).slideDown(1000);
+    $("#announcement-close").click(function(e) { 
+        e.preventDefault();
+        $("#announcement").fadeOut();
+    });
 });

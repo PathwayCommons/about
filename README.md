@@ -1,4 +1,4 @@
-# pathwaycommons.org
+# pathwaycommons.org/about
 (Automatically exported from code.google.com/p/pathway-commons.site)
 
 Development of the main Pathway Commons info site goes here and  

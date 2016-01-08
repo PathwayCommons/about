@@ -37,11 +37,13 @@ If you have any questions, suggestions or if you wish to contribute Outreach mat
 This section contains teaching materials that we've collected which will help kick start you on your way to familiarizing yourself with Pathway Commons.
 
 * BioPAX
-  * Level: Beginner
-    * [BioPax primer](https://github.com/cannin/biopaxTutorial) 
-      * Workshop at the University of Sao Paulo, Brazil
-      * January 18-21, 2016
-      * By [@cannin](https://github.com/cannin)
+  * Level: Intermediate-Advanced
+    * Workshop: [Biological Pathway Exchange (BioPAX) Ontology and Pathway Commons Database](https://github.com/cannin/biopaxTutorial)
+      * [International Conference on Biomedical Ontology](http://icbo2015.fc.ul.pt/workshops.html)
+      * Lisbon, Portugal; July 27-30, 2015
+      * Organizers
+        * Augustin Luna, Memorial Sloan Kettering Cancer Center - [@cannin](https://github.com/cannin)
+        * Emek Kemir, Memorial Sloan Kettering Cancer Center - [emekdemir](https://github.com/emekdemir)
 
 
 

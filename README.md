@@ -6,7 +6,7 @@ Need information about [Pathway Commons](http://www.pathwaycommons.org/)? You've
 * [Overview](#overview)
 * [People](#people)
 * [Training](#training)
-  * [Tutorials](##tutorials)
+  * [Tutorials](#tutorials)
 * [Links](#links)
 
 # Overview
@@ -38,9 +38,10 @@ This section contains teaching materials that we've collected which will help ki
 
 * BioPAX
   * Level: Beginner
-    * Tutorial by [@cannin](https://github.com/cannin)
+    * [BioPax primer](https://github.com/cannin/biopaxTutorial) 
       * Workshop at the University of Sao Paulo, Brazil
       * January 18-21, 2016
+      * By [@cannin](https://github.com/cannin)
 
 
 

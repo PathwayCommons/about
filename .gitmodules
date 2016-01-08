@@ -1,1 +1,4 @@
 
+[submodule "Training/Tutorials/BioPAX"]
+	path = Training/Tutorials/BioPAX
+	url = https://github.com/cannin/biopaxTutorial

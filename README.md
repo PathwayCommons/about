@@ -39,8 +39,7 @@ This section contains teaching materials that we've collected which will help ki
 * BioPAX
   * Level: Intermediate-Advanced
     * Workshop: [Biological Pathway Exchange (BioPAX) Ontology and Pathway Commons Database](https://github.com/cannin/biopaxTutorial)
-      * [International Conference on Biomedical Ontology](http://icbo2015.fc.ul.pt/workshops.html)
-      * Lisbon, Portugal; July 27-30, 2015
+      * [International Conference on Biomedical Ontology](http://icbo2015.fc.ul.pt/workshops.html) - Lisbon, Portugal; July 27-30, 2015
       * Organizers
         * Augustin Luna, Memorial Sloan Kettering Cancer Center - [@cannin](https://github.com/cannin)
         * Emek Kemir, Memorial Sloan Kettering Cancer Center - [emekdemir](https://github.com/emekdemir)

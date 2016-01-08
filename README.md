@@ -1,6 +1,6 @@
 # ![GitHub Logo](assets/logo.png) About
 
-Need information about [Pathway Commons](http://www.pathwaycommons.org/)? You've come to the right place. Here's you'll find information about tools, tutorials, and other helpful resources that are available.  
+Need information about [Pathway Commons](http://www.pathwaycommons.org/)? You've come to the right place. Here's where you'll find information about tools, tutorials, and other helpful resources that are available.  
 
 # Contents
 * [Overview](#overview)

@@ -53,4 +53,7 @@ This section contains teaching materials that we've collected which will help ki
 * [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/)
   * [Sander Lab](https://www.mskcc.org/research-areas/labs/chris-sander)
 * [Pathway Commons](http://www.pathwaycommons.org/)
-  * [@PathwayCommons](https://twitter.com/pathwaycommons)
+  * [Twitter: @PathwayCommons](https://twitter.com/pathwaycommons)
+  * [YouTube](https://www.youtube.com/channel/UCWSbcyynroIp-f6O3sfz7jg)
+  * [Facebook](https://www.facebook.com/Pathway-Commons-1667729473467209/)
+  

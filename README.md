@@ -42,7 +42,7 @@ This section contains teaching materials that we've collected which will help ki
       * [International Conference on Biomedical Ontology](http://icbo2015.fc.ul.pt/workshops.html) - Lisbon, Portugal; July 27-30, 2015
       * Organizers
         * Augustin Luna, Memorial Sloan Kettering Cancer Center - [@cannin](https://github.com/cannin)
-        * Emek Kemir, Memorial Sloan Kettering Cancer Center - [emekdemir](https://github.com/emekdemir)
+        * Emek Kemir, Memorial Sloan Kettering Cancer Center - [@emekdemir](https://github.com/emekdemir)
 
 
 
@@ -56,4 +56,3 @@ This section contains teaching materials that we've collected which will help ki
   * [Twitter: @PathwayCommons](https://twitter.com/pathwaycommons)
   * [YouTube](https://www.youtube.com/channel/UCWSbcyynroIp-f6O3sfz7jg)
   * [Facebook](https://www.facebook.com/Pathway-Commons-1667729473467209/)
-  

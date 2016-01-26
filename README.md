@@ -24,7 +24,7 @@ If you have any questions, suggestions or if you wish to contribute Outreach mat
 
 * Gary Bader
   * Principal Investigator - [@gbader](https://github.com/gbader)
-* Augustin Luna
+* [Augustin Luna](http://blog.lunean.com/)
   * Postdoctoral Research Fellow -  [@cannin](https://github.com/cannin)
 * Jeffrey Wong
   * Outreach Manager - [@jvwong](https://github.com/jvwong)

@@ -43,6 +43,12 @@ This section contains teaching materials that we've collected which will help ki
       * Organizers
         * Augustin Luna, Memorial Sloan Kettering Cancer Center - [@cannin](https://github.com/cannin)
         * Emek Kemir, Memorial Sloan Kettering Cancer Center - [@emekdemir](https://github.com/emekdemir)
+* [PaxtoolsR](http://www.ncbi.nlm.nih.gov/pubmed/26685306)
+  * Level: Beginner
+    * Wokshop: [Introduction to Pathway Commons using PaxtoolsR ](http://blog.lunean.com/2016/01/18/introduction-to-pathway-commons-and-paxtoolsr/)
+      * Details
+      * Organizer
+        * Augustin Luna, Dana Farber - [@cannin](https://github.com/cannin)
 
 
 

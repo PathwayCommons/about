@@ -36,7 +36,7 @@ If you have any questions, suggestions or if you wish to contribute Outreach mat
 ## Tutorials
 This section contains teaching materials that we've collected which will help kick start you on your way to familiarizing yourself with Pathway Commons.
 
-* BioPAX
+* [BioPAX](http://biopax.org/)
   * Level: Intermediate-Advanced
     * Workshop: [Biological Pathway Exchange (BioPAX) Ontology and Pathway Commons Database](https://github.com/cannin/biopaxTutorial)
       * [International Conference on Biomedical Ontology](http://icbo2015.fc.ul.pt/workshops.html) - Lisbon, Portugal; July 27-30, 2015
@@ -45,10 +45,10 @@ This section contains teaching materials that we've collected which will help ki
         * Emek Kemir, Memorial Sloan Kettering Cancer Center - [@emekdemir](https://github.com/emekdemir)
 * [PaxtoolsR](http://www.ncbi.nlm.nih.gov/pubmed/26685306)
   * Level: Beginner
-    * Wokshop: [Introduction to Pathway Commons using PaxtoolsR ](http://blog.lunean.com/2016/01/18/introduction-to-pathway-commons-and-paxtoolsr/)
-      * Details
+    * Workshop: [Introduction to Pathway Commons using PaxtoolsR ](http://blog.lunean.com/2016/01/18/introduction-to-pathway-commons-and-paxtoolsr/)
+      * Exploring Cancer Pharmacogenomics - University of São Paulo, Brazil; January
       * Organizer
-        * Augustin Luna, Dana Farber - [@cannin](https://github.com/cannin)
+        * Augustin Luna, Research Fellow, Department of Biostatistics and Computational Biology, Dana-Farber Cancer Institute - [@cannin](https://github.com/cannin)
 
 
 

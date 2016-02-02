@@ -11,7 +11,7 @@ $(function(){ // document ready
         } else { /* nothing */ }
 
         window.location
-            = "http://www.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt;
+            = "http://sanderlab.org/pcviz/#neighborhood/" + geneTxt;
         return false;
     });
 
@@ -63,7 +63,7 @@ $(function(){ // document ready
     /*  Use the PC2 web api (/log) to set the numbers on the page:
      *	 - total no. requests (excluding errors);
      *   - total no. unique client IPs;  
-     *   TODO use http://pathwaycommons.baderlab.org/log/ when testing.
+     *   TODO use http://pathwaycommons.baderlab.org/log/ when testing. Also, switch to ELK, Kibana once ready...
      */  
    	// AJAX calls to the remote PC2 server should work because PC2 supports CORS
    	$.getJSON('http://www.pathwaycommons.org/pc2/log/totalok', function(tok) {

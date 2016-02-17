@@ -1,27 +1,23 @@
 ---
 layout: default
 ---      
-<div style="float: left;">
+<div style="float: left; padding: 25px">
   <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
   </h3>
-      
   <p>Links:</p>
   <ul>
-    <li><a href="about/">welcome</a></li>
+    <li><a href="about/">welcome page</a></li>
     <li><a href="https://github.com/PathwayCommons/about/blob/master/README.md">more information and tutorials</a></li>
   </ul>
-
   <p>GitHub Repositories</p>
   <ul>
-{% for repository in site.github.public_repositories %}
-  <li><a href="https://github.com/PathwayCommons/{{ repository.name }}">{{ repository.name }}</a></li>
-{% endfor %}
+  {% for repository in site.github.public_repositories %}
+    <li><a href="https://github.com/PathwayCommons/{{ repository.name }}">{{ repository.name }}</a></li>
+  {% endfor %}
   </ul>
 </div>
-<br/>
-<div style="float: right;">
+<div style="float: right; padding: 25px">
 <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/PathwayCommons" data-widget-id="700074922526142464">Tweets by @PathwayCommons</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
-<br/>
 

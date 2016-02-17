@@ -5,18 +5,20 @@ twitter: PathwayCommons
 github: PathwayCommons
 ---      
 
-  <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome.
+  <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
   </h3>
       
-  <p><button><a href="https://github.com/PathwayCommons"><small>Follow us on</small> GitHub</a></button></p>
+  <button><a href="https://github.com/PathwayCommons"><small>Follow us on</small> GitHub</a></button>
 
   <p>Links:</p>
   <ul>
     <li><a href="about/">About PC</a></li>
   </ul>
 
+  <p>Pathway Commons GitHub Repositories</p>
+  <ul>
 {% for repository in site.github.public_repositories %}
-  * {{ repository.name }}
+  <li><a href="https://github.com/PathwayCommons/{{ repository.name }}">{{ repository.name }}</a></li>
 {% endfor %}
-
+  </ul>
 

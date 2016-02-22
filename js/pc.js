@@ -10,7 +10,7 @@ $(function(){ // document ready
             geneTxt = geneTxt.replace(/ /g, ",");
         } else { /* nothing */ }
 
-        window.location = "http://www.sanderlab.org/pcviz/#neighborhood/" + geneTxt;
+        window.location = "http://www.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt;
         return false;
     });
 

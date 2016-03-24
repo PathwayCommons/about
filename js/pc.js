@@ -10,7 +10,7 @@ $(function(){ // document ready
             geneTxt = geneTxt.replace(/ /g, ",");
         } else { /* nothing */ }
 
-        window.location = "http://www.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt;
+        window.location = "http://beta.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt;
         return false;
     });
 
@@ -65,11 +65,11 @@ $(function(){ // document ready
      *   TODO use http://pathwaycommons.baderlab.org/log/ when testing. Also, switch to ELK, Kibana once ready...
      */  
    	// AJAX calls to the remote PC2 server should work because PC2 supports CORS
-   	$.getJSON('http://www.pathwaycommons.org/pc2/log/totalok', function(tok) {
+   	$.getJSON('http://beta.pathwaycommons.org/pc2/log/totalok', function(tok) {
    		$('.pc2_tok').text(tok);
    	}).error(function() {$('.pc2_tok').text(0);});
     	
-   	$.getJSON('http://www.pathwaycommons.org/pc2/log/totalip', function(tip) {
+   	$.getJSON('http://beta.pathwaycommons.org/pc2/log/totalip', function(tip) {
    		$('.pc2_tip').text(tip);
    	}).error(function() {$('.pc2_tip').text(0);});
 

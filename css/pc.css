@@ -159,12 +159,12 @@ blockquote p {
     height: 35px;
 }
 
-div.announcement p {
+#announcement p {
     font-size: 15px;
     padding: 5px;
 }
 
-div.announcement p a {
+#announcement p a {
     color: darkgreen;
 }
 

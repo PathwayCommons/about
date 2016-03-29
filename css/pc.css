@@ -28,6 +28,10 @@ div.qa p {
     text-align: justify;
 }
 
+.lead {
+    font-size: 1.3em;
+}
+
 /* NAVBAR
 -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -93,52 +97,26 @@ div.qa p {
 /* GREYBAND
 -------------------------------------------------- */
 #grey-band .lead {
-    font-size: 16px;
+    font-size: 1.2em;
 }
 /* END GREYBAND
 -------------------------------------------------- */
 
-.documentation {
-    padding-left: 25px;
-}
-
-.read-more {
-    font-size: 16px;
-}
-
-img.main-logo {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-blockquote {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-blockquote p {
-    font-style: italic;
-}
-
-.pcpapers p {
-	font-size: 16px;
-}
-
-.top-image {
-    height: 150px;
-}
-
-
-
-
 /* APPS
 -------------------------------------------------- */
-#apps {
-    margin-top: 50px;
+#apps .tiles .tile-wrapper {
+    padding: 0.5em;
 }
 
-/* END APPS
--------------------------------------------------- */
+#apps .tiles .tile-wrapper .tile img{
+    max-height: 150px;
+}
+
+#apps .tiles .tile-wrapper .tile img.fixed-size {
+    height: 75px;
+}
+    /* END APPS
+    -------------------------------------------------- */
 
 
 

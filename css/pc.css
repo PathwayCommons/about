@@ -26,7 +26,7 @@ div.qa p {
 }
 
 body {
-    padding-top: 50px;
+    padding-top: 75px;
 	padding-bottom: 30px;
 }
 
@@ -74,14 +74,11 @@ body {
 
 /* ANOUNCEMENT
 -------------------------------------------------- */
-#announcement {
-    margin-top: 5px;
-    /*visibility: hidden;*/
-    /*display: none;*/
-}
-#announcement .alert{
+#announcement > .alert {
     padding: 5px;
+    margin-bottom: 5px;
 }
+
 /* END ANOUNCEMENT
 -------------------------------------------------- */
 
@@ -248,10 +245,6 @@ div.dataTables_filter input {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    /*.container {*/
-        /*max-width: 1000px;*/
-    /*}*/
-
     /* Navbar positioning foo */
     .navbar-wrapper {
         margin-top: 20px;
@@ -270,10 +263,10 @@ div.dataTables_filter input {
         border-radius: 4px;
     }
 
-    #announcement {
-        position: relative;
-        margin-top: 25px;
-    }
+    /*#announcement {*/
+        /*position: relative;*/
+        /*margin-top: 25px;*/
+    /*}*/
 }
 
 /* Medium devices (desktops, 992px and up) */

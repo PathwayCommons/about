@@ -72,55 +72,37 @@
             <a href="http://beta.pathwaycommons.org/pc2/">Version 8</a>:&nbsp;<span class="label label-default">42 000 Pathways</span>, <span class="label label-default">1 350 000 Interactions</span>, <span class="label label-default">22 Data Sources</span>
           </p>
         </div>
-      </div>
-      <!-- END: announcement -->
+
 
       <!-- BEGIN: grey-band -->
       <div id="grey-band" class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h1>Pathway Commons</h1>
+
+        <!-- comment out the following line before merging into 'master' -->
+        <p style="font-family: Courier; color: red; font-size: large;">
+          *This is a development site - visit the stable version <a href="http://www.pathwaycommons.org/">here</a>
+        </p>
+
+        <p class="lead">Pathway information. Single point of access.</p>
+        <div id="explore-form" class="input-group col-xs-12 col-xs-8">
+          <input type="text" id="gene-text" value="BRCA2" class="form-control" placeholder="Gene Name">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div>
       </div>
-      <!--<div id="grey-band">-->
-          <!--<div class="container" id="main-container">-->
-            <!--<div class="demo-headline">-->
-              <!--<h1 class="demo-logo">-->
-                <!--Pathway Commons -->
-  <!--&lt;!&ndash; comment out the following line before merging into 'master' &ndash;&gt;              -->
-                <!--<small style="font-family: Courier; color: red;">*This is the test/development page (NOT pathwaycommons.org)</small>-->
-  <!--&lt;!&ndash; &ndash;&gt;-->
-                <!--<small>Search and visualize public biological pathway information. Single point of access.</small>-->
-              <!--</h1>-->
-            <!--</div> &lt;!&ndash; /demo-headline &ndash;&gt;-->
+      <!-- END: grey-band -->
 
-            <!--<hr>-->
-            <!--<div class="row" id="explore-row">-->
-                <!--<div class="span9 offset3">-->
-                    <!--<form id="explore-form">-->
-                        <!--<div class="span8">-->
-                            <!--<input type="text" id="gene-text" value="BRCA2" class="input-large span3" placeholder="Enter a gene (e.g. MDM2)">-->
-                            <!--<button class="btn btn-large btn-primary" href="#explore" id="explore-button">Start exploring &raquo;</button>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<hr>-->
-
-            <!--<div class="row" id="about-container">-->
-                <!--<div class="span10 offset1">-->
-                    <!--<div id="about">-->
-                        <!--<p>-->
-                            <!--Pathway Commons is a network biology resource and acts as a convenient point of access to-->
-                            <!--biological pathway information collected from public pathway databases, which you can search,-->
-                            <!--visualize and download. All data is freely available, under the license terms of each contributing-->
-                            <!--database.-->
-                        <!--</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-           <!--</div>-->
-      <!--</div>-->
-      <!--&lt;!&ndash; END: grey-band &ndash;&gt;-->
+      <!-- BEGIN: about -->
+      <div id="about">
+        <blockquote>
+          <p>
+            Pathway Commons aims to store and disseminate knowledge about biological pathways.
+            Information is sourced from <a href="">public pathway databases</a> and is readily searched, visualized, and downloaded.
+            The data is freely available under the license terms of each contributing database.
+          </p>
+        </blockquote>
+      </div>
 
       <!-- BEGIN: tiles-container -->
       <div id="apps">

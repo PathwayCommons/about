@@ -1,6 +1,6 @@
 $(function(){ // document ready
 
-    $("#explore-form").submit(function() {
+    $("#explore-form button").click(function() {
         var geneTxt = $("#gene-text").val();
         if(geneTxt.search(",") > 0) {
             // comma separators, clean-up the spaces

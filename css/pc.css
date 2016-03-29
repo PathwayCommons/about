@@ -72,24 +72,21 @@ body {
 /* END NAVBAR
 -------------------------------------------------- */
 
-
-
+/* ANOUNCEMENT
+-------------------------------------------------- */
+#announcement {
+    position: relative;
+    /*visibility: hidden;*/
+    /*display: none;*/
+}
+#announcement .alert{
+    padding: 5pxgit st;
+}
+/* END ANOUNCEMENT
+-------------------------------------------------- */
 
 hr.sticky-hr {
     width: 90%;
-}
-
-div.twitter-wrapper {
-   width: 90%;
-}
-
-.sticky-nav li {
-    line-height: 25px;
-    font-size: 18px;
-}
-
-.subnav li {
-    font-size: 15px;
 }
 
 #contact {
@@ -191,26 +188,6 @@ blockquote p {
 
 
 
-/* Data table fixes */
-table.table thead .sorting,
-table.table thead .sorting_asc,
-table.table thead .sorting_desc,
-table.table thead .sorting_asc_disabled,
-table.table thead .sorting_desc_disabled {
-    cursor: pointer;
-    *cursor: hand;
-}
- 
-table.table thead .sorting { background: url('../images/sort_both.png') no-repeat center right; }
-table.table thead .sorting_asc { background: url('../images/sort_asc.png') no-repeat center right; }
-table.table thead .sorting_desc { background: url('../images/sort_desc.png') no-repeat center right; }
- 
-table.table thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
-table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
-
-div.dataTables_filter input {
-	padding: 3px 3px 3px 3px;
-}
 
 /* APPS
 -------------------------------------------------- */
@@ -240,12 +217,36 @@ h4.tile-title {
 }
 
 
-/* CITATIONS
+/* PUBLICATIONS
 -------------------------------------------------- */
+
+/* Data table fixes */
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+}
+
+table.table thead .sorting { background: url('../images/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('../images/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('../images/sort_desc.png') no-repeat center right; }
+
+table.table thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
+
+div.dataTables_filter input {
+    padding: 3px 3px 3px 3px;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 
+/* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     /* Navbar positioning foo */
     .navbar-wrapper {
@@ -264,7 +265,17 @@ h4.tile-title {
     .navbar-wrapper .navbar {
         border-radius: 4px;
     }
+
+    #announcement {
+        position: relative;
+        margin-top: 25px;
+    }
 }
 
+/* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }

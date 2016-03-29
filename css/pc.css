@@ -32,11 +32,47 @@ body {
 
 /* NAVBAR
 -------------------------------------------------- */
-.navbar {
-    background-color: #34495e !important;
-    color: white;
-    z-index: 2000;
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
 }
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-wrapper .navbar {
+    background-color: #34495e !important;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+    width: auto;
+}
+
+.navbar-wrapper .navbar a, a:visited{
+    text-decoration: none;
+}
+
+/* logo */
+.navbar-wrapper .navbar .navbar-header .navbar-brand{
+    padding: 0;
+}
+.navbar-wrapper .navbar .navbar-header .navbar-brand img{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 40px;
+}
+
+/* END NAVBAR
+-------------------------------------------------- */
+
+
 
 
 hr.sticky-hr {
@@ -73,22 +109,7 @@ div.twitter-wrapper {
     padding-left: 0;
 }
 
-h2.tile-title {
-    font-size: 25px;
-}
 
-h4.tile-title {
-	font-weight: bold;
-}
-
-#other-tools .tile {
-    background-color: #f0f0f0;
-}
-
-#other-tools .tile p
-{
-	margin-bottom: 50px;
-}
 
 .demo-logo small {
     font-size: 24px;
@@ -125,9 +146,7 @@ img.main-logo {
     cursor: pointer;
 }
 
-#tiles-container {
-    margin-top: 50px;
-}
+
 
 blockquote {
     padding-top: 5px;
@@ -160,9 +179,6 @@ blockquote p {
     height: 150px;
 }
 
-.top-tiles .tile p {
-    height: 35px;
-}
 
 #announcement p {
     font-size: 15px;
@@ -196,8 +212,59 @@ div.dataTables_filter input {
 	padding: 3px 3px 3px 3px;
 }
 
-/* TILES
+/* APPS
 -------------------------------------------------- */
+#apps {
+    margin-top: 50px;
+}
+
+.top-tiles .tile p {
+    height: 35px;
+}
+
+h2.tile-title {
+    font-size: 25px;
+}
+
+h4.tile-title {
+    font-weight: bold;
+}
+
+#other-tools .tile {
+    background-color: #f0f0f0;
+}
+
+#other-tools .tile p
+{
+    margin-bottom: 50px;
+}
+
 
 /* CITATIONS
 -------------------------------------------------- */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+}
+
+@media (min-width: 992px) {
+}

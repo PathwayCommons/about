@@ -12,7 +12,7 @@ Detailed and comprehensive pathway information is a key element for understandin
 
 Pathway Commons is a convenient single point of access for all publicly accessible pathway information. In close coordination with database teams and NHGRI staff, we aim to provide for the efficient exchange of pathway data; aggregation and integration into a shared public information store; distribution in a value-added form as aggregated data sets and as context-tailored data feeds; and availability to the end-user in the context of domain-specific portals, such as genetics, genomics, personalized medicine, model organism and bioinformatics web portals, exploiting advanced internet web service technology.
 
-Pathway Commons was originally developed at the [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/) and the [University of Toronto](https://www.utoronto.ca/). The Pathway Commons team is a collaboration between the [Bader Lab](http://baderlab.org/) and the [Sander Lab]() at the cBio Center for Information Biology, [Dana-Farber Cancer Institute]((http://www.dana-farber.org/)) and the Computational biology collaboratory at [Harvard Medical School](http://hms.harvard.edu/).
+Pathway Commons was originally developed at the [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/) and the [University of Toronto](https://www.utoronto.ca/). The Pathway Commons team is a collaboration between the [Bader Lab](http://baderlab.org/) at the University of Toronto and the [Sander Lab]() at the cBio Center for Information Biology, [Dana-Farber Cancer Institute]((http://www.dana-farber.org/)) and the Computational biology collaboratory at [Harvard Medical School](http://hms.harvard.edu/).
 
 
 

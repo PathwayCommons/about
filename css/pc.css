@@ -9,11 +9,16 @@ body {
     padding-bottom: 30px;
 }
 
+.section {
+    margin-top: 5em;
+}
+
+.subsection {
+    margin-top: 3em;
+}
+
 div.qa {
     margin-bottom: 20px;
-}
-section h4 {
-	font-weight: bold;
 }
 
 div.qa p {
@@ -72,6 +77,15 @@ div.qa p {
     margin-bottom: 5px;
 }
 
+#announcement p {
+    font-size: 15px;
+    padding: 5px;
+}
+
+#announcement p a {
+    color: darkgreen;
+}
+
 /* END ANOUNCEMENT
 -------------------------------------------------- */
 
@@ -84,30 +98,8 @@ div.qa p {
 /* END GREYBAND
 -------------------------------------------------- */
 
-
-hr.sticky-hr {
-    width: 90%;
-}
-
-#contact {
-    margin-bottom: 80px;
-}
-
-.sticky {
-    width: 300px;
-}
-
-.demo-logo small {
-    font-size: 24px;
-    color: rgba(52, 73, 94, 0.4);
-}
-
 .documentation {
     padding-left: 25px;
-}
-
-section {
-    padding-top: 40px;
 }
 
 .read-more {
@@ -120,41 +112,12 @@ img.main-logo {
     margin-right: 10px;
 }
 
-.pc-logo-text {
-    font-size: 22px;
-}
-
-.tile p {
-    height: 55px;
-}
-
-.tile {
-    cursor: pointer;
-}
-
-
-
 blockquote {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 blockquote p {
     font-style: italic;
-}
-
-#about p {
-    font-size: 20px;
-    text-align: justify;
-}
-
-.grey-band {
-    background-color: #ecf0f5;
-    padding-bottom: 30px;
-}
-
-.grey-band hr {
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #eeeeee;
 }
 
 .pcpapers p {
@@ -166,16 +129,6 @@ blockquote p {
 }
 
 
-#announcement p {
-    font-size: 15px;
-    padding: 5px;
-}
-
-#announcement p a {
-    color: darkgreen;
-}
-
-
 
 
 /* APPS
@@ -184,26 +137,9 @@ blockquote p {
     margin-top: 50px;
 }
 
-.top-tiles .tile p {
-    height: 35px;
-}
+/* END APPS
+-------------------------------------------------- */
 
-h2.tile-title {
-    font-size: 25px;
-}
-
-h4.tile-title {
-    font-weight: bold;
-}
-
-#other-tools .tile {
-    background-color: #f0f0f0;
-}
-
-#other-tools .tile p
-{
-    margin-bottom: 50px;
-}
 
 
 /* PUBLICATIONS
@@ -229,6 +165,8 @@ table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_
 div.dataTables_filter input {
     padding: 3px 3px 3px 3px;
 }
+/* END PUBLICATIONS
+-------------------------------------------------- */
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

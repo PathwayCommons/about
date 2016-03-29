@@ -74,7 +74,6 @@
         </div>
       </div>
 
-
       <!-- BEGIN: grey-band -->
       <div id="grey-band" class="jumbotron">
         <h1>Pathway Commons</h1>
@@ -99,101 +98,99 @@
         <blockquote>
           <p>
             Pathway Commons aims to store and disseminate knowledge about biological pathways.
-            Information is sourced from <a href="">public pathway databases</a> and is readily searched, visualized, and downloaded.
+            Information is sourced from <a href="http://www.pathwaycommons.org/pc2/datasources.html">public pathway databases</a> and is readily searched, visualized, and downloaded.
             The data is freely available under the license terms of each contributing database.
           </p>
         </blockquote>
       </div>
 
       <!-- BEGIN: tiles-container -->
-      <div id="apps">
-        <div class="row demo-tiles top-tiles">
-          <div class="span12">
-            <h1>For biologists</h1>
-            <blockquote>
-              <p>
-                Search, visualize and download Pathway Commons pathways as part of an integrated network analysis <span class="read-more">(<a href="#bio" class="smooth-scroll">more</a>)</span>
-              </p>
-            </blockquote>
-          </div>
-          <div class="span4">
-            <div class="tile">
-              <img class="tile-image top-image" alt="PCViz Logo" src="images/pcviz.png" />
-              <h1 class="tile-title">Simple</h1>
-              <p>See genes in pathway context</p>
-              <a class="btn btn-large btn-block btn-primary" href="http://beta.pathwaycommons.org/pcviz/">PCViz</a>
+      <div id="apps" class="section">
+        <h1>APPS</h1>
+        <hr/>
+        <div class="tiles">
+          <h2 class="text-center">Biologists</h2>
+          <p class="lead text-center text-muted">
+            Search, visualize and download Pathway Commons pathways as part of an integrated network analysis.
+          </p>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <div class="tile">
+                <img class="tile-image top-image" alt="PCViz Logo" src="images/pcviz.png" />
+                <h1 class="tile-title">Simple</h1>
+                <p>See genes in pathway context</p>
+                <a class="btn btn-large btn-block btn-primary" href="http://beta.pathwaycommons.org/pcviz/">PCViz</a>
+              </div>
             </div>
-          </div>
-          <div class="span4">
-            <div class="tile">
-              <img class="tile-image top-image" alt="ChiBE" src="images/chibe.png" />
-              <h3 class="tile-title">Advanced</h3>
-              <p>See detailed processes</p>
-              <a class="btn btn-block btn-large btn-warning" href="https://github.com/PathwayCommons/chibe">ChiBE</a>
+            <div class="col-xs-12 col-sm-4">
+              <div class="tile">
+                <img class="tile-image top-image" alt="ChiBE" src="images/chibe.png" />
+                <h3 class="tile-title">Advanced</h3>
+                <p>See detailed processes</p>
+                <a class="btn btn-block btn-large btn-warning" href="https://github.com/PathwayCommons/chibe">ChiBE</a>
+              </div>
             </div>
-          </div>
-          <div class="span4">
-            <div class="tile">
-              <img class="tile-image top-image" alt="CyPath2 Logo" src="images/cypath.png" />
-              <h3 class="tile-title">Analyze</h3>
-              <p>Search and analyze pathway relationships</p>
-              <a class="btn btn-block btn-large btn-danger" href="http://apps.cytoscape.org/apps/cypath2">CyPath2</a>
+            <div class="col-xs-12 col-sm-4">
+              <div class="tile">
+                <img class="tile-image top-image" alt="CyPath2 Logo" src="images/cypath.png" />
+                <h3 class="tile-title">Analyze</h3>
+                <p>Search and analyze pathway relationships</p>
+                <a class="btn btn-block btn-large btn-danger" href="http://apps.cytoscape.org/apps/cypath2">CyPath2</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="row demo-tiles" id="other-tools">
-          <div class="span12">
-            <h1>For computational biologists and software developers</h1>
-            <blockquote>
-              <p>
-                Download all pathways in BioPAX, SIF and other formats for pathway and network analysis. Build software on top of Pathway Commons using our web service API
-                <span class="read-more">(<a href="#compbio" class="smooth-scroll">more</a>)</span>
-              </p>
-            </blockquote>
-          </div>
-          <div class="span3">
-            <div class="tile">
-              <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
-              <h3 class="tile-title">PC2: Web service</h3>
-              <p>BioPAX Level 3. Advanced graph queries. Programmatic access. Batch downloads.</p>
-              <a class="btn btn-large btn-block" href="http://beta.pathwaycommons.org/pc2/">Pathway Commons 2</a>
+        <div class="tiles subsection">
+          <h2 class="text-center">Computational Biologists & Software Developers</h2>
+          <p class="lead text-center text-muted">
+            Download all pathways in BioPAX, SIF and other formats for pathway and network analysis. Build software on top of Pathway Commons using our web service API.
+          </p>
+          <div class="row">
+            <div class="col-xs-12 col-sm-3">
+              <div class="tile">
+                <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
+                <h3 class="tile-title">PC2: Web service</h3>
+                <p>BioPAX Level 3. Advanced graph queries. Programmatic access. Batch downloads.</p>
+                <a class="btn btn-large btn-block" href="http://beta.pathwaycommons.org/pc2/">Pathway Commons 2</a>
+              </div>
             </div>
-          </div>
-          <div class="span3">
-            <div class="tile">
-              <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/paxtools.png" />
-              <h3 class="tile-title">BioPAX &amp; Paxtools</h3>
-              <p>
-                Standard language for <abbr title="Biological">Bio</abbr>logical <abbr title="Pathway">Pa</abbr>thway E<abbr title="Exchange">x</abbr>change and a software library for handling data in BioPAX.
-              </p>
-              <a class="btn btn-block btn-large btn-success" href="http://www.biopax.org/">BioPAX &amp; Paxtools</a>
+            <div class="col-xs-12 col-sm-3">
+              <div class="tile">
+                <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/paxtools.png" />
+                <h3 class="tile-title">BioPAX &amp; Paxtools</h3>
+                <p>
+                  Standard language for <abbr title="Biological">Bio</abbr>logical <abbr title="Pathway">Pa</abbr>thway E<abbr title="Exchange">x</abbr>change and a software library for handling data in BioPAX.
+                </p>
+                <a class="btn btn-block btn-large btn-success" href="http://www.biopax.org/">BioPAX &amp; Paxtools</a>
+              </div>
             </div>
-          </div>
-          <div class="span3">
+            <div class="col-xs-12 col-sm-3">
             <div class="tile">
               <img class="tile-image" alt="Pathway Commons 2 Logo" src="images/rlogo.png" />
               <h3 class="tile-title">PaxtoolsR</h3>
               <p>An R interface for Paxtools software and Pathway Commons webservice.</p>
               <a class="btn btn-block btn-large btn-warning" href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html">PaxtoolsR</a>
-            </div>
-          </div>
-          <div class="span3">
-              <div class="tile">
-                  <img class="tile-image" alt="Pathway Commons Logo" src="images/pc.gif" />
-                  <h4 class="tile-title">PC: Previous web service</h4>
-                  <p><br>Obsolete, last updated 2011<br><br></p>
-                  <a class="btn btn-block btn-large btn-info" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
               </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="tile">
+                <img class="tile-image" alt="Pathway Commons Logo" src="images/pc.gif" />
+                <h4 class="tile-title">PC: Previous web service</h4>
+                <p><br>Obsolete, last updated 2011<br><br></p>
+                <a class="btn btn-block btn-large btn-info" href="http://www.pathwaycommons.org/pc/">Pathway Commons</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <!-- BEGIN: tiles-container -->
 
       <!-- BEGIN: Downloads -->
-      <div id="downloads">
+      <div id="downloads" class="section">
         <h1>Downloads</h1>
-        <hr>
+        <hr/>
         <blockquote>
           <p>All Pathway Commons data are available for download in a range of formats made to be compatible with a range of software tools.</p>
         </blockquote>
@@ -227,7 +224,7 @@
       <!-- END : Downloads -->
 
       <!-- BEGIN: faq -->
-      <div id="faq">
+      <div id="faq" class="section">
         <!-- BEGIN section: faq-general -->
         <section id="faq-general">
           <h1>Frequently Asked Questions (F.A.Q.)</h1>
@@ -419,7 +416,7 @@
       <!-- END: faq -->
 
       <!-- BEGIN: publications -->
-      <div id="publications">
+      <div id="publications" class="section">
         <h1>Publications</h1>
         <hr>
         <blockquote class="pcpapers">
@@ -1089,7 +1086,7 @@
       <!-- END: citations -->
 
       <!-- BEGIN: contact -->
-      <div id="contact">
+      <div id="contact" class="section">
         <h1>Contact</h1>
         <hr>
         <p>

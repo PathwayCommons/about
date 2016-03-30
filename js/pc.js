@@ -57,22 +57,6 @@ $(function(){ // document ready
 	"aaSorting": [[ 3, "desc" ], [1, "asc"] ],
 	"sPaginationType": "bootstrap"
     });
-    
-
-    /*  Use the PC2 web api (/log) to set the numbers on the page:
-     *	 - total no. requests (excluding errors);
-     *   - total no. unique client IPs;  
-     *   TODO use http://pathwaycommons.baderlab.org/log/ when testing. Also, switch to ELK, Kibana once ready...
-     */  
-   	// AJAX calls to the remote PC2 server should work because PC2 supports CORS
-   	$.getJSON('http://beta.pathwaycommons.org/pc2/log/totalok', function(tok) {
-   		$('.pc2_tok').text(tok);
-   	}).error(function() {$('.pc2_tok').text(0);});
-    	
-   	$.getJSON('http://beta.pathwaycommons.org/pc2/log/totalip', function(tip) {
-   		$('.pc2_tip').text(tip);
-   	}).error(function() {$('.pc2_tip').text(0);});
-
 
     $("#announcement").hide().slideDown(1000);
     $("#announcement-close").click(function(e) { 

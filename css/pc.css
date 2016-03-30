@@ -129,6 +129,10 @@ body {
     text-align: justify;
     font-size: 1.2em;
 }
+
+#faq h2 {
+    margin-top: 2em;
+}
 /* END FAQ
 -------------------------------------------------- */
 

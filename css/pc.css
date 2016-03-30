@@ -121,15 +121,13 @@ body {
 
 /* FAQ
 -------------------------------------------------- */
-div.qa {
+.qa {
     margin-bottom: 20px;
 }
 
-div.qa p {
-    padding-left: 20px;
-    margin-left: 5px;
-    border-left: 1px solid #cecece;
+.qa .well p, li {
     text-align: justify;
+    font-size: 1.2em;
 }
 /* END FAQ
 -------------------------------------------------- */

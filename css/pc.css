@@ -17,17 +17,6 @@ body {
     margin-top: 3em;
 }
 
-div.qa {
-    margin-bottom: 20px;
-}
-
-div.qa p {
-	padding-left: 20px;
-	margin-left: 5px;
-	border-left: 1px solid #cecece;
-    text-align: justify;
-}
-
 .lead {
     font-size: 1.3em;
 }
@@ -105,18 +94,35 @@ div.qa p {
 /* APPS
 -------------------------------------------------- */
 #apps .tiles .tile-wrapper {
-    padding: 0.5em;
+    padding: 0.25em;
+}
+
+#apps .tiles .tile-wrapper .tile > p{
+    margin-bottom: 0.5em;
 }
 
 #apps .tiles .tile-wrapper .tile img{
-    max-height: 150px;
+    display: none;
+}
+/* END APPS
+-------------------------------------------------- */
+
+
+
+/* FAQ
+-------------------------------------------------- */
+div.qa {
+    margin-bottom: 20px;
 }
 
-#apps .tiles .tile-wrapper .tile img.fixed-size {
-    height: 75px;
+div.qa p {
+    padding-left: 20px;
+    margin-left: 5px;
+    border-left: 1px solid #cecece;
+    text-align: justify;
 }
-    /* END APPS
-    -------------------------------------------------- */
+/* END FAQ
+-------------------------------------------------- */
 
 
 
@@ -146,6 +152,8 @@ div.dataTables_filter input {
 /* END PUBLICATIONS
 -------------------------------------------------- */
 
+
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 /* Extra small devices (phones, less than 768px) */
@@ -173,6 +181,28 @@ div.dataTables_filter input {
 
     #grey-band > .lead {
         font-size:  21px;
+    }
+
+    /* APPS */
+    #apps .tiles .tile-wrapper .tile > h3{
+        margin-top: 0.5em;
+    }
+
+    #apps .tiles .tile-wrapper .tile > p{
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #apps .tiles .tile-wrapper .tile img{
+        display: block;
+        min-height: 150px;
+        max-height: 150px;
+    }
+
+    #apps .tiles .tile-wrapper .tile img.fixed-size{
+        display: block;
+        min-height: 100px;
+        max-height: 100px;
     }
 }
 

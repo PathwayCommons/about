@@ -140,26 +140,29 @@ body {
 
 /* PUBLICATIONS
 -------------------------------------------------- */
-
-/* Data table fixes */
-table.table thead .sorting,
-table.table thead .sorting_asc,
-table.table thead .sorting_desc,
-table.table thead .sorting_asc_disabled,
-table.table thead .sorting_desc_disabled {
-    cursor: pointer;
-    *cursor: hand;
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #1abc9c;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
-table.table thead .sorting { background: url('../images/sort_both.png') no-repeat center right; }
-table.table thead .sorting_asc { background: url('../images/sort_asc.png') no-repeat center right; }
-table.table thead .sorting_desc { background: url('../images/sort_desc.png') no-repeat center right; }
-
-table.table thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
-table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
-
-div.dataTables_filter input {
-    padding: 3px 3px 3px 3px;
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
 }
 /* END PUBLICATIONS
 -------------------------------------------------- */

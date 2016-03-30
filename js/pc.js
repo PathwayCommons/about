@@ -47,16 +47,24 @@ $(function(){ // document ready
         });
     });
 
-    // Initialize data-tables
-    $.extend( $.fn.dataTableExt.oStdClasses, {
-        "sWrapper": "dataTables_wrapper form-inline"
+    // Initialize dataTables
+
+    // Add the 'paginate' class to pagingation module
+    $('#citation-table').DataTable({
+      searching: true,
+      ordering:  true,
+      paging: true
     });
 
-    $('#citation-table').dataTable({
-        "sDom": "<'row'<'span5'l><'span5'f>r>t<'row'<'span5'i><'span5'p>>",
-	"aaSorting": [[ 3, "desc" ], [1, "asc"] ],
-	"sPaginationType": "bootstrap"
-    });
+    // $.extend( $.fn.dataTableExt.oStdClasses, {
+    //     "sWrapper": "dataTables_wrapper form-inline"
+    // });
+    //
+    // $('#citation-table').dataTable({
+    //   "sDom": "<'row'<'span5'l><'span5'f>r>t<'row'<'span5'i><'span5'p>>",
+    //   "aaSorting": [[ 3, "desc" ], [1, "asc"] ],
+    //   "sPaginationType": "bootstrap"
+    // });
     
 
     /*  Use the PC2 web api (/log) to set the numbers on the page:

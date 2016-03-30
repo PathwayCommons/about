@@ -115,7 +115,7 @@
         <div class="tiles">
           <h2 class="text-center">Biologists</h2>
           <p class="lead text-center text-muted">
-            Search, visualize and download Pathway Commons pathways as part of an integrated network analysis.
+            Visualize, Edit, and Analyze Pathways.
           </p>
 
           <div class="row">
@@ -125,7 +125,7 @@
                 <h3 class="tile-title">Pathway Viewer <span class="badge">Web</span></h3>
                 <p>
                   Search by gene name <br/>
-                  View pathway neighbours
+                  View pathway neighbors
                 </p>
                 <a class="btn btn-block btn-primary" href="http://beta.pathwaycommons.org/pcviz/">PCViz</a>
               </div>
@@ -146,7 +146,7 @@
                 <img class="img-responsive img-thumbnail center-block" alt="CyPath2 Logo" src="images/cypath.png" />
                 <h3 class="tile-title">PC Analyzer  <span class="badge">Cytoscape</span></h3>
                 <p>
-                  Pathway Commons Access<br/>
+                  Access Pathway Commons<br/>
                   Search and query webservice
                 </p>
                 <a class="btn btn-block btn-primary" href="http://apps.cytoscape.org/apps/cypath2">CyPath2</a>
@@ -158,13 +158,13 @@
         <div class="tiles subsection">
           <h2 class="text-center">Computational Biologists & Software Developers</h2>
           <p class="lead text-center text-muted">
-            Download all pathways in BioPAX, SIF and other formats for pathway and network analysis. Build software on top of Pathway Commons using our web service API.
+            Build apps. Dig into BioPAX. Use R.
           </p>
           <div class="row">
             <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
               <div class="tile">
                 <img class="fixed-size center-block" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
-                <h3 class="tile-title">RESTful API</h3>
+                <h3 class="tile-title">RESTful API <span class="badge"></span></h3>
                 <p>
                   BioPAX level 3 <br/>
                   Programmatic access
@@ -207,9 +207,15 @@
           </div>
 
           <div class="row">
-            <h4>Other</h4>
-            <a href="http://www.pathwaycommons.org/pc/">Legacy PC Site</a> (Last Updated: 2011)
+            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
+              <!--<h4>Other</h4>-->
+              <ul class="list-group">
+                <li class="list-group-item"><a href="http://www.pathwaycommons.org/pc/">Legacy PC Site</a> (Last Updated: 2011)</li>
+              </ul>
+            </div>
           </div>
+
+
         </div>
       </div>
       <!-- BEGIN: tiles-container -->
@@ -218,34 +224,46 @@
       <div id="downloads" class="section">
         <h1>Downloads</h1>
         <hr/>
-        <blockquote>
-          <p>All Pathway Commons data are available for download in a range of formats made to be compatible with a range of software tools.</p>
-        </blockquote>
-        <h2>Links</h2>
-        <ul style="font-size: larger;">
-          <li><a  href="http://www.pathwaycommons.org/pc2/downloads" target="_blank">Current Pathway Commons (PC2) data</a></li>
-          <li><a  href="http://www.pathwaycommons.org/archives/" target="_blank">Archives of previous releases</a></li>
-        </ul>
-        <div>
-          <!-- downloads/access summary table -->
-          <table class="table table-striped table-bordered" id="access-log-table">
-            <caption>Access Summary</caption>
-            <thead>
-            <tr>
-              <th>Resource Name</th>
-              <th>Successful Requests</th>
-              <th>Unique Clients</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td class='service'><a href="http://www.pathwaycommons.org/pc2/" target="_blank">PC2 web service</a> (total)</td>
-              <td class='pc2_tok'></td>
-              <td class='pc2_tip'></td>
-            </tr>
-            </tbody>
-          </table>
+
+        <div class="tiles">
+          <div class="row">
+            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
+              <div class="tile">
+                <!--<h4 class="tile-title">Current</h4>-->
+                <!--<br/>-->
+                <a class="btn btn-block btn-primary" href="http://www.pathwaycommons.org/pc2/downloads" target="_blank">Current</a>
+              </div>
+            </div>
+            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
+              <div class="tile">
+                <!--<h4 class="tile-title">Archive</h4>-->
+                <!--<br/>-->
+                <a class="btn btn-block" href="http://www.pathwaycommons.org/archives/" target="_blank">Archive</a>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- BEGIN downloads/access summary table -->
+        <table class="table table-striped table-bordered" id="access-log-table">
+          <caption>Access Summary</caption>
+          <thead>
+          <tr>
+            <th>Resource Name</th>
+            <th>Successful Requests</th>
+            <th>Unique Clients</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class='service'><a href="http://www.pathwaycommons.org/pc2/" target="_blank">PC2 web service</a> (total)</td>
+            <td class='pc2_tok'></td>
+            <td class='pc2_tip'></td>
+          </tr>
+          </tbody>
+        </table>
+        <!-- END downloads/access summary table -->
+
         <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
       </div>
       <!-- END : Downloads -->
@@ -254,7 +272,7 @@
       <div id="faq" class="section">
         <!-- BEGIN section: faq-general -->
         <section id="faq-general">
-          <h1>Frequently Asked Questions (F.A.Q.)</h1>
+          <h1>Frequently Asked Questions</h1>
           <hr>
           <div class="qa">
             <h4>What is Pathway Commons?</h4>

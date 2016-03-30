@@ -21,6 +21,19 @@ body {
     font-size: 1.3em;
 }
 
+/* TILES */
+.tiles .tile-wrapper {
+    padding: 0.25em;
+}
+
+.tiles .tile-wrapper .tile > p{
+    margin-bottom: 0.5em;
+}
+
+.tiles .tile-wrapper .tile img{
+    display: none;
+}
+
 /* NAVBAR
 -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -93,20 +106,17 @@ body {
 
 /* APPS
 -------------------------------------------------- */
-#apps .tiles .tile-wrapper {
-    padding: 0.25em;
-}
-
-#apps .tiles .tile-wrapper .tile > p{
-    margin-bottom: 0.5em;
-}
-
-#apps .tiles .tile-wrapper .tile img{
-    display: none;
-}
 /* END APPS
 -------------------------------------------------- */
 
+
+/* DOWNLOADS
+-------------------------------------------------- */
+#downloads > table{
+    margin-top: 2em;
+}
+/* END DOWNLOADS
+-------------------------------------------------- */
 
 
 /* FAQ
@@ -183,23 +193,23 @@ div.dataTables_filter input {
         font-size:  21px;
     }
 
-    /* APPS */
-    #apps .tiles .tile-wrapper .tile > h3{
+    /* TILES */
+    .tiles .tile-wrapper .tile > h3{
         margin-top: 0.5em;
     }
 
-    #apps .tiles .tile-wrapper .tile > p{
+    .tiles .tile-wrapper .tile > p{
         margin-top: 1em;
         margin-bottom: 1em;
     }
 
-    #apps .tiles .tile-wrapper .tile img{
+    .tiles .tile-wrapper .tile img{
         display: block;
         min-height: 150px;
         max-height: 150px;
     }
 
-    #apps .tiles .tile-wrapper .tile img.fixed-size{
+    .tiles .tile-wrapper .tile img.fixed-size{
         display: block;
         min-height: 100px;
         max-height: 100px;

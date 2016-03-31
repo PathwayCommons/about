@@ -55,8 +55,13 @@
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <form id="pcviz-form" class="navbar-form navbar-right">
+                      <input type="text" id="gene-text" class="form-control" placeholder="Search Gene">
+                    </form>
+                  </li>
+                  <li><a target="_blank" href="http://beta.pathwaycommons.org/archives/">Downloads</a></li>
                   <li><a href="#apps">Apps</a></li>
-                  <li><a href="#downloads">Downloads</a></li>
                   <li><a href="#faq">FAQ</a></li>
                   <li><a href="#publications">Publications</a></li>
                   <li><a href="#contact">Contact</a></li>
@@ -89,12 +94,12 @@
         </p>
 
         <p class="lead">Pathway information. Single point of access.</p>
-        <div id="explore-form" class="input-group col-xs-12 col-xs-8">
-          <input type="text" id="gene-text" value="BRCA2" class="form-control" placeholder="Gene Name">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
-          </span>
-        </div>
+        <!--<div id="explore-form" class="input-group col-xs-12 col-xs-8">-->
+          <!--<input type="text" id="gene-text" value="BRCA2" class="form-control" placeholder="Gene Name">-->
+          <!--<span class="input-group-btn">-->
+            <!--<button class="btn btn-default" type="button">Go!</button>-->
+          <!--</span>-->
+        <!--</div>-->
       </div>
       <!-- END: grey-band -->
 
@@ -223,33 +228,6 @@
         </div>
       </div>
       <!-- BEGIN: tiles-container -->
-
-      <!-- BEGIN: Downloads -->
-      <div id="downloads" class="section">
-        <h1>Downloads</h1>
-        <hr/>
-
-        <div class="tiles">
-          <div class="row">
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <!--<h4 class="tile-title">Current</h4>-->
-                <!--<br/>-->
-                <a class="btn btn-block btn-primary" href="http://beta.pathwaycommons.org/pc2/downloads" target="_blank">Current</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <!--<h4 class="tile-title">Archive</h4>-->
-                <!--<br/>-->
-                <a class="btn btn-block" href="http://beta.pathwaycommons.org/archives/" target="_blank">Archive</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
-      </div>
-      <!-- END : Downloads -->
 
       <!-- BEGIN: faq -->
       <div id="faq" class="section">
@@ -1171,9 +1149,6 @@
         <h1>Contact</h1>
         <hr>
 
-        <p class="lead text-justify">
-          For questions and feedback, join the <a href="https://groups.google.com/forum/#!forum/pathway-commons-help/join">mailing list</a>.
-        </p>
         <div id="social-media row">
           <ul class="list-inline list-unstyled">
             <li><a target="_blank" href="https://twitter.com/pathwaycommons"><i class="fa fa-twitter fa-2x"></i></a></li>
@@ -1181,6 +1156,10 @@
             <li><a target="_blank" href="https://github.com/pathwaycommons/"><i class="fa fa-github fa-2x"></i></a></li>
           </ul>
         </div>
+
+        <p class="lead text-justify">
+          For questions and feedback, join the <a href="https://groups.google.com/forum/#!forum/pathway-commons-help/join">mailing list</a>.
+        </p>
 
         <div id="credits">
           <p class="lead text-justify">

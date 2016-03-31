@@ -56,7 +56,11 @@ body {
     padding-left: 15px;
 }
 .navbar-wrapper .navbar .container {
-    width: auto;
+     width: auto;
+}
+
+.navbar-wrapper .navbar .container #navbar .nav li{
+    font-size: 1em;
 }
 
 .navbar-wrapper .navbar a, a:visited{

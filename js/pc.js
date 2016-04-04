@@ -53,16 +53,7 @@ $(function(){ // document ready
         });
     });
 
-    // Track outbound links in Google Analytics
-    $(function() {
-        $("a, button").on('click',function(e){
-            var url = $(this).attr("href");
-            ga('send', 'event', 'link', window.location.href, url);
-        });
-    });
-
     // Initialize dataTables
-
     // Add the 'paginate' class to pagingation module
     $('#citation-table').DataTable({
       searching: true,
@@ -75,4 +66,24 @@ $(function(){ // document ready
         e.preventDefault();
         $("#announcement").fadeOut();
     });
+
+    // Google Analytics
+    $(function() {
+
+      // a.ga-publication
+      // must conform to <a class="ga-publication" href="" >title</a>
+      $("a, button").on('click',function(e){
+        var url = $(this).attr("href");
+        console.log("Click event: " + url);
+        ga('send',
+          'event',              // Slot as event
+          'link',               // Category
+          window.location.href, // Action
+          url);                 // Label
+      });
+
+      //
+
+    });
+
 });

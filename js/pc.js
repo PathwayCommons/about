@@ -99,9 +99,19 @@ $(function(){ // document ready
 
       if(send){
         ga('send', 'event', category, action, label);
-        console.log("Event - Category: %s; Action: %s; Label: %s", category, action, label);
+        //console.info("Event - Category: %s; Action: %s; Label: %s", category, action, label);
       }
 
+    });
+
+    // Google Analytics depth tracking plugin (scrolldepth.parsnip.io/)
+    jQuery.scrollDepth({
+      minHeight: 0,
+      elements: ["#apps", "#faq", "#publications", "#contact"],
+      percentage: false,
+      userTiming: false,
+      pixelDepth: false,
+      nonInteraction: false
     });
 
 });

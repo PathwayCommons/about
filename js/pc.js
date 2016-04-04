@@ -43,16 +43,6 @@ $(function(){ // document ready
         $('html, body').animate({ scrollTop: 0 }, 300);
     });
 
-    $(".tile .btn").each(function() {
-        var button = this;
-        var btnLink = $(this).attr("href");
-
-        $(button).parent().click(function(e) {
-            e.preventDefault();
-            window.open(btnLink, "_blank");
-        });
-    });
-
     // Initialize dataTables
     // Add the 'paginate' class to pagingation module
     $('#citation-table').DataTable({
@@ -68,21 +58,49 @@ $(function(){ // document ready
     });
 
     // Google Analytics
-    $(function() {
+    // Event handler for all .ga classed elements
+    $(".ga").on('click',function(e){
+      var
+        self,
+        category = "",
+        action = "click",
+        label = "",
+        self = $(this),
+        send = true
+        ;
 
-      // a.ga-publication
-      // must conform to <a class="ga-publication" href="" >title</a>
-      $("a, button").on('click',function(e){
-        var url = $(this).attr("href");
-        console.log("Click event: " + url);
-        ga('send',
-          'event',              // Slot as event
-          'link',               // Category
-          window.location.href, // Action
-          url);                 // Label
-      });
+      if(self.hasClass("ga-publications"))
+      {
+        category = "Publications";
+        label = self.text();
+      }
+      else if(self.hasClass("ga-apps"))
+      {
+        category = "Apps";
+        label = self.text();
+      }
+      else if(self.hasClass("ga-faq"))
+      {
+        category = "FAQ";
+        label = self.children("h4").text();
+      }
+      else if(self.hasClass("ga-contact"))
+      {
+        category = "Contact";
+        self.children("i").attr("class", function(i, val){
+          //make sure the second element is classed fa-<label>...
+          if(val) label = val.split(" ")[0];
+        });
+      }
+      else
+      {
+        send = false;
+      }
 
-      //
+      if(send){
+        ga('send', 'event', category, action, label);
+        console.log("Event - Category: %s; Action: %s; Label: %s", category, action, label);
+      }
 
     });
 

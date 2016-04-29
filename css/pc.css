@@ -1,192 +1,233 @@
-.demo-headline {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.bigger-image {
-	height: 120px;
-	width: 120px;
-}
-
-div.qa {
-	margin-bottom: 20px;
-}
-
-section h4 {
-	font-weight: bold;
-}
-
-div.qa p {
-	padding-left: 20px;
-	margin-left: 5px;
-	border-left: 1px solid #cecece;
-    text-align: justify;
-}
+/* GLOBAL STYLES
+-------------------------------------------------- */
 
 body {
-    padding-top: 50px;
-	padding-bottom: 30px;
-}
+    /* smallest is nexus 4 */
+    min-width: 384px;
 
-hr.sticky-hr {
-    width: 90%;
-}
-
-div.twitter-wrapper {
-   width: 90%;
-}
-
-.sticky-nav li {
-    line-height: 25px;
-    font-size: 18px;
-}
-
-.subnav li {
-    font-size: 15px;
-}
-
-#contact {
-    margin-bottom: 80px;
-}
-
-.sticky {
-    width: 300px;
-}
-
-#gene-text {
-    height: 25px;
-    margin: 0;
-    margin-top: 1px;
-    text-align: center;
-    font-size: 115%;
-    padding-left: 0;
-}
-
-h2.tile-title {
-    font-size: 25px;
-}
-
-h4.tile-title {
-	font-weight: bold;
-}
-
-#other-tools .tile {
-    background-color: #f0f0f0;
-}
-
-#other-tools .tile p
-{
-	margin-bottom: 50px;
-}
-
-.demo-logo small {
-    font-size: 24px;
-    color: rgba(52, 73, 94, 0.4);
-}
-
-.documentation {
-    padding-left: 25px;
-}
-
-section {
-    padding-top: 40px;
-}
-
-.read-more {
-    font-size: 16px;
-}
-
-.navbar {
-    background-color: #34495e !important;
-    color: white;
-    z-index: 2000;
-}
-
-img.main-logo {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-.pc-logo-text {
-    font-size: 22px;
-}
-
-.tile p {
-    height: 55px;
-}
-
-.tile {
-    cursor: pointer;
-}
-
-#tiles-container {
-    margin-top: 50px;
-}
-
-blockquote {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-blockquote p {
-    font-style: italic;
-}
-
-#about p {
-    font-size: 20px;
-    text-align: justify;
-}
-
-.grey-band {
-    background-color: #ecf0f5;
+    padding-top: 75px;
     padding-bottom: 30px;
 }
 
-.grey-band hr {
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #eeeeee;
+.section {
+    margin-top: 5em;
 }
 
-.pcpapers p {
-	font-size: 16px;
+.subsection {
+    margin-top: 3em;
 }
 
-.top-image {
-    height: 150px;
+.lead {
+    font-size: 1.3em;
 }
 
-.top-tiles .tile p {
-    height: 35px;
+/* TILES */
+.tiles .tile-wrapper {
+    padding: 0.25em;
 }
 
-div.announcement p {
+.tiles .tile-wrapper .tile > p{
+    margin-bottom: 0.5em;
+}
+
+.tiles .tile-wrapper .tile img{
+    display: none;
+}
+
+/* NAVBAR
+-------------------------------------------------- */
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-wrapper .navbar {
+    background-color: #34495e !important;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+     width: auto;
+}
+
+.navbar-wrapper .navbar .container #navbar .nav li{
+    font-size: 1em;
+}
+
+.navbar-wrapper .navbar a, a:visited{
+    text-decoration: none;
+}
+
+/* logo */
+.navbar-wrapper .navbar .navbar-header .navbar-brand{
+    padding: 0;
+}
+.navbar-wrapper .navbar .navbar-header .navbar-brand img{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 40px;
+}
+
+/* END NAVBAR
+-------------------------------------------------- */
+
+/* ANOUNCEMENT
+-------------------------------------------------- */
+#announcement > .alert {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#announcement p {
     font-size: 15px;
     padding: 5px;
 }
 
-div.announcement p a {
+#announcement p a {
     color: darkgreen;
 }
 
+/* END ANOUNCEMENT
+-------------------------------------------------- */
 
 
-/* Data table fixes */
-table.table thead .sorting,
-table.table thead .sorting_asc,
-table.table thead .sorting_desc,
-table.table thead .sorting_asc_disabled,
-table.table thead .sorting_desc_disabled {
-    cursor: pointer;
-    *cursor: hand;
+/* GREYBAND
+-------------------------------------------------- */
+#grey-band .lead {
+    font-size: 1.2em;
 }
- 
-table.table thead .sorting { background: url('../images/sort_both.png') no-repeat center right; }
-table.table thead .sorting_asc { background: url('../images/sort_asc.png') no-repeat center right; }
-table.table thead .sorting_desc { background: url('../images/sort_desc.png') no-repeat center right; }
- 
-table.table thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
-table.table thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
+/* END GREYBAND
+-------------------------------------------------- */
 
-div.dataTables_filter input {
-	padding: 3px 3px 3px 3px;
+/* APPS
+-------------------------------------------------- */
+/* END APPS
+-------------------------------------------------- */
+
+
+/* FAQ
+-------------------------------------------------- */
+.qa {
+    margin-bottom: 20px;
+}
+
+.qa .well p, li {
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+#faq h2 {
+    margin-top: 2em;
+}
+/* END FAQ
+-------------------------------------------------- */
+
+
+
+/* PUBLICATIONS
+-------------------------------------------------- */
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #1abc9c;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+}
+/* END PUBLICATIONS
+-------------------------------------------------- */
+
+/* CONTACT
+-------------------------------------------------- */
+#credits {
+    margin-top: 3em;
+}
+
+/* END CONTACT
+-------------------------------------------------- */
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+
+    #grey-band > .lead {
+        font-size:  21px;
+    }
+
+    /* TILES */
+    .tiles .tile-wrapper .tile > h3{
+        margin-top: 0.5em;
+    }
+
+    .tiles .tile-wrapper .tile > p{
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .tiles .tile-wrapper .tile img{
+        display: block;
+        min-height: 150px;
+        max-height: 150px;
+    }
+
+    .tiles .tile-wrapper .tile img.fixed-size{
+        display: block;
+        min-height: 100px;
+        max-height: 100px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }

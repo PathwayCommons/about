@@ -2,11 +2,14 @@
 -------------------------------------------------- */
 
 body {
-    /* smallest is nexus 4 */
-    min-width: 384px;
 
     padding-top: 75px;
     padding-bottom: 30px;
+}
+
+.container{
+  min-width: 384px;
+  max-width: 992px;
 }
 
 .section {
@@ -15,10 +18,6 @@ body {
 
 .subsection {
     margin-top: 3em;
-}
-
-.lead {
-    font-size: 1.3em;
 }
 
 /* TILES */
@@ -80,32 +79,57 @@ body {
 /* END NAVBAR
 -------------------------------------------------- */
 
-/* ANOUNCEMENT
+
+/* JUMBOTRON
 -------------------------------------------------- */
-#announcement > .alert {
-    padding: 5px;
-    margin-bottom: 5px;
+.jumbotron h1 {
+  font-size: 50px;
 }
 
-#announcement p {
-    font-size: 15px;
-    padding: 5px;
+.jumbotron .brand {
+  margin: 2em 0;
 }
 
-#announcement p a {
-    color: darkgreen;
+.jumbotron .splash {
+  margin: 1.5em auto 3em;
+  display: block;
 }
 
-/* END ANOUNCEMENT
--------------------------------------------------- */
-
-
-/* GREYBAND
--------------------------------------------------- */
-#grey-band .lead {
-    font-size: 1.2em;
+.jumbotron blockquote p {
+  font-size: 16px;
 }
-/* END GREYBAND
+
+@media (max-width: 996px) {
+  .jumbotron h1 {
+    font-size: 36px;
+  }
+  .jumbotron .lead {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron blockquote p {
+    font-size: 14px;
+  }
+
+  .jumbotron .splash {
+    display: none;
+  }
+
+  .jumbotron .lead {
+    font-size: 18px;
+  }
+
+  .jumbotron .brand.ghost {
+    position: absolute;
+    right: 10%;
+    top: 5em;
+    opacity: 0.15;
+    max-height: 150px;
+  }
+}
+/* END JUMBOTRON
 -------------------------------------------------- */
 
 /* APPS
@@ -132,42 +156,8 @@ body {
 -------------------------------------------------- */
 
 
-
-/* PUBLICATIONS
--------------------------------------------------- */
-.pagination > li > a, .pagination > li > span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #1abc9c;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-
-.pagination > .active > a,
-.pagination > .active > span,
-.pagination > .active > a:hover,
-.pagination > .active > span:hover,
-.pagination > .active > a:focus,
-.pagination > .active > span:focus {
-    z-index: 3;
-    color: #fff;
-    cursor: default;
-    background-color: #1abc9c;
-    border-color: #1abc9c;
-}
-/* END PUBLICATIONS
--------------------------------------------------- */
-
 /* CONTACT
 -------------------------------------------------- */
-#credits {
-    margin-top: 3em;
-}
-
 /* END CONTACT
 -------------------------------------------------- */
 
@@ -195,10 +185,6 @@ body {
     /* The navbar becomes detached from the top, so we round the corners */
     .navbar-wrapper .navbar {
         border-radius: 4px;
-    }
-
-    #grey-band > .lead {
-        font-size:  21px;
     }
 
     /* TILES */

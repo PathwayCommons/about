@@ -28,35 +28,6 @@ $(function(){ // document ready
         return false;
     });
 
-    $("a.smooth-scroll").click(function(e) {
-        e.preventDefault();
-
-        var whereTo = $($(this).attr("href")).offset().top - 5;
-
-        $('html, body').animate({
-            scrollTop: whereTo
-        }, 500);
-    });
-
-    $("a.top-scroll").click(function(e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 300);
-    });
-
-    // Initialize dataTables
-    // Add the 'paginate' class to pagingation module
-    $('#citation-table').DataTable({
-      searching: true,
-      ordering:  true,
-      paging: true
-    });
-
-    $("#announcement").hide().slideDown(1000);
-    $("#announcement-close").click(function(e) { 
-        e.preventDefault();
-        $("#announcement").fadeOut();
-    });
-
     // Google Analytics
     // Event handler for all .ga classed elements
     $(".ga").on('click',function(e){

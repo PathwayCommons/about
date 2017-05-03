@@ -96,23 +96,118 @@
           <h2>Apps <small></small></h2>
         </div>
 
-        <div class="list-group">
+        <div class="pc-list-group">
 
-          <div class="archive list-group-item">
+          <div class="archive pc-list-group-item">
             <a href="#">
-              <div class="list-group-item-text">
-                <p class="list-group-item-title">doc.title</p>
-                <p class="list-group-item-description">doc.subtitle</p>
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title">doc.title</p>
+                <p class="pc-list-group-item-description">doc.subtitle</p>
               </div>
-              <div class="list-group-item-meta">
+              <div class="pc-list-group-item-meta">
                 <span class="label label-default">badge</span>
               </div>
-              <div class="list-group-item-media">
+              <div class="pc-list-group-item-media">
                 <img class="img-responsive" src="http://placehold.it/900x175" />
               </div>
             </a>
           </div>
         </div>
+
+      </div>
+      <!-- END: Apps -->
+
+      <!-- BEGIN: Data -->
+      <div id="data" class="section">
+        <div class="page-header">
+          <h2>Data <small></small></h2>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="text-center">
+              <a href="http://beta.pathwaycommons.org/archives/PC2/current/" target="_blank" class="">
+                File Downloads
+              </a>
+            </h4>
+          </div>
+
+          <div class="list-group">
+            <a href="http://www.biopax.org/" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">Biological Pathway Exchange (BioPAX)</h4>
+              <p class="list-group-item-text">
+                Rich descriptions of pathways and interactions.
+              </p>
+              <p class="list-group-item-text">
+                For archival and exchange.
+              </p>
+              <dl>
+                <dt>Format</dt>
+                <dd>RDF/XML</dd>
+              </dl>
+            </a>
+            <a href="http://wiki.cytoscape.org/Cytoscape_User_Manual/Network_Formats" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">Simple Interaction Format (SIF)</h4>
+              <p class="list-group-item-text">
+                List of gene-pair relationships for pathways.
+              </p>
+              <p class="list-group-item-text">
+                For use in visualization and analysis software (e.g. Cytoscape)
+              </p>
+            </a>
+            <a href="http://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GMT:_Gene_Matrix_Transposed_file_format_.28.2A.gmt.29" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">Gene Set Database (gmt)</h4>
+              <p class="list-group-item-text">
+                List of gene-pair relationships for pathways.
+              </p>
+              <p class="list-group-item-text">
+                For use in visualization and analysis software (e.g. Cytoscape)
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="text-center">
+              <a href="http://beta.pathwaycommons.org/pc2/" target="_blank" class="">
+                Web Services
+              </a>
+            <h4>
+          </div>
+
+          <div class="list-group">
+            <a href="http://beta.pathwaycommons.org/pc2/#search" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">Search</h4>
+              <p class="list-group-item-text">
+                A full-text search of the BioPAX database.
+              </p>
+              <p class="list-group-item-text">
+
+              </p>
+              <dl>
+                <dt>Features</dt>
+                <dd>Apache Lucene syntax support</dd>
+                <dd>Paginated results</dd>
+                <dd>Filter by organism, datasource and BioPAX class</dd>
+              </dl>
+            </a>
+            <a href="http://beta.pathwaycommons.org/pc2/#get" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">Get</h4>
+              <p class="list-group-item-text">
+                Retrieves a particular object model in Pathway Commons using its assocaited URI.
+              </p>
+              <dl>
+                <dt>Formats</dt>
+                <dd>SBGN for visualization</dd>
+                <dd>GSEA for enrichment analysis</dd>
+                <dd>SIF, BioPAX, JSON-LD</dd>
+              </dl>
+            </a>
+          </div>
+        </div>
+
+
 
       </div>
       <!-- END: Apps -->
@@ -124,23 +219,62 @@
         </div>
 
         <h3 class="text-muted subtitle">Data visualization and analysis</h3>
-        <div class="list-group">
-          <div class="list-group-item">
+        <div class="pc-list-group">
+          <div class="pc-list-group-item">
             <a href="https://github.com/PathwayCommons/chibe" target="_blank">
-              <div class="list-group-item-text">
-                <p class="list-group-item-title">ChiBE</p>
-                <p class="list-group-item-description hidden-xs">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">ChiBE</p>
+                <p class="pc-list-group-item-description hidden-xs">
                   Chisio BioPAX Editor (ChiBE) is an editing and visualization tool for pathway models represented in BioPAX, using SBGN Process Description Language, based on Chisio. Provides the ability to access and view pathways from Pathway Commons.
                 </p>
-                <p class="list-group-item-description hidden-sm hidden-md hidden-lg">
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
                   Edit and visualize pathway models represented in BioPAX.
                 </p>
               </div>
-              <div class="list-group-item-meta">
+              <div class="pc-list-group-item-meta">
                 <span class="label label-default">Desktop</span>
                 <span class="label label-default">Java</span>
               </div>
-              <div class="list-group-item-media">
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x250" />
+              </div>
+            </a>
+          </div>
+          <div class="pc-list-group-item">
+            <a href="http://apps.cytoscape.org/apps/cypath2" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">CyPath2</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                  This Cytoscape app provides a user-friendly menu for keyword-based search and retrieval of pathways and interactions from Pathway Commons. Also supports advanced filtering and graph queries over the resource. Visualize results as a network and leverage the power of Cytoscape.
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                  Access Pathway Commons from Cytoscape.
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">Cytoscape</span>
+              </div>
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x250" />
+              </div>
+            </a>
+          </div>
+          <div class="pc-list-group-item">
+            <a href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">PaxToolsR</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                  Use this package for the R statistical programming language to access a set of functions for interacting with BioPAX OWL files by leveraging the capabilities of the Java Paxtools library. Supports querying Pathway Commons by keyword and retrieving elements in a variety of formats aloing with more sophisticated graph querying.
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                  Use Pathway Commons data within R.
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">Desktop</span>
+                <span class="label label-default">Java</span>
+              </div>
+              <div class="pc-list-group-item-media">
                 <img class="img-responsive" src="http://placehold.it/1000x250" />
               </div>
             </a>
@@ -148,24 +282,24 @@
         </div>
 
         <h3 class="text-muted subtitle">Developer resources</h3>
-        <div class="list-group">
-          <div class="archive list-group-item">
+        <div class="pc-list-group">
+          <div class="archive pc-list-group-item">
             <a href="http://biopax.baderlab.org/" target="_blank">
-              <div class="list-group-item-text">
-                <p class="list-group-item-title">BioPAX Validator</p>
-                <p class="list-group-item-description hidden-xs">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">BioPAX Validator</p>
+                <p class="pc-list-group-item-description hidden-xs">
                   The BioPAX Validator applies custom criteria to identify syntax and semantic errors. Rules originate from the BioPAX Level3 specification and the community best practice and provides errors or warnings in many categories.
                 </p>
-                <p class="list-group-item-description hidden-sm hidden-md hidden-lg">
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
                   Validate BioPAX using rules from the Level3 specification.
                 </p>
               </div>
-              <div class="list-group-item-meta">
+              <div class="pc-list-group-item-meta">
                 <span class="label label-default">Web</span>
                 <span class="label label-default">Console</span>
                 <span class="label label-default">Java</span>
               </div>
-              <div class="list-group-item-media">
+              <div class="pc-list-group-item-media">
                 <img class="img-responsive" src="http://placehold.it/1000x250" />
               </div>
             </a>
@@ -173,40 +307,40 @@
         </div>
 
         <h3 class="text-muted subtitle">Experimental</h3>
-        <div class="list-group">
-          <div class="archive list-group-item">
+        <div class="pc-list-group">
+          <div class="archive pc-list-group-item">
             <a href="http://sanderlab.org/pcapi" target="_blank">
-              <div class="list-group-item-text">
-                <p class="list-group-item-title">PC API</p>
-                <p class="list-group-item-description hidden-xs">
-                   A web interface for the Pathway Commons web services.
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title">PC API</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                   Web interface for the Pathway Commons web services.
                 </p>
-                <p class="list-group-item-description hidden-sm hidden-md hidden-lg">
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
                 </p>
               </div>
-              <div class="list-group-item-meta">
+              <div class="pc-list-group-item-meta">
                 <span class="label label-default">Web</span>
               </div>
-              <div class="list-group-item-media">
+              <div class="pc-list-group-item-media">
                 <img class="img-responsive" src="http://placehold.it/1000x125" />
               </div>
             </a>
           </div>
-          <div class="archive list-group-item">
+          <div class="archive pc-list-group-item">
             <a href="https://www.npmjs.com/package/pathway-commons" target="_blank">
-              <div class="list-group-item-text">
-                <p class="list-group-item-title">cPath2-client</p>
-                <p class="list-group-item-description hidden-xs">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title">cPath2-client</p>
+                <p class="pc-list-group-item-description hidden-xs">
                   JavaScript client for Pathway Commons web services (NPM)
                 </p>
-                <p class="list-group-item-description hidden-sm hidden-md hidden-lg">
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
                 </p>
               </div>
-              <div class="list-group-item-meta">
+              <div class="pc-list-group-item-meta">
                 <span class="label label-default">JavaScript</span>
                 <span class="label label-default">NPM</span>
               </div>
-              <div class="list-group-item-media">
+              <div class="pc-list-group-item-media">
                 <img class="img-responsive" src="http://placehold.it/1000x125" />
               </div>
             </a>

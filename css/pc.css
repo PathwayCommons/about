@@ -38,11 +38,25 @@ footer {
   margin: 3em;
 }
 
+.pc-btn-anchor {
+  color: #ecf0f1;
+  background-color:#577a9d;
+  border-color: #577a9d;
+}
+
+.pc-btn-anchor h3,h4 {
+  margin: 0;
+}
+
 /* pc-list-group */
 .pc-list-group .pc-list-group-item {
   margin-top: 1.5em;
   position: relative;
   padding: 0;
+}
+
+.pc-list-group .pc-list-group-item a, a:hover {
+  color: #ecf0f1;
 }
 
 .pc-list-group .pc-list-group-item .pc-list-group-item-text {
@@ -67,6 +81,12 @@ footer {
   text-align: left;
   color: #BDC3C7;
   font-size: 15px;
+  font-weight: 200;
+}
+.pc-list-group .pc-list-group-item .pc-list-group-item-text .pc-list-group-item-description-footer {
+  position: absolute;
+  margin: 0.5em;
+  right: 1em;
   font-weight: 200;
 }
 .pc-list-group .pc-list-group-item .pc-list-group-item-meta {

@@ -40,7 +40,6 @@
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#apps">Apps</a></li>
                   <li><a href="#data">Data</a></li>
                   <li><a href="#tools">Tools</a></li>
                   <li><a href="#faq">FAQ</a></li>
@@ -71,9 +70,6 @@
             </p>
           </div>
         </div>
-
-
-        <img src="images/splash.png" class="img-responsive splash" alt="splash">
 
         <blockquote>
           <p class="text-right text-muted citation">
@@ -116,6 +112,30 @@
 
       </div>
       <!-- END: Apps -->
+
+      <!-- BEGIN: Apps -->
+      <div id="info" class="section">
+        <div class="page-header">
+          <h3 class="hidden-xs text-center text-muted">What's Inside?</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-offset-0 col-xs-11 col-sm-offset-1 col-sm-10 alert alert-pc" role="alert">
+            <ul>
+              <li>
+                <a href="" target="_blank">Find out what's new</a> in our version 9 release
+              </li>
+              <li>
+                Visit our <a href="http://pathwaycommons.github.io/guide/" target="_blank">Guide</a> with pathway analysis workflows
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <img src="images/splash.png" class="img-responsive splash" alt="splash">
+
+      </div>
+      <!-- END: Info -->
 
       <!-- BEGIN: Data -->
       <div id="data" class="section">
@@ -188,26 +208,32 @@
                 A full-text search of the BioPAX database.
               </p>
               <p class="list-group-item-text">
-
+                Apache Lucene syntax support; Filter by datasource and BioPAX class
               </p>
-              <dl>
-                <dt></dt>
-                <dd>- Apache Lucene syntax support</dd>
-                <dd>- Filter by organism, datasource and BioPAX class</dd>
-              </dl>
             </a>
             <a href="http://beta.pathwaycommons.org/pc2/#get" target="_blank" class="list-group-item">
               <h4 class="list-group-item-heading">Get</h4>
               <p class="list-group-item-text">
                 Retrieves a particular object model in Pathway Commons by URI.
               </p>
-              <dl>
-                <dt></dt>
-                <dd>- Return SBGN for visualization</dd>
-                <dd>- Return GMT for enrichment analysis</dd>
-                <dd>- Available as SIF, BioPAX and JSON-LD</dd>
-              </dl>
+              <p class="list-group-item-text">
+                SBGN for visualization; GMT for enrichment analysis; SIF, BioPAX and JSON-LD
+              </p>
             </a>
+            <div class="list-group-item">
+              <h4 class="list-group-item-heading">
+                <a href="http://beta.pathwaycommons.org/pc2/#graph" target="_blank" >Graph</a>, <a href="http://beta.pathwaycommons.org/pc2/#traverse" target="_blank" >Traverse</a> and <a href="http://beta.pathwaycommons.org/pc2/#top_pathways" target="_blank" >Top Pathways</a>
+              </h4>
+              <p class="list-group-item-text">
+                Graph searches identify connections and neighborhoods of elements.
+              </p>
+              <p class="list-group-item-text">
+                Traverse provides XPath-like access to this BioPAX database.
+              </p>
+              <p class="list-group-item-text">
+                Top Pathways returns those that are not a component of another biological process.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -309,7 +335,7 @@
           </div>
         </div>
 
-        <h3 class="text-muted subtitle">Experimental</h3>
+        <h3 class="text-muted subtitle">Laboratory</h3>
         <div class="pc-list-group">
           <div class="archive pc-list-group-item">
             <a href="http://sanderlab.org/pcapi" target="_blank">
@@ -353,117 +379,6 @@
       </div>
       <!-- END: Apps -->
 
-
-        <!-- <div class="tiles">
-          <h2 class="text-center">Biologists</h2>
-          <p class="lead text-center text-muted">
-            Visualize, Edit, and Analyze Pathways.
-          </p>
-
-          <div class="row">
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="img-responsive img-thumbnail center-block" alt="PCViz Logo" src="images/pcviz.png" />
-                <h3 class="tile-title">Pathway Viewer <span class="badge">Web</span></h3>
-                <p>
-                  Search by gene name <br/>
-                  View pathway neighbors
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://beta.pathwaycommons.org/pcviz/">PCViz</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="img-responsive img-thumbnail center-block" alt="ChiBE" src="images/chibe.png" />
-                <h3 class="tile-title">BioPAX Editor  <span class="badge">Desktop</span></h3>
-                <p>
-                  View BioPAX-encoded pathways<br/>
-                  Visually edit BioPAX
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="https://github.com/PathwayCommons/chibe">ChiBE</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="img-responsive img-thumbnail center-block" alt="CyPath2 Logo" src="images/cypath.png" />
-                <h3 class="tile-title">PC Analyzer  <span class="badge">Cytoscape</span></h3>
-                <p>
-                  Access Pathway Commons<br/>
-                  Search and query webservice
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://apps.cytoscape.org/apps/cypath2">CyPath2</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tiles subsection">
-          <h2 class="text-center">Computational Biologists & Software Developers</h2>
-          <p class="lead text-center text-muted">
-            Build apps. Dig into BioPAX. Use R.
-          </p>
-          <div class="row">
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
-                <h3 class="tile-title">RESTful API <span class="badge"></span></h3>
-                <p>
-                  BioPAX level 3 integrated data<br/>
-                  Programmatic access
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://beta.pathwaycommons.org/pc2/">PC Web Service</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="Paxtools Logo" src="images/paxtools.png" />
-                <h3 class="tile-title">BioPAX <span class="badge">Java</span></h3>
-                <p>
-                  Language specification<br/>
-                  PaxTools Java library
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://www.biopax.org/">BioPAX</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="R Logo" src="images/rlogo.png" />
-                <h3 class="tile-title">PC Analyzer
-                  <span class="badge">R</span>
-                </h3>
-                <p>
-                  Bioconductor package<br/>
-                  BioPAX editing
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html">PaxtoolsR</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="RDF logo" src="images/rdf.png" />
-                <h3 class="tile-title">BioPAX <span class="badge">RDF</span></h3>
-                <p>
-                  PC BioPAX integrated data -<br/>
-                  SPARQL endpoint and Faceted browser
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://rdf.pathwaycommons.org">PC for LinkedData</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="BioPAX Logo" src="images/paxtools.png" />
-                <h3 class="tile-title">BioPAX Validator<span class="badge">Web, Java</span></h3>
-                <p>
-                  Validate your BioPAX models<br/>
-                  Web and console tool for pathway data authors
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://www.biopax.org/validator">BioPAX Validator</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-       -->
       <!-- BEGIN: faq -->
       <div id="faq" class="section">
         <div class="page-header">
@@ -528,7 +443,7 @@
             </a>
             <div class="collapse" id="faq-4">
               <div class="well">
-                <ul class="list-unstyled">
+                <ol class="">
                   <li>Web</li>
                   <ul>
                     <li>
@@ -540,16 +455,21 @@
                   </ul>
                   <li>Desktop software</li>
                   <ul>
-                    <li>Retrieve, view and edit Pathway Commons data using the <a href="https://github.com/PathwayCommons/chibe" target="_blank">Chisio BioPAX Editor (ChiBE)</a></li>
-                    <li>Search and analyze Pathway Commons data from <a href="http://apps.cytoscape.org/apps/cypath2" target="_blank">Cytoscape</a></li>
-                    <li>Search and analyze Pathway Commons data using the <a href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html" target="_blank">R programming language</a></li>
-                    <li>Search, retrieve and navigate through Pathway Commons data using the set of <a href="http://www.pathwaycommons.org/pc2/" target="_blank">web services</a></li>
+                    <li>Retrieve, view and edit Pathway Commons data using the <a href="https://github.com/PathwayCommons/chibe" target="_blank">Chisio BioPAX Editor (ChiBE)</a>
+                    </li>
+                    <li>Search and analyze Pathway Commons data from <a href="http://apps.cytoscape.org/apps/cypath2" target="_blank">Cytoscape</a>
+                    </li>
+                    <li>Search and analyze Pathway Commons data using the <a href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html" target="_blank">R programming language</a>
+                    </li>
                   </ul>
                   <li>Programmatically</li>
                   <ul>
-                    <li>Search, retrieve and navigate over Pathway Commons data using our set of <a href="http://www.pathwaycommons.org/pc2/" target="_blank">web services</a></li>
+                    <li>Search, retrieve and navigate over Pathway Commons data using our set of <a href="http://www.pathwaycommons.org/pc2/" target="_blank">web services</a>
+                    </li>
+                    <li>Use semantic queries for Pathway Commons data at our <a href="http://rdf.pathwaycommons.org/" target="_blank">SPARQL endpoint</a>
+                    </li>
                   </ul>
-                </ul>
+                </ol>
               </div>
             </div>
           </div>

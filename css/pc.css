@@ -22,6 +22,12 @@ body {
     margin-top: 3em;
 }
 
+.splash {
+  margin: 1.5em auto 3em;
+  display: block;
+}
+
+
 .list-group-item dl {
   margin-bottom: 0.5em;
 }
@@ -36,6 +42,18 @@ body {
 
 footer {
   margin: 3em;
+}
+
+/* alert */
+.alert-pc {
+  background-color: #E74C3C;
+  opacity: 0.85;
+  color: #ECF0F1;
+}
+
+.alert-pc a, .alert-pc a:hover, .alert-pc a:visited{
+  color: #ECF0F1;
+  text-decoration: underline;
 }
 
 .pc-btn-anchor {
@@ -117,6 +135,15 @@ footer {
 
   .boost {
     font-size: 16px;
+  }
+
+  .splash {
+    display: none;
+  }
+
+  /* alert */
+  .alert-pc {
+    margin: auto 0.5em auto 1em;
   }
 
   /* pc-list-group */
@@ -201,6 +228,10 @@ footer {
 
 
 /* Start: JUMBOTRON */
+.jumbotron {
+  padding: 25px;
+}
+
 .jumbotron h1 {
   font-size: 50px;
 }
@@ -209,10 +240,10 @@ footer {
   margin: 2em 0;
 }
 
-.jumbotron .splash {
-  margin: 1.5em auto 3em;
-  display: block;
+.jumbotron blockquote {
+  padding: 2px;
 }
+
 
 .jumbotron blockquote p {
   font-size: 16px;
@@ -230,10 +261,6 @@ footer {
 @media (max-width: 768px) {
   .jumbotron blockquote p {
     font-size: 14px;
-  }
-
-  .jumbotron .splash {
-    display: none;
   }
 
   .jumbotron .lead {

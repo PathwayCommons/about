@@ -1,19 +1,4 @@
 $(function(){ // document ready
-
-    $("#explore-form button").click(function() {
-        var geneTxt = $("#gene-text").val();
-        if(geneTxt.search(",") > 0) {
-            // comma separators, clean-up the spaces
-            geneTxt = geneTxt.replace(/ /g, " ");
-        } else if (geneTxt.search(" ") > 0) {
-            // space separators, replace them with commas
-            geneTxt = geneTxt.replace(/ /g, ",");
-        } else { /* nothing */ }
-
-        window.location = "http://beta.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt;
-        return false;
-    });
-
     $("#pcviz-form").submit(function() {
         var geneTxt = $("#gene-text").val();
         if(geneTxt.search(",") > 0) {

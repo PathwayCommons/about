@@ -92,24 +92,37 @@
           <h2>Apps <small></small></h2>
         </div>
 
-        <div class="pc-list-group">
-
-          <div class="archive pc-list-group-item">
-            <a href="#">
-              <div class="pc-list-group-item-text">
-                <p class="pc-list-group-item-title">doc.title</p>
-                <p class="pc-list-group-item-description">doc.subtitle</p>
-              </div>
-              <div class="pc-list-group-item-meta">
-                <span class="label label-default">badge</span>
-              </div>
-              <div class="pc-list-group-item-media">
-                <img class="img-responsive" src="http://placehold.it/900x175" />
-              </div>
-            </a>
-          </div>
+        <div class="app">
+          <a href="http://beta.pathwaycommons.org/pathways/#/search" target="_blank" class="btn btn-primary btn-block pc-btn-anchor">
+            <p class="app-name">
+              Pathway Search
+            </p>
+          </a>
+          <iframe id="pathway-search-app-embed"
+            title="pathway-search-app-embed"
+            width="100%"
+            height="80"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="http://beta.pathwaycommons.org/pathways/#/search/embed">
+          </iframe>
         </div>
 
+        <div class="app">
+          <a href="http://www.pathwaycommons.org/pcviz/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor">
+            <p class="app-name">
+              PC Viz
+            </p>
+          </a>
+          <iframe
+            width="100%"
+            height="400"
+            src="http://www.pathwaycommons.org/pcviz/#embed/neighborhood/MDM2"
+            scrolling="no" frameborder="0" seamless="seamless">
+          </iframe>
+        </div>
       </div>
       <!-- END: Apps -->
 
@@ -120,15 +133,33 @@
         </div>
 
         <div class="row">
-          <div class="col-xs-offset-0 col-xs-11 col-sm-offset-1 col-sm-10 alert alert-pc" role="alert">
+          <div class="col-xs-offset-0 col-xs-11 col-sm-offset-2 col-sm-8 alert alert-pc" role="alert">
             <ul>
               <li>
-                <a href="" target="_blank">Find out what's new</a> in our version 9 release
+                <a href="#" data-toggle="modal" data-target="#pc-news-modal">Find out what's new</a> in our version 9 release
               </li>
               <li>
                 Visit our <a href="http://pathwaycommons.github.io/guide/" target="_blank">Guide</a> with pathway analysis workflows
               </li>
             </ul>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="pc-news-modal" tabindex="-1" role="dialog" aria-labelledby="pc-news-modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Pathway Commons version 9</h4>
+              </div>
+              <div class="modal-body">
+                Updates here
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -335,7 +366,7 @@
           </div>
         </div>
 
-        <h3 class="text-muted subtitle">Laboratory</h3>
+        <h3 class="text-muted subtitle">Idea Laboratory</h3>
         <div class="pc-list-group">
           <div class="archive pc-list-group-item">
             <a href="http://sanderlab.org/pcapi" target="_blank">

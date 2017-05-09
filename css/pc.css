@@ -44,6 +44,13 @@ footer {
   margin: 3em;
 }
 
+.panel-heading {
+  padding: 3px;
+}
+.panel-body {
+  padding: 10px 2px 0;
+}
+
 /* alert */
 .alert-pc {
   background-color: #E74C3C;
@@ -58,8 +65,9 @@ footer {
 
 .pc-btn-anchor {
   color: #ecf0f1;
-  background-color:#577a9d;
-  border-color: #577a9d;
+  background-color: #2980B9;
+  border-color: #2980B9;
+  opacity: 0.9;
 }
 
 .pc-btn-anchor h3,h4 {
@@ -277,6 +285,15 @@ footer {
 }
 /* END: JUMBOTRON */
 
+/* START: Apps */
+#apps .app {
+  margin-bottom: 3em;
+}
+#apps .app-name {
+  margin: 2px;
+  font-size: 21px;
+}
+/* END: Apps */
 
 /* START: FAQ */
 .qa {

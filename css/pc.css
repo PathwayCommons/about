@@ -1,12 +1,17 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-
+/* START: GLOBAL */
 body {
-    /* smallest is nexus 4 */
-    min-width: 384px;
 
     padding-top: 75px;
     padding-bottom: 30px;
+}
+
+.subtitle {
+  margin: 2em auto 1em 1em;
+}
+
+.container{
+  min-width: 384px;
+  max-width: 992px;
 }
 
 .section {
@@ -17,26 +22,158 @@ body {
     margin-top: 3em;
 }
 
-.lead {
-    font-size: 1.3em;
+.splash {
+  margin: 1.5em auto 3em;
+  display: block;
 }
 
-/* TILES */
-.tiles .tile-wrapper {
-    padding: 0.25em;
+
+.list-group-item dl {
+  margin-bottom: 0.5em;
 }
 
-.tiles .tile-wrapper .tile > p{
-    margin-bottom: 0.5em;
+.list-group-item dl dd {
+  margin-left: 1em;
+}
+/* Typography */
+.boost {
+  font-size: 18px;
 }
 
-.tiles .tile-wrapper .tile img{
+footer {
+  margin: 3em;
+}
+
+.panel-heading {
+  padding: 3px;
+}
+.panel-body {
+  padding: 10px 2px 0;
+}
+
+/* alert */
+.alert-pc {
+  background-color: #E74C3C;
+  opacity: 0.85;
+  color: #ECF0F1;
+}
+
+.alert-pc a, .alert-pc a:hover, .alert-pc a:visited{
+  color: #ECF0F1;
+  text-decoration: underline;
+}
+
+.pc-btn-anchor {
+  color: #ecf0f1;
+  background-color: #2980B9;
+  border-color: #2980B9;
+  opacity: 0.9;
+}
+
+.pc-btn-anchor h3,h4 {
+  margin: 0;
+}
+
+/* pc-list-group */
+.pc-list-group .pc-list-group-item {
+  margin-top: 1.5em;
+  position: relative;
+  padding: 0;
+}
+
+.pc-list-group .pc-list-group-item a, a:hover {
+  color: #ecf0f1;
+}
+
+.pc-list-group .pc-list-group-item .pc-list-group-item-text {
+  position: absolute;
+  color: #ECF0F1;
+  background: rgba(44, 62, 80, 0.8);
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  overflow: hidden;
+  padding: 1.5em;
+  width: 50%;
+}
+.pc-list-group .pc-list-group-item .pc-list-group-item-text .pc-list-group-item-title {
+  font-size: 21px;
+  margin-bottom: 1.375rem;
+}
+.pc-list-group .pc-list-group-item .pc-list-group-item-text .pc-list-group-item-description {
+  text-align: left;
+  color: #BDC3C7;
+  font-size: 15px;
+  font-weight: 200;
+}
+.pc-list-group .pc-list-group-item .pc-list-group-item-text .pc-list-group-item-description-footer {
+  position: absolute;
+  margin: 0.5em;
+  right: 1em;
+  font-weight: 200;
+}
+.pc-list-group .pc-list-group-item .pc-list-group-item-meta {
+  display: inline;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  padding: 1em;
+}
+
+
+@media (max-width: 996px) {
+  /* pc-list-group */
+  .pc-list-group .pc-list-group-item .pc-list-group-item-text {
+    padding: 0.8em;
+    width: 70%;
+  }
+  .pc-list-group .pc-list-group-item .pc-list-group-item-meta {
+    top: 0;
+    right: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .boost {
+    font-size: 16px;
+  }
+
+  .splash {
     display: none;
-}
+  }
 
-/* NAVBAR
--------------------------------------------------- */
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
+  /* alert */
+  .alert-pc {
+    margin: auto 0.5em auto 1em;
+  }
+
+  /* pc-list-group */
+  .pc-list-group .pc-list-group-item {
+    margin-top: 0.2em;
+  }
+  .pc-list-group .pc-list-group-item .pc-list-group-item-text {
+      width: 100%;
+  }
+  .pc-list-group .pc-list-group-item .pc-list-group-item-text .pc-list-group-item-title {
+    font-size: 18px;
+    margin-bottom: 0.5em;
+  }
+
+  .pc-list-group .pc-list-group-item .pc-list-group-item-meta {
+    display: none;
+  }
+}
+/* END: GLOBAL */
+
+
+/* START: NAVBAR */
 .navbar-wrapper {
     position: absolute;
     top: 0;
@@ -67,7 +204,6 @@ body {
     text-decoration: none;
 }
 
-/* logo */
 .navbar-wrapper .navbar .navbar-header .navbar-brand{
     padding: 0;
 }
@@ -77,107 +213,6 @@ body {
     width: 40px;
 }
 
-/* END NAVBAR
--------------------------------------------------- */
-
-/* ANOUNCEMENT
--------------------------------------------------- */
-#announcement > .alert {
-    padding: 5px;
-    margin-bottom: 5px;
-}
-
-#announcement p {
-    font-size: 15px;
-    padding: 5px;
-}
-
-#announcement p a {
-    color: darkgreen;
-}
-
-/* END ANOUNCEMENT
--------------------------------------------------- */
-
-
-/* GREYBAND
--------------------------------------------------- */
-#grey-band .lead {
-    font-size: 1.2em;
-}
-/* END GREYBAND
--------------------------------------------------- */
-
-/* APPS
--------------------------------------------------- */
-/* END APPS
--------------------------------------------------- */
-
-
-/* FAQ
--------------------------------------------------- */
-.qa {
-    margin-bottom: 20px;
-}
-
-.qa .well p, li {
-    text-align: justify;
-    font-size: 1.2em;
-}
-
-#faq h2 {
-    margin-top: 2em;
-}
-/* END FAQ
--------------------------------------------------- */
-
-
-
-/* PUBLICATIONS
--------------------------------------------------- */
-.pagination > li > a, .pagination > li > span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #1abc9c;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-
-.pagination > .active > a,
-.pagination > .active > span,
-.pagination > .active > a:hover,
-.pagination > .active > span:hover,
-.pagination > .active > a:focus,
-.pagination > .active > span:focus {
-    z-index: 3;
-    color: #fff;
-    cursor: default;
-    background-color: #1abc9c;
-    border-color: #1abc9c;
-}
-/* END PUBLICATIONS
--------------------------------------------------- */
-
-/* CONTACT
--------------------------------------------------- */
-#credits {
-    margin-top: 3em;
-}
-
-/* END CONTACT
--------------------------------------------------- */
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     /* Navbar positioning foo */
     .navbar-wrapper {
@@ -196,38 +231,85 @@ body {
     .navbar-wrapper .navbar {
         border-radius: 4px;
     }
+}
+/* END: NAVBAR */
 
-    #grey-band > .lead {
-        font-size:  21px;
-    }
 
-    /* TILES */
-    .tiles .tile-wrapper .tile > h3{
-        margin-top: 0.5em;
-    }
-
-    .tiles .tile-wrapper .tile > p{
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    .tiles .tile-wrapper .tile img{
-        display: block;
-        min-height: 150px;
-        max-height: 150px;
-    }
-
-    .tiles .tile-wrapper .tile img.fixed-size{
-        display: block;
-        min-height: 100px;
-        max-height: 100px;
-    }
+/* Start: JUMBOTRON */
+.jumbotron {
+  padding: 25px;
 }
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+.jumbotron h1 {
+  font-size: 50px;
 }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+.jumbotron .brand {
+  margin: 2em 0;
 }
+
+.jumbotron blockquote {
+  padding: 2px;
+}
+
+
+.jumbotron blockquote p {
+  font-size: 16px;
+}
+
+@media (max-width: 996px) {
+  .jumbotron h1 {
+    font-size: 36px;
+  }
+  .jumbotron .lead {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron blockquote p {
+    font-size: 14px;
+  }
+
+  .jumbotron .lead {
+    font-size: 18px;
+  }
+
+  .jumbotron .brand.ghost {
+    position: absolute;
+    right: 10%;
+    top: 5em;
+    opacity: 0.15;
+    max-height: 150px;
+  }
+}
+/* END: JUMBOTRON */
+
+/* START: Apps */
+#apps .app {
+  margin-bottom: 3em;
+}
+#apps .app-name {
+  margin: 2px;
+  font-size: 21px;
+}
+/* END: Apps */
+
+/* START: FAQ */
+.qa {
+    margin-bottom: 20px;
+}
+
+.qa .well p, li {
+    text-align: justify;
+    font-size: 16px;
+}
+
+#faq h2 {
+    margin-top: 2em;
+}
+/* END: FAQ */
+
+
+/* START: CONTACT */
+/* END CONTACT */

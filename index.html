@@ -6,19 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pathway Commons: A Resource for Biological Pathway Analysis</title>
 
-    <!-- Loading Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Loading Flat UI -->
-    <link rel="stylesheet" type="text/css" href="lib/DataTables/datatables.min.css"/>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/font-awesome-4.5.0/css/font-awesome.min.css">
-    <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/pc.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="css/pc.css">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -30,7 +20,7 @@
       window.ga = ga;
     </script>
   </head>
-  <body data-spy="scroll"data-spy="scroll" data-target=".navbar">
+  <body>
 
     <!-- BEGIN: body > container -->
     <div class="container">
@@ -47,23 +37,12 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-<!--
-                <a class="navbar-brand" href="#">
-                  <img src="images/pc2.png">
-                </a>
--->
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li>
-                    <form id="pcviz-form" class="navbar-form navbar-right">
-                      <input type="text" id="gene-text" class="form-control" placeholder="Search Gene">
-                    </form>
-                  </li>
-                  <li><a target="_blank" href="http://beta.pathwaycommons.org/archives/">Downloads</a></li>
-                  <li><a href="#apps">Apps</a></li>
+                  <li><a href="#data">Data</a></li>
+                  <li><a href="#tools">Tools</a></li>
                   <li><a href="#faq">FAQ</a></li>
-                  <li><a href="#publications">Publications</a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </div>
@@ -73,235 +52,480 @@
       </div>
       <!-- END: navbar -->
 
-      <!-- BEGIN: announcement -->
-      <div id="announcement">
-        <div class="alert alert-success">
-          <span id="announcement-close" class="close"><small>x</small></span>
-          <p align="center">
-            Version 8: Over <span class="label label-default">42 000 Pathways</span> and <span class="label label-default">1 350 000 Interactions</span>
-            from <a href="http://beta.pathwaycommons.org/pc2/datasources">22 Data Sources</a>
-          </p>
+      <!-- BEGIN: jumbotron -->
+      <div class="jumbotron">
+
+        <div class="row">
+          <div class="hidden-xs col-sm-2">
+            <img class="img-responsive brand" alt="pc-logo" src="images/pc_logo.png" >
+          </div>
+          <div class="visible-xs">
+            <img class="img-responsive brand ghost" alt="pc-logo" src="images/pc_logo.png" >
+          </div>
+
+          <div class="col-xs-12 col-sm-10">
+            <h1>Pathway Commons</h1>
+            <p class="lead">
+              Access and discover data from <a href="http://beta.pathwaycommons.org/pc2/datasources" target="_blank">public pathway and interactions databases</a>.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <!-- BEGIN: grey-band -->
-      <div id="grey-band" class="jumbotron">
-        <h1>Pathway Commons</h1>
-
-        <!-- comment out the following line before merging into 'master' -->
-        <p style="font-family: Courier; color: red; font-size: large;">
-          *This is a development site - visit the stable version <a href="http://www.pathwaycommons.org/">here</a>
-        </p>
-
-        <p class="lead">Pathway information. Single point of access.</p>
-        <!--<div id="explore-form" class="input-group col-xs-12 col-xs-8">-->
-          <!--<input type="text" id="gene-text" value="BRCA2" class="form-control" placeholder="Gene Name">-->
-          <!--<span class="input-group-btn">-->
-            <!--<button class="btn btn-default" type="button">Go!</button>-->
-          <!--</span>-->
-        <!--</div>-->
-      </div>
-      <!-- END: grey-band -->
-
-      <!-- BEGIN: about -->
-      <div id="about">
         <blockquote>
-          <p class="text-justify">
-            Pathway Commons aims to store and disseminate knowledge about biological pathways.
-            Information is sourced from <a href="http://beta.pathwaycommons.org/pc2/datasources">public pathway databases</a> and is readily searched, visualized, and downloaded.
-            The data is freely available under the license terms of each contributing database.
+          <p class="text-right text-muted citation">
+            <em><a class="ga ga-publications text-muted"
+            href="http://www.ncbi.nlm.nih.gov/pubmed/21071392"
+            target="_blank">Pathway Commons, a web resource for biological pathway data.</a></em>
           </p>
-          <cite title="Source Title">
-            <a class="ga ga-publications" href="http://www.ncbi.nlm.nih.gov/pubmed/21071392" target="_blank">Pathway Commons, a web resource for biological pathway data.</a> Cerami E et al. Nucleic Acids Research (2011).
-          </cite>
         </blockquote>
-      </div>
 
-      <!-- BEGIN: tiles-container using 'flat-ui.css' -->
+          <!-- comment before merging into 'master' -->
+          <!-- <p style="font-family: Courier; color: red; font-size: large; margin-top: 2em;">
+            *This is a development site - visit the stable version <a href="http://www.pathwaycommons.org/">here</a>
+          </p> -->
+      </div>
+      <!-- END: jumbotron -->
+
+      <!-- BEGIN: Apps -->
       <div id="apps" class="section">
-        <h1>Apps</h1>
-        <hr/>
-        <div class="tiles">
-          <h2 class="text-center">Biologists</h2>
-          <p class="lead text-center text-muted">
-            Visualize, Edit, and Analyze Pathways.
-          </p>
-
-          <div class="row">
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="img-responsive img-thumbnail center-block" alt="PCViz Logo" src="images/pcviz.png" />
-                <h3 class="tile-title">Pathway Viewer <span class="badge">Web</span></h3>
-                <p>
-                  Search by gene name <br/>
-                  View pathway neighbors
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://beta.pathwaycommons.org/pcviz/">PCViz</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="img-responsive img-thumbnail center-block" alt="ChiBE" src="images/chibe.png" />
-                <h3 class="tile-title">BioPAX Editor  <span class="badge">Desktop</span></h3>
-                <p>
-                  View BioPAX-encoded pathways<br/>
-                  Visually edit BioPAX
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="https://github.com/PathwayCommons/chibe">ChiBE</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="img-responsive img-thumbnail center-block" alt="CyPath2 Logo" src="images/cypath.png" />
-                <h3 class="tile-title">PC Analyzer  <span class="badge">Cytoscape</span></h3>
-                <p>
-                  Access Pathway Commons<br/>
-                  Search and query webservice
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://apps.cytoscape.org/apps/cypath2">CyPath2</a>
-              </div>
-            </div>
-          </div>
+        <div class="page-header">
+          <h2>Apps <small></small></h2>
         </div>
 
-        <div class="tiles subsection">
-          <h2 class="text-center">Computational Biologists & Software Developers</h2>
-          <p class="lead text-center text-muted">
-            Build apps. Dig into BioPAX. Use R.
-          </p>
-          <div class="row">
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="Pathway Commons 2 Logo" src="images/pc2.png" />
-                <h3 class="tile-title">RESTful API <span class="badge"></span></h3>
-                <p>
-                  BioPAX level 3 integrated data<br/>
-                  Programmatic access
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://beta.pathwaycommons.org/pc2/">PC Web Service</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="Paxtools Logo" src="images/paxtools.png" />
-                <h3 class="tile-title">BioPAX <span class="badge">Java</span></h3>
-                <p>
-                  Language specification<br/>
-                  PaxTools Java library
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://www.biopax.org/">BioPAX</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="R Logo" src="images/rlogo.png" />
-                <h3 class="tile-title">PC Analyzer
-                  <span class="badge">R</span>
-                </h3>
-                <p>
-                  Bioconductor package<br/>
-                  BioPAX editing
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html">PaxtoolsR</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="RDF logo" src="images/rdf.png" />
-                <h3 class="tile-title">BioPAX <span class="badge">RDF</span></h3>
-                <p>
-                  PC BioPAX integrated data -<br/>
-                  SPARQL endpoint and Faceted browser
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://rdf.pathwaycommons.org">PC for LinkedData</a>
-              </div>
-            </div>
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <div class="tile">
-                <img class="fixed-size center-block" alt="BioPAX Logo" src="images/paxtools.png" />
-                <h3 class="tile-title">BioPAX Validator<span class="badge">Web, Java</span></h3>
-                <p>
-                  Validate your BioPAX models<br/>
-                  Web and console tool for pathway data authors
-                </p>
-                <a target="_blank" class="btn btn-block btn-primary ga ga-apps" href="http://www.biopax.org/validator">BioPAX Validator</a>
-              </div>
-            </div>
-          </div>
+        <div class="app">
+          <a href="http://beta.pathwaycommons.org/pathways/#/search" target="_blank" class="btn btn-primary btn-block pc-btn-anchor">
+            <p class="app-name">
+              Pathway Search
+            </p>
+          </a>
+          <iframe id="pathway-search-app-embed"
+            title="pathway-search-app-embed"
+            width="100%"
+            height="80"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="http://beta.pathwaycommons.org/pathways/#/search/embed">
+          </iframe>
+        </div>
 
+        <div class="app">
+          <a href="http://www.pathwaycommons.org/pcviz/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor">
+            <p class="app-name">
+              PC Viz
+            </p>
+          </a>
           <div class="row">
-            <div class="tile-wrapper col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-              <!--<h4>Other</h4>-->
-              <ul class="list-group">
-                <li class="list-group-item"><a class="ga ga-apps" target="_blank" href="http://beta.pathwaycommons.org/pc/">Legacy PC Site</a> (Last Updated: 2011)</li>
-              </ul>
-            </div>
+            <form id="pcviz-form" class="col-xs-offset-0 col-xs-12">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="pcviz-gene-text"
+                  class="form-control text-center"
+                  placeholder="Search Pathway Commons for interactions by gene name (e.g. MDM2)">
+              </div>
+            </form>
           </div>
-
+          <iframe
+            width="100%"
+            height="400"
+            src="http://www.pathwaycommons.org/pcviz/#embed/neighborhood/MDM2"
+            scrolling="no" frameborder="0" seamless="seamless">
+          </iframe>
         </div>
       </div>
-      <!-- BEGIN: tiles-container -->
+      <!-- END: Apps -->
+
+      <!-- BEGIN: Info -->
+      <div id="info" class="section">
+        <div class="page-header">
+          <h3 class="hidden-xs text-center text-muted">What's Inside?</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-offset-0 col-xs-11 col-sm-offset-2 col-sm-8 alert alert-pc" role="alert">
+            <ul>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#pc-news-modal">Find out what's new</a> in our version 9 release
+              </li>
+              <li>
+                Visit our <a href="http://pathwaycommons.github.io/guide/" target="_blank">Guide</a> with pathway analysis workflows
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="pc-news-modal" tabindex="-1" role="dialog" aria-labelledby="pc-news-modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Pathway Commons version 9</h4>
+              </div>
+              <div class="modal-body">
+                Updates here
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="images/splash.png" class="img-responsive splash" alt="splash">
+
+      </div>
+      <!-- END: Info -->
+
+      <!-- BEGIN: Data -->
+      <div id="data" class="section">
+        <div class="page-header">
+          <h2>Data <small></small></h2>
+        </div>
+
+        <div class="panel panel-default">
+          <a href="http://beta.pathwaycommons.org/archives/PC2/current/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor">
+            <div class="panel-heading">
+              <h3>
+                  File Downloads &nbsp
+                  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+              </h3>
+            </div>
+          </a>
+
+          <div class="list-group">
+            <a href="http://www.biopax.org/" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">
+                Biological Pathway Exchange (xml)
+              </h4>
+              <p class="list-group-item-text">
+                Rich descriptions of pathways and interactions.
+              </p>
+              <p class="list-group-item-text">
+                For archival and exchange.
+              </p>
+            </a>
+            <a href="http://wiki.cytoscape.org/Cytoscape_User_Manual/Network_Formats" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">
+                Simple Interaction Format (sif)
+              </h4>
+              <p class="list-group-item-text">
+                List of gene-pair relationships for pathways.
+              </p>
+              <p class="list-group-item-text">
+                For use in visualization and analysis software (e.g. Cytoscape)
+              </p>
+            </a>
+            <a href="http://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GMT:_Gene_Matrix_Transposed_file_format_.28.2A.gmt.29" target="_blank" class="list-group-item">
+              <h4 class="boost list-group-item-heading">
+                Gene Set Database (gmt)
+              </h4>
+              </p>
+              <p class="list-group-item-text">
+                List of genes names for pathways.
+              </p>
+              <p class="list-group-item-text">
+                For use in Gene Set Enrichment Analysis (GSEA)
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <a href="http://beta.pathwaycommons.org/pc2/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor">
+            <div class="panel-heading">
+              <h3>
+                Web Services &nbsp
+                <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>
+              </h3>
+            </div>
+          </a>
+
+          <div class="list-group">
+            <a href="http://beta.pathwaycommons.org/pc2/#search" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">Search</h4>
+              <p class="list-group-item-text">
+                A full-text search of the BioPAX database.
+              </p>
+              <p class="list-group-item-text">
+                Apache Lucene syntax support; Filter by datasource and BioPAX class
+              </p>
+            </a>
+            <a href="http://beta.pathwaycommons.org/pc2/#get" target="_blank" class="list-group-item">
+              <h4 class="list-group-item-heading">Get</h4>
+              <p class="list-group-item-text">
+                Retrieves a particular object model in Pathway Commons by URI.
+              </p>
+              <p class="list-group-item-text">
+                SBGN for visualization; GMT for enrichment analysis; SIF, BioPAX and JSON-LD
+              </p>
+            </a>
+            <div class="list-group-item">
+              <h4 class="list-group-item-heading">
+                <a href="http://beta.pathwaycommons.org/pc2/#graph" target="_blank" >Graph</a>, <a href="http://beta.pathwaycommons.org/pc2/#traverse" target="_blank" >Traverse</a> and <a href="http://beta.pathwaycommons.org/pc2/#top_pathways" target="_blank" >Top Pathways</a>
+              </h4>
+              <p class="list-group-item-text">
+                Graph searches identify connections and neighborhoods of elements.
+              </p>
+              <p class="list-group-item-text">
+                Traverse provides XPath-like access to this BioPAX database.
+              </p>
+              <p class="list-group-item-text">
+                Top Pathways returns those that are not a component of another biological process.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- END: Apps -->
+
+      <!-- BEGIN: Tools -->
+      <div id="tools" class="section">
+        <div class="page-header">
+          <h2>Tools <small></small></h2>
+        </div>
+
+        <h3 class="text-muted subtitle">Data visualization and analysis</h3>
+        <div class="pc-list-group">
+          <div class="pc-list-group-item">
+            <a href="http://apps.cytoscape.org/apps/cypath2" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">CyPath2</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                  This Cytoscape app provides a user-friendly menu for keyword-based search and retrieval of pathways and interactions from Pathway Commons. Also supports advanced filtering and graph queries over the resource. Visualize results as a network and leverage the power of Cytoscape.
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                  Access Pathway Commons from Cytoscape.
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">Cytoscape</span>
+              </div>
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x250" />
+              </div>
+            </a>
+          </div>
+          <div class="pc-list-group-item">
+            <a href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">PaxToolsR</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                  Use this package for the R statistical programming language to access a set of functions for interacting with BioPAX OWL files by leveraging the capabilities of the Java Paxtools library. Supports querying Pathway Commons by keyword and retrieving elements in a variety of formats aloing with more sophisticated graph querying.
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                  Use Pathway Commons data within R.
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">Desktop</span>
+                <span class="label label-default">Java</span>
+              </div>
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x250" />
+              </div>
+            </a>
+          </div>
+          <div class="pc-list-group-item">
+            <a href="https://github.com/PathwayCommons/chibe" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">ChiBE</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                  Chisio BioPAX Editor (ChiBE) is an editing and visualization tool for pathway models represented in BioPAX, using SBGN Process Description Language, based on Chisio. Provides the ability to access and view pathways from Pathway Commons.
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                  View and edit BioPAX pathway models.
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">Desktop</span>
+                <span class="label label-default">Java</span>
+              </div>
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x250" />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="text-muted subtitle">Developer resources</h3>
+        <div class="pc-list-group">
+          <div class="archive pc-list-group-item">
+            <a href="http://biopax.baderlab.org/" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title text-center">BioPAX Validator</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                  The BioPAX Validator applies custom criteria to identify syntax and semantic errors. Rules originate from the BioPAX Level3 specification and the community best practice and provides errors or warnings in many categories.
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                  Validate BioPAX using Level3 specification.
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">Web</span>
+                <span class="label label-default">Console</span>
+                <span class="label label-default">Java</span>
+              </div>
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x250" />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="text-muted subtitle">Idea lab</h3>
+        <div class="pc-list-group">
+          <div class="archive pc-list-group-item">
+            <a href="http://sanderlab.org/pcapi" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title">PC API</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                   Web interface for the Pathway Commons web services.
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">Web</span>
+              </div>
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x125" />
+              </div>
+            </a>
+          </div>
+          <div class="archive pc-list-group-item">
+            <a href="https://www.npmjs.com/package/pathway-commons" target="_blank">
+              <div class="pc-list-group-item-text">
+                <p class="pc-list-group-item-title">cPath2-client</p>
+                <p class="pc-list-group-item-description hidden-xs">
+                  JavaScript client for Pathway Commons web services (NPM)
+                </p>
+                <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
+                </p>
+              </div>
+              <div class="pc-list-group-item-meta">
+                <span class="label label-default">JavaScript</span>
+                <span class="label label-default">NPM</span>
+              </div>
+              <div class="pc-list-group-item-media">
+                <img class="img-responsive" src="http://placehold.it/1000x125" />
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <!-- END: Apps -->
 
       <!-- BEGIN: faq -->
       <div id="faq" class="section">
-        <h1>Frequently Asked Questions</h1>
-        <hr>
+        <div class="page-header">
+          <h2>Frequently Asked Questions <small></small></h2>
+        </div>
 
         <!-- BEGIN section: faq-general -->
         <div id="faq-general">
           <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-general-1" aria-expanded="true" aria-controls="faq-general-1">
-              <h4>What is Pathway Commons?</h4>
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-1" aria-expanded="true" aria-controls="faq-1">
+              <p class="boost">What is Pathway Commons?</p>
             </a>
-            <div class="collapse" id="faq-general-1">
+            <div class="collapse" id="faq-1">
               <div class="well">
                 <p>
-                  Pathway Commons is a collection of publicly available pathway information from multiple organisms.
-                  It provides researchers with convenient access to a comprehensive collection of biological pathways from multiple sources represented in a common language for gene and metabolic pathway analysis.
-                  Access is via a web portal for query and download.
-                  Database providers can share their pathway data via a common repository and avoid duplication of effort and reduce software development costs.
-                  Bioinformatics software developers can increase efficiency by sharing pathway analysis software components.
-                  Pathways can include biochemical reactions, complex assembly, transport and catalysis events, physical interactions involving proteins, DNA, RNA, small molecules and complexes, gene regulation events and genetic interactions involving genes.
+                  Pathway Commons aims to collect and disseminate biological pathway and interaction data.  Data is collected from <a href="http://beta.pathwaycommons.org/pc2/datasources" target="_blank">partner databases</a> and is represented in the <a href="http://www.biopax.org/" target="_blank">BioPAX</a> standard. By representing data in BioPAX, Pathway Commons is able to provide a detailed representation of a variety of biological concepts including: Biochemical reactions; gene regulatory networks; and genetic interactions; transport and catalysis events; and physical interactions involving proteins, DNA, RNA and small molecules and complexes.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-general-2" aria-expanded="false" aria-controls="faq-general-2">
-              <h4>Is is free to use?</h4>
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-2" aria-expanded="false" aria-controls="faq-2">
+              <p class="boost">Is it free to use?</p>
             </a>
-            <div class="collapse" id="faq-general-2">
+            <div class="collapse" id="faq-2">
               <div class="well">
                 <p>
-                  Yes, the Pathway Commons data are available for free! Pathway Commons distributes pathway information with the intellectual property restrictions of the source database. However, only databases that are freely available or free to academics are included. Additionally, this site provides several free pathway analysis software examples to conduct gene pathway analysis.
+                  Yes. All of the data provided by Pathway Commons is free! In particular, Pathway Commons distributes pathway information with the intellectual property restrictions of the source database; Only databases that are freely available for academics are included. All of the <a href="https://github.com/PathwayCommons" target="_blank">software that we provide</a> is open-source.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-general-3" aria-expanded="false" aria-controls="faq-general-3">
-              <h4>Does it compete with other pathway databases?</h4>
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-3" aria-expanded="true" aria-controls="faq-3">
+              <p class="boost">What can I do with this information?</p>
             </a>
-            <div class="collapse" id="faq-general-3">
+            <div class="collapse" id="faq-3">
               <div class="well">
-                <p>
-                  No. Pathway Commons does not compete with or duplicate efforts of pathway databases or software tool providers. Pathway Commons will add value to these existing efforts by providing a shared resource for publishing, distributing, querying, and analyzing pathway information. Existing database groups will provide pathway curation, Pathway Commons will provide a mechanism and the technology for sharing. A key aspect of Pathway Commons is clear author attribution. Curation teams at existing databases must be supported by researchers to ensure they can keep performing their valuable work.
-                </p>
+                <ul class="list-unstyled">
+                  <li>Researchers</li>
+                  <ul>
+                    <li>
+                      A common practice is to identify pathways that are enriched in gene expression data. To this end, Pathway Commons provides <a href="http://beta.pathwaycommons.org/archives/" target="_blank">gene set database file downloads</a> for direct use in <a href="http://software.broadinstitute.org/gsea/index.jsp" target="_blank">Gene Set Enrichement Analysis (GSEA)</a>.
+                    </li>
+                  </ul>
+                  <li>Softare developers</li>
+                  <ul>
+                    <li>
+                      Download and incorporate biological pathway data as part of metabolic and gene pathway analysis software in BioPAX Level 3 format. <a href="http://www.biopax.org" target="_blank">Details about the BioPAX format</a>
+                    </li>
+                  </ul>
+                </ul>
               </div>
             </div>
           </div>
 
           <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-general-4" aria-expanded="false" aria-controls="faq-general-4">
-              <h4>What are the future plans for Pathway Commons?</h4>
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-4" aria-expanded="true" aria-controls="faq-4">
+              <p class="boost">How can I access the data?</p>
             </a>
-            <div class="collapse" id="faq-general-4">
+            <div class="collapse" id="faq-4">
+              <div class="well">
+                <ol class="">
+                  <li>Web</li>
+                  <ul>
+                    <li>
+                      <a href="http://beta.pathwaycommons.org/pathways/#/search" target="_blank">Search and view</a> pathways
+                    </li>
+                    <li>
+                      <a href="http://www.pathwaycommons.org/pcviz/" target="_blank">Search and view</a> interactions
+                    </li>
+                  </ul>
+                  <li>Desktop software</li>
+                  <ul>
+                    <li>Retrieve, view and edit Pathway Commons data using the <a href="https://github.com/PathwayCommons/chibe" target="_blank">Chisio BioPAX Editor (ChiBE)</a>
+                    </li>
+                    <li>Search and analyze Pathway Commons data from <a href="http://apps.cytoscape.org/apps/cypath2" target="_blank">Cytoscape</a>
+                    </li>
+                    <li>Search and analyze Pathway Commons data using the <a href="http://bioconductor.org/packages/release/bioc/html/paxtoolsr.html" target="_blank">R programming language</a>
+                    </li>
+                  </ul>
+                  <li>Programmatically</li>
+                  <ul>
+                    <li>Search, retrieve and navigate over Pathway Commons data using our set of <a href="http://www.pathwaycommons.org/pc2/" target="_blank">web services</a>
+                    </li>
+                    <li>Use semantic queries for Pathway Commons data at our <a href="http://rdf.pathwaycommons.org/" target="_blank">SPARQL endpoint</a>
+                    </li>
+                  </ul>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa">
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-5" aria-expanded="false" aria-controls="faq-5">
+              <p class="boost">Does Pathway Commons compete with other pathway databases?</p>
+            </a>
+            <div class="collapse" id="faq-5">
               <div class="well">
                 <p>
-                  The Pathway Commons work group will continue to provide software systems to collect, store and integrate pathway data from database groups, with clear author attribution; store, validate, index and maintain the information to enable efficient, quality access; distribute pathway information to the scientific public; and, provide a basic set of end user software for querying and analysis of metabolic and gene pathways.
-                  We will be adding more databases over time.
+                  Pathway Commons does not compete with or duplicate efforts of pathway databases or software tool providers. Pathway Commons will add value to these existing efforts by providing a shared resource for publishing, distributing, querying, and analyzing pathway information. Existing database groups will provide pathway curation, Pathway Commons will provide a mechanism and the technology for sharing. A key aspect of Pathway Commons is clear author attribution. Curation teams at existing databases must be supported by researchers to ensure they can keep performing their valuable work.
+
+                   Pathway Commons enables database providers to share their data in an efficient manner by avoiding duplication of effort and reducing software development overhead.
                 </p>
               </div>
             </div>
@@ -309,12 +533,51 @@
 
           <div class="qa">
             <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-general-5" aria-expanded="false" aria-controls="faq-general-5">
-              <h4>What is BioPAX?</h4>
+              <p class="boost">How is the data in Pathway Commons represented?</p>
             </a>
             <div class="collapse" id="faq-general-5">
               <div class="well">
                 <p>
-                  BioPAX, or Biological Pathway Exchange, is a standard exchange format for biological pathways. Pathway databases that make their data available in this format can be imported into Pathway Commons. BioPAX is developed through a collaborative effort by many pathway databases. More information is available at http://biopax.org.
+                  Pathway Commons uses the <a href="http://www.biopax.org" target="_blank">Biological Pathway Exchange (BioPAX)</a> standard to represent data. Pathway databases that make their data available in this format can be imported into Pathway Commons. BioPAX is developed through a collaborative effort by many pathway databases.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa">
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-6" aria-expanded="true" aria-controls="faq-6">
+              <p class="boost">What kind of biological concepts are represented?</p>
+            </a>
+            <div class="collapse" id="faq-6">
+              <div class="well">
+                <p>
+                  Pathway Commons leverages the richness and versatility of <a href="http://www.biopax.org" target="_blank">BioPAX</a> to store data. Details that <em>can</em> be included are biochemical reactions; gene regulatory networks; genetic interactions; proteins, small molecules, DNA, RNA, complexes and their cellular locations; complex assembly and transport; post-translational protein modifications; citations; experimental evidence; and links to other databases e.g. protein sequence annotation. Some information is only available in the downloaded BioPAX files.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa">
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-7" aria-expanded="true" aria-controls="faq-7">
+              <p class="boost">How were the pathways collected?</p>
+            </a>
+            <div class="collapse" id="faq-7">
+              <div class="well">
+                <p>
+                  Pathways were downloaded directly from source databases. Each source pathway database has been created differently, some by manual extraction of pathway information from the literature and some by computational prediction.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa">
+            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-8" aria-expanded="true" aria-controls="faq-8">
+              <p class="boost">What happened to the old Pathway Commons site?</p>
+            </a>
+            <div class="collapse" id="faq-8">
+              <div class="well">
+                <p>
+                  The <a href="http://www.pathwaycommons.org/pc/" target="_blank">legacy site</a> has not been updated since 2011 and is not actively maintained.
                 </p>
               </div>
             </div>
@@ -322,7 +585,7 @@
 
           <div class="qa">
             <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-general-6" aria-expanded="false" aria-controls="faq-general-6">
-              <h4>What are the benefits of exporting BioPAX formatted data for data providers?</h4>
+              <p class="boost">We are a data provider. Why should we export our data to BioPAX?</p>
             </a>
             <div class="collapse" id="faq-general-6">
               <div class="well">
@@ -362,843 +625,44 @@
             </div>
           </div>
 
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-general-" aria-expanded="false" aria-controls="faq-general-">
-              <h4>What will Pathway Commons not do?</h4>
-            </a>
-            <div class="collapse" id="faq-general-">
-              <div class="well">
-                <p>
-                  Pathway Commons will avoid duplication of advanced features of source databases. Users are encouraged to explore these features by following hyperlinks from Pathway Commons.
-                </p>
-              </div>
-            </div>
-          </div>
         </div> <!-- END SECTION: faq -->
-        <!-- BEGIN section: faq-bio -->
-        <div id="faq-bio">
-          <h2>Biologists</h2>
-          <br/>
-
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-bio-1" aria-expanded="true" aria-controls="faq-bio-1">
-              <h4>What can I do with this information?</h4>
-            </a>
-            <div class="collapse" id="faq-bio-1">
-              <div class="well">
-                <p>You can freely query available pathway information and answer questions such as:</p>
-                <ul>
-                  <li>What proteins interact with my favorite protein?</li>
-                  <li>What cell signaling or metabolic pathways involve my favorite protein?</li>
-                  <li>Is my favorite protein involved in transport events or biochemical reactions?</li>
-                  <li>What enzymes use my metabolite of interest as a substrate?</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-bio-2" aria-expanded="true" aria-controls="faq-bio-2">
-              <h4>What kind of information is part of each cell signaling and metabolic pathway?</h4>
-            </a>
-            <div class="collapse" id="faq-bio-2">
-              <div class="well">
-                <p>
-                  Pathways from different databases are defined by different levels of detail. Details that may be included are proteins, small molecules, DNA, RNA, complexes and their cellular locations, different types of physical interactions, such as molecular interaction, biochemical reaction, catalysis, complex assembly and transport, gene regulation, genetic interactions, post-translational protein modifications, original citations, experimental evidence and links to other databases e.g. of protein sequence annotation. Some information is only available in the downloaded BioPAX files.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-bio-3" aria-expanded="true" aria-controls="faq-bio-3">
-              <h4>How were the pathways collected?</h4>
-            </a>
-            <div class="collapse" id="faq-bio-3">
-              <div class="well">
-                <p>
-                  Pathways were downloaded directly from source databases. Each source pathway database has been created differently, some by manual extraction of pathway information from the literature and some by computational prediction.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-bio-" aria-expanded="true" aria-controls="faq-bio-">
-              <h4>How good is the quality of Pathway Commons?</h4>
-            </a>
-            <div class="collapse" id="faq-bio-">
-              <div class="well">
-                <p>
-                  The quality of Pathway Commons pathways is dependent on the quality of the pathways from source databases. Pathway Commons allows users to filter data by various criteria, including data source, which should allow viewing a restricted subset of high quality data. In the future, Pathway Commons will implement published algorithms to automatically assess data quality and allow this as an additional filter.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div><!-- END SECTION: faq-bio -->
-        <!-- BEGIN section: faq-combio -->
-        <div id="faq-compbio">
-          <h2>Computational Biologists</h2>
-          <br/>
-
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-cbio-1" aria-expanded="true" aria-controls="faq-cbio-1">
-              <h4>What can I do with this information?</h4>
-            </a>
-            <div class="collapse" id="faq-cbio-1">
-              <div class="well">
-                <p>
-                  You can download and incorporate this biological pathway data as part of metabolic and gene pathway analysis software in BioPAX Level 3 format. <a href="http://www.biopax.org">Details about the BioPAX format</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-cbio-2" aria-expanded="true" aria-controls="faq-cbio-2">
-              <h4>How many pathways are part of Pathway Commons?</h4>
-            </a>
-            <div class="collapse" id="faq-cbio-2">
-              <div class="well">
-                <p>
-                  Please see the <a href="http://beta.pathwaycommons.org/pc2/datasources.html">statistics page</a> for up to the minute information.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-cbio-3" aria-expanded="true" aria-controls="faq-cbio-3">
-              <h4>What is cPath2?</h4>
-            </a>
-            <div class="collapse" id="faq-cbio-3">
-              <div class="well">
-                <p>
-                  cPath2 is an open-source data management software that runs the Pathway Commons web service. You can download it for your own use <a href="http://code.google.com/p/pathway-commons/">the developer site</a>.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="qa">
-            <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-cbio-4" aria-expanded="true" aria-controls="faq-cbio-4">
-              <h4>Can I access Pathway Commons data via a web service</h4>
-            </a>
-            <div class="collapse" id="faq-cbio-4">
-              <div class="well">
-                <p>
-                  Yes! A <a href="http://beta.pathwaycommons.org/pc2/">web service</a> is available to answer specific queries with computer readable responses for intergration with other network analysis components. This is designed to enable third party software and scripts to easily access the information.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END SECTION: faq-compio -->
-
-        <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
       </div>
       <!-- END: faq -->
 
-      <!-- BEGIN: publications -->
-      <div id="publications" class="section">
-        <h1>Publications</h1>
-        <hr>
-
-        <!-- BEGIN: citations table -->
-        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="citation-table">
-          <thead>
-          <tr>
-            <th class='author'>Authors</th>
-            <th class='title'>Title</th>
-            <th class='journal'>Journal</th>
-            <th class='year'>Year</th>
-          </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class='author'>Aksoy B.A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://bioinformatics.oxfordjournals.org/content/early/2014/04/17/bioinformatics.btu164'>Prediction of individualized therapeutic vulnerabilities in cancer from genomic profiles</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2014</td>
-            </tr>
-            <tr>
-              <td class='author'>Babur O., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Pattern+search+in+biopax+models'>Pattern search in biopax models</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2014</td>
-            </tr>
-            <tr>
-              <td class='author'>Mitra S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Systems+biology+of+cancer+biomarker+detection'>Systems biology of cancer biomarker detection</a></td>
-              <td class='journal'>Cancer Biomarkers</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Wodak S.J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Protein-protein+interaction+networks%3A+The+puzzling+riches'>Protein-protein interaction networks: The puzzling riches</a></td>
-              <td class='journal'>Current Opinion in Structural Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Araujo G.S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Random+forest+and+gene+networks+for+association+of+SNPs+to+Alzheimer%27s+disease'>Random forest and gene networks for association of SNPs to Alzheimer's disease</a></td>
-              <td class='journal'>Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Hofree M., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Network-based+stratification+of+tumor+mutations'>Network-based stratification of tumor mutations</a></td>
-              <td class='journal'>Nature Methods</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Snijder B., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Predicting+functional+gene+interactions+with+the+hierarchical+interaction+score'>Predicting functional gene interactions with the hierarchical interaction score</a></td>
-              <td class='journal'>Nature Methods</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Li J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Pathway-based+drug+repositioning+using+causal+inference'>Pathway-based drug repositioning using causal inference</a></td>
-              <td class='journal'>BMC Bioinformatics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Wang Z., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Incorporating+prior+knowledge+into+Gene+Network+Study'>Incorporating prior knowledge into Gene Network Study</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Tamborero D., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Comprehensive+identification+of+mutational+cancer+driver+genes+across+12+tumor+types'>Comprehensive identification of mutational cancer driver genes across 12 tumor types</a></td>
-              <td class='journal'>Scientific Reports</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Klapa M.I., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Reconstruction+of+the+experimentally+supported+human+protein+interactome%3A+What+can+we+learn%3F'>Reconstruction of the experimentally supported human protein interactome: What can we learn?</a></td>
-              <td class='journal'>BMC Systems Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Tieri P., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Signalling+pathway+database+usability%3A+Lessons+learned'>Signalling pathway database usability: Lessons learned</a></td>
-              <td class='journal'>Molecular BioSystems</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Carbonetto P., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Integrated+Enrichment+Analysis+of+Variants+and+Pathways+in+Genome-Wide+Association+Studies+Indicates+Central+Role+for+IL-2+Signaling+Genes+in+Type+1+Diabetes%2C+and+Cytokine+Signaling+Genes+in+Crohn%27s+Disease'>Integrated Enrichment Analysis of Variants and Pathways in Genome-Wide Association Studies Indicates Central Role for IL-2 Signaling Genes in Type 1 Diabetes, and Cytokine Signaling Genes in Crohn's Disease</a></td>
-              <td class='journal'>PLoS Genetics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Croze E., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Interferon-beta-1b-induced+short-and+long-term+signatures+of+treatment+activity+in+multiple+sclerosis'>Interferon-beta-1b-induced short-and long-term signatures of treatment activity in multiple sclerosis</a></td>
-              <td class='journal'>Pharmacogenomics Journal</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Miller M.L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Drug+synergy+screen+and+network+modeling+in+dedifferentiated+liposarcoma+identifies+CDK4+and+IGF1R+as+synergistic+drug+targets'>Drug synergy screen and network modeling in dedifferentiated liposarcoma identifies CDK4 and IGF1R as synergistic drug targets</a></td>
-              <td class='journal'>Science Signaling</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Grandori C.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+high-throughput+siRNA+screening+platform+to+identify+MYC-synthetic+lethal+genes+as+candidate+therapeutic+targets'>A high-throughput siRNA screening platform to identify MYC-synthetic lethal genes as candidate therapeutic targets</a></td>
-              <td class='journal'>Methods in Molecular Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Cun Y., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Network+and+Data+Integration+for+Biomarker+Signature+Discovery+via+Network+Smoothed+T-Statistics'>Network and Data Integration for Biomarker Signature Discovery via Network Smoothed T-Statistics</a></td>
-              <td class='journal'>PLoS ONE</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Melas I.N., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Detecting+and+Removing+Inconsistencies+between+Experimental+Data+and+Signaling+Network+Topologies+Using+Integer+Linear+Programming+on+Interaction+Graphs'>Detecting and Removing Inconsistencies between Experimental Data and Signaling Network Topologies Using Integer Linear Programming on Interaction Graphs</a></td>
-              <td class='journal'>PLoS Computational Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Demir E., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Using+Biological+Pathway+Data+with+Paxtools'>Using Biological Pathway Data with Paxtools</a></td>
-              <td class='journal'>PLoS Computational Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Kortenhorst M.S.Q., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Analysis+of+the+genomic+response+of+human+prostate+cancer+cells+to+histone+deacetylase+inhibitors'>Analysis of the genomic response of human prostate cancer cells to histone deacetylase inhibitors</a></td>
-              <td class='journal'>Epigenetics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Aksoy B.A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=PiHelper%3A+An+open+source+framework+for+drug-target+and+antibody-target+data'>PiHelper: An open source framework for drug-target and antibody-target data</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Sambarey A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Mining+large-scale+response+networks+reveals+%27topmost+activities%27+in+Mycobacterium+tuberculosis+infection'>Mining large-scale response networks reveals 'topmost activities' in Mycobacterium tuberculosis infection</a></td>
-              <td class='journal'>Scientific Reports</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Garcia Godoy M.J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Sharing+and+executing+linked+data+queries+in+a+collaborative+environment'>Sharing and executing linked data queries in a collaborative environment</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Ho A.S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=The+mutational+landscape+of+adenoid+cystic+carcinoma'>The mutational landscape of adenoid cystic carcinoma</a></td>
-              <td class='journal'>Nature Genetics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Rajagopalan P., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Systems+biology+characterization+of+engineered+tissues'>Systems biology characterization of engineered tissues</a></td>
-              <td class='journal'>Annual Review of Biomedical Engineering</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Stobbe M.D., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Consensus+and+conflict+cards+for+metabolic+pathway+databases'>Consensus and conflict cards for metabolic pathway databases</a></td>
-              <td class='journal'>BMC Systems Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Praveen P., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Boosting+Probabilistic+Graphical+Model+Inference+by+Incorporating+Prior+Knowledge+from+Multiple+Sources'>Boosting Probabilistic Graphical Model Inference by Incorporating Prior Knowledge from Multiple Sources</a></td>
-              <td class='journal'>PLoS ONE</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Goudarzi A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Protein+kinase+c+epsilon+and+genetic+networks+in+osteosarcoma+metastasis'>Protein kinase c epsilon and genetic networks in osteosarcoma metastasis</a></td>
-              <td class='journal'>Cancers</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Sun J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=IBIG%3A+An+Integrative+Network+Tool+for+Supporting+Human+Disease+Mechanism+Studies'>IBIG: An Integrative Network Tool for Supporting Human Disease Mechanism Studies</a></td>
-              <td class='journal'>Genomics, Proteomics and Bioinformatics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Pagliarini R., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+genome-scale+modeling+approach+to+study+inborn+errors+of+liver+metabolism%3A+Toward+an+in+silico+patient'>A genome-scale modeling approach to study inborn errors of liver metabolism: Toward an in silico patient</a></td>
-              <td class='journal'>Journal of Computational Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Sorokina S.Y., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Databases+as+instruments+for+analysis+of+large-scale+data+sets+of+interactions+between+molecular+biological+objects'>Databases as instruments for analysis of large-scale data sets of interactions between molecular biological objects</a></td>
-              <td class='journal'>Biology Bulletin</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Sadeghi A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Steiner+tree+methods+for+optimal+sub-network+identification%3A+An+empirical+study'>Steiner tree methods for optimal sub-network identification: An empirical study</a></td>
-              <td class='journal'>BMC Bioinformatics</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Dolinski K., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Systematic+curation+of+protein+and+genetic+interaction+data+for+computable+biology'>Systematic curation of protein and genetic interaction data for computable biology</a></td>
-              <td class='journal'>BMC Biology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Fanayan S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Proteogenomic+analysis+of+human+colon+carcinoma+cell+lines+LIM1215%2C+LIM1899%2C+and+LIM2405'>Proteogenomic analysis of human colon carcinoma cell lines LIM1215, LIM1899, and LIM2405</a></td>
-              <td class='journal'>Journal of Proteome Research</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Gao J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Integrative+analysis+of+complex+cancer+genomics+and+clinical+profiles+using+the+cBioPortal'>Integrative analysis of complex cancer genomics and clinical profiles using the cBioPortal</a></td>
-              <td class='journal'>Science Signaling</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Gu Y., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Network+analysis+of+genomic+alteration+profiles+reveals+co-altered+functional+modules+and+driver+genes+for+glioblastoma'>Network analysis of genomic alteration profiles reveals co-altered functional modules and driver genes for glioblastoma</a></td>
-              <td class='journal'>Molecular BioSystems</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Mukherjee S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Current+trends+in+modeling+host-pathogen+interactions'>Current trends in modeling host-pathogen interactions</a></td>
-              <td class='journal'>Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Liu Z., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=In+silico+drug+repositioning-what+we+need+to+know'>In silico drug repositioning-what we need to know</a></td>
-              <td class='journal'>Drug Discovery Today</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Mayer M.L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Rescue+of+dysfunctional+autophagy+attenuates+hyperinflammatory+responses+from+cystic+fibrosis+cells'>Rescue of dysfunctional autophagy attenuates hyperinflammatory responses from cystic fibrosis cells</a></td>
-              <td class='journal'>Journal of Immunology</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Kamburov A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=The+ConsensusPathDB+interaction+database%3A+2013+Update'>The ConsensusPathDB interaction database: 2013 Update</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Zhao M., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=TSGene%3A+A+web+resource+for+tumor+suppressor+genes'>TSGene: A web resource for tumor suppressor genes</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Chatr-Aryamontri A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=The+BioGRID+interaction+database%3A+2013+Update'>The BioGRID interaction database: 2013 Update</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2013</td>
-            </tr>
-            <tr>
-              <td class='author'>Cheng L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Global+gene+expression+and+functional+network+analysis+of+gastric+cancer+identify+extended+pathway+maps+and+GPRC5A+as+a+potential+biomarker'>Global gene expression and functional network analysis of gastric cancer identify extended pathway maps and GPRC5A as a potential biomarker</a></td>
-              <td class='journal'>Cancer Letters</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Johnson S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=StRAP%3A+An+Integrated+Resource+for+Profiling+High-Throughput+Cancer+Genomic+Data+from+Stress+Response+Studies'>StRAP: An Integrated Resource for Profiling High-Throughput Cancer Genomic Data from Stress Response Studies</a></td>
-              <td class='journal'>PLoS ONE</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Droniou-Bonzom M.E., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+systems+biology+starter+kit+for+arenaviruses'>A systems biology starter kit for arenaviruses</a></td>
-              <td class='journal'>Viruses</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Mitsos A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Non+Linear+Programming+%28NLP%29+Formulation+for+Quantitative+Modeling+of+Protein+Signal+Transduction+Pathways'>Non Linear Programming (NLP) Formulation for Quantitative Modeling of Protein Signal Transduction Pathways</a></td>
-              <td class='journal'>PLoS ONE</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>West J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Differential+network+entropy+reveals+cancer+system+hallmarks'>Differential network entropy reveals cancer system hallmarks</a></td>
-              <td class='journal'>Scientific Reports</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Blinov M.L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Logic+modeling+and+the+ridiculome+under+the+rug'>Logic modeling and the ridiculome under the rug</a></td>
-              <td class='journal'>BMC Biology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Feiglin A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Static+network+structure+can+be+used+to+model+the+phenotypic+effects+of+perturbations+in+regulatory+networks'>Static network structure can be used to model the phenotypic effects of perturbations in regulatory networks</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Saito R., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+travel+guide+to+Cytoscape+plugins'>A travel guide to Cytoscape plugins</a></td>
-              <td class='journal'>Nature Methods</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Videla S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Revisiting+the+training+of+logic+models+of+protein+signaling+networks+with+ASP'>Revisiting the training of logic models of protein signaling networks with ASP</a></td>
-              <td class='journal'>Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Terfve C., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=CellNOptR%3A+A+flexible+toolkit+to+train+protein+signaling+networks+to+data+using+multiple+logic+formalisms'>CellNOptR: A flexible toolkit to train protein signaling networks to data using multiple logic formalisms</a></td>
-              <td class='journal'>BMC Systems Biology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Eo H.-S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+pathway-based+classification+of+breast+cancer+integrating+data+on+differentially+expressed+genes%2C+copy+number+variations+and+microrna+target+genes'>A pathway-based classification of breast cancer integrating data on differentially expressed genes, copy number variations and microrna target genes</a></td>
-              <td class='journal'>Molecules and Cells</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Forst C.V.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Influenza+infection+and+therapy%3A+A+systems+approach'>Influenza infection and therapy: A systems approach</a></td>
-              <td class='journal'>Future Virology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Tsuji S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+simple+knowledge-based+mining+method+for+exploring+hidden+key+molecules+in+a+human+biomolecular+network'>A simple knowledge-based mining method for exploring hidden key molecules in a human biomolecular network</a></td>
-              <td class='journal'>BMC Systems Biology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Wyner A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Argumentation+to+represent+and+reason+over+biological+systems'>Argumentation to represent and reason over biological systems</a></td>
-              <td class='journal'>Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Guziolowski C., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Automatic+generation+of+causal+networks+linking+growth+factor+stimuli+to+functional+cell+state+changes'>Automatic generation of causal networks linking growth factor stimuli to functional cell state changes</a></td>
-              <td class='journal'>FEBS Journal</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Eduati F., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Integrating+literature-constrained+and+data-driven+inference+of+signalling+networks'>Integrating literature-constrained and data-driven inference of signalling networks</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Engin H.B., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+strategy+based+on+protein-protein+interface+motifs+may+help+in+identifying+drug+off-targets'>A strategy based on protein-protein interface motifs may help in identifying drug off-targets</a></td>
-              <td class='journal'>Journal of Chemical Information and Modeling</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Davis M.P.A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Large-scale+identification+of+microRNA+targets+in+murine+Dgcr8-deficient+embryonic+stem+cell+lines'>Large-scale identification of microRNA targets in murine Dgcr8-deficient embryonic stem cell lines</a></td>
-              <td class='journal'>PLoS ONE</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Helikar T., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=The+Cell+Collective%3A+Toward+an+open+and+collaborative+approach+to+systems+biology'>The Cell Collective: Toward an open and collaborative approach to systems biology</a></td>
-              <td class='journal'>BMC Systems Biology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Tang H., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+quick+guide+to+biomolecular+network+studies%3A+Construction%2C+analysis%2C+applications%2C+and+resources'>A quick guide to biomolecular network studies: Construction, analysis, applications, and resources</a></td>
-              <td class='journal'>Biochemical and Biophysical Research Communications</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Kavlock R., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Update+on+EPA%27s+ToxCast+program%3A+Providing+high+throughput+decision+support+tools+for+chemical+risk+management'>Update on EPA's ToxCast program: Providing high throughput decision support tools for chemical risk management</a></td>
-              <td class='journal'>Chemical Research in Toxicology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Al-Lazikani B., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Combinatorial+drug+therapy+for+cancer+in+the+post-genomic+era'>Combinatorial drug therapy for cancer in the post-genomic era</a></td>
-              <td class='journal'>Nature Biotechnology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Carkacioglu L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=iSNP%3A+An+integrated%2C+automatically+updated+SNP+database'>iSNP: An integrated, automatically updated SNP database</a></td>
-              <td class='journal'>2012 7th International Symposium on Health Informatics and Bioinformatics, HIBIT 2012</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Komurov K., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=NetWalker%3A+A+contextual+network+analysis+tool+for+functional+genomics'>NetWalker: A contextual network analysis tool for functional genomics</a></td>
-              <td class='journal'>BMC Genomics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Papp D., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=The+NRF2-related+interactome+and+regulome+contain+multifunctional+proteins+and+fine-tuned+autoregulatory+loops'>The NRF2-related interactome and regulome contain multifunctional proteins and fine-tuned autoregulatory loops</a></td>
-              <td class='journal'>FEBS Letters</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Mori T., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=NIRF%2FUHRF2+occupies+a+central+position+in+the+cell+cycle+network+and+allows+coupling+with+the+epigenetic+landscape'>NIRF/UHRF2 occupies a central position in the cell cycle network and allows coupling with the epigenetic landscape</a></td>
-              <td class='journal'>FEBS Letters</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Weile J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Bayesian+integration+of+networks+without+gold+standards'>Bayesian integration of networks without gold standards</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Julfayev E.S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=KB-Rank%3A+Efficient+protein+structure+and+functional+annotation+identification+via+text+query'>KB-Rank: Efficient protein structure and functional annotation identification via text query</a></td>
-              <td class='journal'>Journal of Structural and Functional Genomics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Kirik U., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Multimodel+pathway+enrichment+methods+for+functional+evaluation+of+expression+regulation'>Multimodel pathway enrichment methods for functional evaluation of expression regulation</a></td>
-              <td class='journal'>Journal of Proteome Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Cerami E., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=The+cBio+Cancer+Genomics+Portal%3A+An+open+platform+for+exploring+multidimensional+cancer+genomics+data'>The cBio Cancer Genomics Portal: An open platform for exploring multidimensional cancer genomics data</a></td>
-              <td class='journal'>Cancer Discovery</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Kirouac D.C., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Creating+and+analyzing+pathway+and+protein+interaction+compendia+for+modelling+signal+transduction+networks'>Creating and analyzing pathway and protein interaction compendia for modelling signal transduction networks</a></td>
-              <td class='journal'>BMC Systems Biology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Cun Y., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Prognostic+gene+signatures+for+patient+stratification+in+breast+cancer+-+accuracy%2C+stability+and+interpretability+of+gene+selection+approaches+using+prior+knowledge+on+protein-protein+interactions'>Prognostic gene signatures for patient stratification in breast cancer - accuracy, stability and interpretability of gene selection approaches using prior knowledge on protein-protein interactions</a></td>
-              <td class='journal'>BMC Bioinformatics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Garcia-Godoy M.J., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Bioqueries%3A+A+social+community+sharing+experiences+while+querying+Biological+Linked+Data'>Bioqueries: A social community sharing experiences while querying Biological Linked Data</a></td>
-              <td class='journal'>ACM International Conference Proceeding Series</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Kholodenko B., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Computational+approaches+for+analyzing+information+flow+in+biological+networks'>Computational approaches for analyzing information flow in biological networks</a></td>
-              <td class='journal'>Science Signaling</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Ronnberg T., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Searching+for+cellular+partners+of+hantaviral+nonstructural+protein+NSs%3A+Y2H+screening+of+mouse+cDNA+library+and+analysis+of+cellular+interactome'>Searching for cellular partners of hantaviral nonstructural protein NSs: Y2H screening of mouse cDNA library and analysis of cellular interactome</a></td>
-              <td class='journal'>PLoS ONE</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Garay J.P., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Omics+and+therapy+-+A+basis+for+precision+medicine'>Omics and therapy - A basis for precision medicine</a></td>
-              <td class='journal'>Molecular Oncology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Bebek G.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Identifying+gene+interaction+networks'>Identifying gene interaction networks</a></td>
-              <td class='journal'>Methods in Molecular Biology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Kozhenkov S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Mining+and+integration+of+pathway+diagrams+from+imaging+data'>Mining and integration of pathway diagrams from imaging data</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Komurov K.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Modeling+community-wide+molecular+networks+of+multicellular+systems'>Modeling community-wide molecular networks of multicellular systems</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Goh W.W.B., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=How+advancement+in+biological+network+analysis+methods+empowers+proteomics'>How advancement in biological network analysis methods empowers proteomics</a></td>
-              <td class='journal'>Proteomics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Ciriello G., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Mutual+exclusivity+analysis+identifies+oncogenic+network+modules'>Mutual exclusivity analysis identifies oncogenic network modules</a></td>
-              <td class='journal'>Genome Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Sales G., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Graphite+-+a+Bioconductor+package+to+convert+pathway+topology+to+gene+network'>Graphite - a Bioconductor package to convert pathway topology to gene network</a></td>
-              <td class='journal'>BMC Bioinformatics</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Alexeyenko A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Comparative+interactomics+with+Funcoup+2.0'>Comparative interactomics with Funcoup 2.0</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Kuchta K., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=DNAtraffic+-+A+new+database+for+systems+biology+of+DNA+dynamics+during+the+cell+life'>DNAtraffic - A new database for systems biology of DNA dynamics during the cell life</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Kelder T., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=WikiPathways%3A+Building+research+communities+on+biological+pathways'>WikiPathways: Building research communities on biological pathways</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Haibe-Kains B., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Predictive+networks%3A+A+flexible%2C+open+source%2C+web+application+for+integration+and+analysis+of+human+gene+networks'>Predictive networks: A flexible, open source, web application for integration and analysis of human gene networks</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Cheng Y.-K., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+mathematical+methodology+for+determining+the+temporal+order+of+pathway+alterations+arising+during+gliomagenesis'>A mathematical methodology for determining the temporal order of pathway alterations arising during gliomagenesis</a></td>
-              <td class='journal'>PLoS Computational Biology</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Yu N., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=hiPathDB%3A+A+human-integrated+pathway+database+with+facile+visualization'>hiPathDB: A human-integrated pathway database with facile visualization</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Sreenivasaiah P.K., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=IPAVS%3A+Integrated+pathway+resources%2C+analysis+and+visualization+system'>IPAVS: Integrated pathway resources, analysis and visualization system</a></td>
-              <td class='journal'>Nucleic Acids Research</td>
-              <td class='year'>2012</td>
-            </tr>
-            <tr>
-              <td class='author'>Mohammad F., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+heuristic+algorithm+for+detecting+intercellular+interactions'>A heuristic algorithm for detecting intercellular interactions</a></td>
-              <td class='journal'>Proceedings - 2011 11th IEEE International Conference on Bioinformatics and Bioengineering, BIBE 2011</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>le Novere N., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Meeting+report+from+the+first+meetings+of+the+Computational+Modeling+in+Biology+Network+%28COMBINE%29'>Meeting report from the first meetings of the Computational Modeling in Biology Network (COMBINE)</a></td>
-              <td class='journal'>Standards in Genomic Sciences</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Doderer M.S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Multisource+biological+pathway+consolidation'>Multisource biological pathway consolidation</a></td>
-              <td class='journal'>Proceedings - IEEE International Workshop on Genomic Signal Processing and Statistics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Brockschmidt F.F., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Susceptibility+variants+on+chromosome+7p21.1+suggest+HDAC9+as+a+new+candidate+gene+for+male-pattern+baldness'>Susceptibility variants on chromosome 7p21.1 suggest HDAC9 as a new candidate gene for male-pattern baldness</a></td>
-              <td class='journal'>British Journal of Dermatology</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Hsu C.-L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Prioritizing+disease+candidate+genes+by+a+gene+interconnectedness-based+approach'>Prioritizing disease candidate genes by a gene interconnectedness-based approach</a></td>
-              <td class='journal'>10th Int. Conference on Bioinformatics - 1st ISCB Asia Joint Conference 2011, InCoB 2011/ISCB-Asia 2011: Computational Biology - Proceedings from Asia Pacific Bioinformatics Network (APBioNet)</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Ghosh S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Software+for+systems+biology%3A+From+tools+to+integrated+platforms'>Software for systems biology: From tools to integrated platforms</a></td>
-              <td class='journal'>Nature Reviews Genetics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Goldenberg A., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Unsupervised+detection+of+genes+of+influence+in+lung+cancer+using+biological+networks'>Unsupervised detection of genes of influence in lung cancer using biological networks</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Frohlich H.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Network+based+consensus+gene+signatures+for+biomarker+discovery+in+breast+cancer'>Network based consensus gene signatures for biomarker discovery in breast cancer</a></td>
-              <td class='journal'>PLoS ONE</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Martha V.-S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Constructing+a+robust+protein-protein+interaction+network+by+integrating+multiple+public+databases'>Constructing a robust protein-protein interaction network by integrating multiple public databases</a></td>
-              <td class='journal'>BMC Bioinformatics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Yaspan B.L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Strategies+for+pathway+analysis+from+UNIT+1.20+GWAS+Data'>Strategies for pathway analysis from UNIT 1.20 GWAS Data</a></td>
-              <td class='journal'>Current Protocols in Human Genetics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Fortney K., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Integrative+computational+biology+for+cancer+research'>Integrative computational biology for cancer research</a></td>
-              <td class='journal'>Human Genetics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Mori T., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=NIRF+constitutes+a+nodal+point+in+the+cell+cycle+network+and+is+a+candidate+tumor+suppressor'>NIRF constitutes a nodal point in the cell cycle network and is a candidate tumor suppressor</a></td>
-              <td class='journal'>Cell Cycle</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Symons S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=MGV%3A+A+generic+graph+viewer+for+comparative+omics+data'>MGV: A generic graph viewer for comparative omics data</a></td>
-              <td class='journal'>Bioinformatics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Nishiyama T., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+scan+statistic+to+extract+causal+gene+clusters+from+case-control+genome-wide+rare+CNV+data'>A scan statistic to extract causal gene clusters from case-control genome-wide rare CNV data</a></td>
-              <td class='journal'>BMC Bioinformatics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Julfayev E.S., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=A+new+approach+to+assess+and+predict+the+functional+roles+of+proteins+across+all+known+structures'>A new approach to assess and predict the functional roles of proteins across all known structures</a></td>
-              <td class='journal'>Journal of Structural and Functional Genomics</td>
-              <td class='year'>2011</td>
-            </tr>
-            <tr>
-              <td class='author'>Saltzman A.L., et al.</td>
-              <td class='title'><a class="ga ga-publications" target="_blank" href='http://www.ncbi.nlm.nih.gov/pubmed/?term=Regulation+of+alternative+splicing+by+the+core+spliceosomal+machinery'>Regulation of alternative splicing by the core spliceosomal machinery</a></td>
-              <td class='journal'>Genes and Development</td>
-              <td class='year'>2011</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- END citations-table -->
-      </div>
-      <!-- END: citations -->
-
       <!-- BEGIN: contact -->
       <div id="contact" class="section">
-        <h1>Contact</h1>
-        <hr>
+        <div class="page-header">
+          <h2>Contact <small></small></h2>
+        </div>
+
+        <p class="boost text-justify">
+          Post a question on the <a href="https://groups.google.com/forum/#!forum/pathway-commons-help/join">Pathway Commons help </a> Google group.
+          <br/>
+          Keep up-to-date by following the <a href="https://groups.google.com/forum/#!forum/pathway-commons-announcements/join">Pathway Commons announcements</a> Google group.
+        </p>
 
         <div id="social-media row">
           <ul class="list-inline list-unstyled">
             <li><a class="ga ga-contact" target="_blank" href="https://twitter.com/pathwaycommons"><i class="fa-twitter fa fa-2x"></i></a></li>
-            <li><a class="ga ga-contact" target="_blank" href="https://www.youtube.com/channel/UCWSbcyynroIp-f6O3sfz7jg"><i class="fa-youtube fa fa-2x"></i></a></li>
             <li><a class="ga ga-contact" target="_blank" href="https://github.com/pathwaycommons/"><i class="fa-github fa fa-2x"></i></a></li>
           </ul>
         </div>
-
-        <p class="lead text-justify">
-          For questions and help, join the <a href="https://groups.google.com/forum/#!forum/pathway-commons-help/join">help mailing list</a>.
-          <br/>
-          For news and updates, join the <a href="https://groups.google.com/forum/#!forum/pathway-commons-announcements/join">announcements mailing list</a> .
-        </p>
-
-        <div id="credits">
-          <p class="lead text-justify">
-            The Pathway Commons team is a collaboration between the <a target="_blank" href="http://baderlab.org/">Bader Lab</a> at the <a target="_blank" href="https://www.utoronto.ca/">University of Toronto</a>,
-            the <a target="_blank" href="http://www.sanderlab.org/">Sander Lab</a> at the cBio Center for Information Biology, <a target="_blank" href="http://www.dana-farber.org/">Dana-Farber Cancer Institute</a> and the Computational biology collaboratory at <a target="_blank" href="http://hms.harvard.edu/">Harvard Medical School</a>,
-            and the Demir Lab, <a target="_blank" href="http://www.ohsu.edu/">Oregon Health & Science University</a>.
-          </p>
-          <blockquote>
-            Pathway Commons was originally developed at the <a target="_blank" href="https://www.mskcc.org/">Memorial Sloan Kettering Cancer Center</a> and the University of Toronto.
-          </blockquote>
-        </div>
-        <p class="text-center"><a href="#" title="go back to the top" class="top-scroll">^ top</a></p>
       </div>
       <!-- END: contact -->
+
+      <footer>
+        <p class="text-muted">
+          Pathway Commons is a collaboration between the <a target="_blank" href="http://baderlab.org/">Bader Lab</a> at the <a target="_blank" href="https://www.utoronto.ca/">University of Toronto</a>, the <a target="_blank" href="http://www.sanderlab.org/">Sander Lab</a> at the <a target="_blank" href="http://www.dana-farber.org/">Dana-Farber Cancer Institute</a> and <a target="_blank" href="http://hms.harvard.edu/">Harvard Medical School</a> and the Demir Lab at <a target="_blank" href="http://www.ohsu.edu/">Oregon Health & Science University</a>.
+        </p>
+        <p class="text-center"><a href="#" title="Back to the top">Top</a></p>
+      </footer>
 
     </div>
     <!-- END: body > container -->
 
     <!-- Load JS here for greater good =============================-->
-    <script src="js/jquery-2.2.2.min.js"></script>
-    <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.placeholder.js"></script>
-    <script type="text/javascript" src="lib/DataTables/datatables.min.js"></script>
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/jquery-scrolldepth/jquery.scrolldepth.min.js"></script>
 
     <!--[if lt IE 8]>

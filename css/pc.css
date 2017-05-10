@@ -4,6 +4,10 @@ body {
   padding-bottom: 30px;
 }
 
+a:hover {
+  color: #34495E;
+}
+
 .site-wrapper {
   min-width: 350px;
   max-width: 992px;
@@ -16,8 +20,6 @@ body {
 .section {
     margin-top: 5em;
 }
-
-
 
 .subsection {
     margin-top: 3em;
@@ -41,7 +43,8 @@ body {
 }
 
 footer {
-  margin: 3em;
+  padding: 1em;
+  margin: 7em 3em;
 }
 
 .panel-heading {
@@ -79,10 +82,6 @@ footer {
   margin-top: 1.5em;
   position: relative;
   padding: 0;
-}
-
-.pc-list-group .pc-list-group-item a, a:hover {
-  color: #ecf0f1;
 }
 
 .pc-list-group .pc-list-group-item .pc-list-group-item-text {
@@ -167,6 +166,7 @@ footer {
   .pc-list-group .pc-list-group-item {
     margin-top: 0.2em;
   }
+
   .pc-list-group .pc-list-group-item .pc-list-group-item-text {
       width: 100%;
   }
@@ -178,17 +178,13 @@ footer {
   .pc-list-group .pc-list-group-item .pc-list-group-item-meta {
     display: none;
   }
-}
-/*
-@media (max-width: 400px) {
 
-  .site-wrapper {
-    padding-left: 2px;
-    padding-right: 2px;
+  footer {
+    padding: 0;
+    margin: 3em 1em;
   }
-}*/
+}
 /* END: GLOBAL */
-
 
 /* Start: JUMBOTRON */
 .jumbotron {

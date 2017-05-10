@@ -145,6 +145,11 @@ footer {
 
 @media (max-width: 768px) {
 
+  .site-wrapper {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
   .boost {
     font-size: 16px;
   }
@@ -174,6 +179,14 @@ footer {
     display: none;
   }
 }
+/*
+@media (max-width: 400px) {
+
+  .site-wrapper {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}*/
 /* END: GLOBAL */
 
 
@@ -221,8 +234,11 @@ footer {
     font-size: 18px;
   }
   .jumbotron .citation a, .citation a:hover, .citation a:visited {
-    top: -0.7em;
+    top: 0;
     font-size: 17px;
+  }
+  .jumbotron .nav.nav-pills  {
+    top: 0;
   }
 }
 

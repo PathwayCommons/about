@@ -22,34 +22,30 @@
   </head>
   <body>
 
-    <!-- BEGIN: body > container -->
-    <div class="container">
+    <!-- BEGIN: site-wrapper -->
+    <div class="container site-wrapper">
 
       <!-- BEGIN: navbar -->
-      <div class="navbar-wrapper">
-        <div class="container">
-          <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#data">Data</a></li>
-                  <li><a href="#tools">Tools</a></li>
-                  <li><a href="#faq">FAQ</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#data">Data</a></li>
+              <li><a href="#tools">Tools</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>    
       <!-- END: navbar -->
 
       <!-- BEGIN: jumbotron -->
@@ -125,12 +121,12 @@
                 placeholder="Search Pathway Commons for interactions by gene name (e.g. MDM2)">
             </div>
           </form>
-          <iframe
+          <!-- <iframe
             width="100%"
             height="400"
             src="http://www.pathwaycommons.org/pcviz/#embed/neighborhood/MDM2"
             scrolling="no" frameborder="0" seamless="seamless">
-          </iframe>
+          </iframe> -->
         </div>
       </div>
       <!-- END: Apps -->
@@ -656,7 +652,7 @@
       </footer>
 
     </div>
-    <!-- END: body > container -->
+    <!-- End: site-wrapper   -->
 
     <!-- Load JS here for greater good =============================-->
     <script src="lib/jquery-3.2.1.min.js"></script>

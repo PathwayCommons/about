@@ -22,34 +22,30 @@
   </head>
   <body>
 
-    <!-- BEGIN: body > container -->
-    <div class="container">
+    <!-- BEGIN: site-wrapper -->
+    <div class="container site-wrapper">
 
       <!-- BEGIN: navbar -->
-      <div class="navbar-wrapper">
-        <div class="container">
-          <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#data">Data</a></li>
-                  <li><a href="#tools">Tools</a></li>
-                  <li><a href="#faq">FAQ</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#data">Data</a></li>
+              <li><a href="#tools">Tools</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>    
       <!-- END: navbar -->
 
       <!-- BEGIN: jumbotron -->
@@ -80,9 +76,9 @@
         </blockquote>
 
           <!-- comment before merging into 'master' -->
-          <!-- <p style="font-family: Courier; color: red; font-size: large; margin-top: 2em;">
+          <p style="font-family: Courier; color: red; font-size: large; margin-top: 2em;">
             *This is a development site - visit the stable version <a href="http://www.pathwaycommons.org/">here</a>
-          </p> -->
+          </p>
       </div>
       <!-- END: jumbotron -->
 
@@ -113,26 +109,24 @@
         <div class="app">
           <a href="http://www.pathwaycommons.org/pcviz/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor">
             <p class="app-name">
-              PC Viz
+              PCViz
             </p>
           </a>
-          <div class="row">
-            <form id="pcviz-form" class="col-xs-offset-0 col-xs-12">
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="pcviz-gene-text"
-                  class="form-control text-center"
-                  placeholder="Search Pathway Commons for interactions by gene name (e.g. MDM2)">
-              </div>
-            </form>
-          </div>
-          <iframe
+          <form id="pcviz-form" class="col-xs-12">
+            <div class="form-group">
+              <input
+                type="text"
+                id="pcviz-gene-text"
+                class="form-control"
+                placeholder="Search Pathway Commons for interactions by gene name (e.g. MDM2)">
+            </div>
+          </form>
+          <!-- <iframe
             width="100%"
             height="400"
             src="http://www.pathwaycommons.org/pcviz/#embed/neighborhood/MDM2"
             scrolling="no" frameborder="0" seamless="seamless">
-          </iframe>
+          </iframe> -->
         </div>
       </div>
       <!-- END: Apps -->
@@ -658,7 +652,7 @@
       </footer>
 
     </div>
-    <!-- END: body > container -->
+    <!-- End: site-wrapper   -->
 
     <!-- Load JS here for greater good =============================-->
     <script src="lib/jquery-3.2.1.min.js"></script>

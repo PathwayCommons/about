@@ -1,17 +1,16 @@
 /* START: GLOBAL */
 body {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
 
-    padding-top: 75px;
-    padding-bottom: 30px;
+.site-wrapper {
+  min-width: 350px;
+  max-width: 992px;
 }
 
 .subtitle {
   margin: 2em auto 1em 1em;
-}
-
-.container{
-  min-width: 384px;
-  max-width: 992px;
 }
 
 .section {
@@ -65,8 +64,8 @@ footer {
 
 .pc-btn-anchor {
   color: #ecf0f1;
-  background-color: #2980B9;
-  border-color: #2980B9;
+  background-color: rgba(44, 62, 80, 0.9);
+  border-color: rgba(44, 62, 80, 0.8);
   opacity: 0.9;
 }
 
@@ -174,63 +173,8 @@ footer {
 
 
 /* START: NAVBAR */
-.navbar-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
-}
-
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-    padding-right: 0;
-    padding-left: 0;
-}
-.navbar-wrapper .navbar {
-    background-color: #34495e !important;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-     width: auto;
-}
-
-.navbar-wrapper .navbar .container #navbar .nav li{
-    font-size: 1em;
-}
-
-.navbar-wrapper .navbar a, a:visited{
-    text-decoration: none;
-}
-
-.navbar-wrapper .navbar .navbar-header .navbar-brand{
-    padding: 0;
-}
-.navbar-wrapper .navbar .navbar-header .navbar-brand img{
-    margin-top: 5px;
-    margin-left: 5px;
-    width: 40px;
-}
-
-@media (min-width: 768px) {
-    /* Navbar positioning foo */
-    .navbar-wrapper {
-        margin-top: 20px;
-    }
-    .navbar-wrapper .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    .navbar-wrapper .navbar {
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    /* The navbar becomes detached from the top, so we round the corners */
-    .navbar-wrapper .navbar {
-        border-radius: 4px;
-    }
+.navbar {
+  margin-bottom: 5px;
 }
 /* END: NAVBAR */
 
@@ -292,6 +236,11 @@ footer {
 #apps .app-name {
   margin: 2px;
   font-size: 21px;
+}
+
+#apps .app #pcviz-form {
+  background-color: rgb(238, 238, 238);
+  padding: 15px 12% 0;
 }
 /* END: Apps */
 

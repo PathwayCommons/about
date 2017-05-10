@@ -17,6 +17,8 @@ body {
     margin-top: 5em;
 }
 
+
+
 .subsection {
     margin-top: 3em;
 }
@@ -25,7 +27,6 @@ body {
   margin: 1.5em auto 3em;
   display: block;
 }
-
 
 .list-group-item dl {
   margin-bottom: 0.5em;
@@ -127,6 +128,10 @@ footer {
 
 
 @media (max-width: 996px) {
+  .citation a, .citation a:hover, .citation a:visited {
+    font-size: 16px;
+  }
+
   /* pc-list-group */
   .pc-list-group .pc-list-group-item .pc-list-group-item-text {
     padding: 0.8em;
@@ -172,15 +177,9 @@ footer {
 /* END: GLOBAL */
 
 
-/* START: NAVBAR */
-.navbar {
-  margin-bottom: 5px;
-}
-/* END: NAVBAR */
-
-
 /* Start: JUMBOTRON */
 .jumbotron {
+  background-color: white;
   padding: 25px;
 }
 
@@ -192,14 +191,27 @@ footer {
   margin: 2em 0;
 }
 
-.jumbotron blockquote {
-  padding: 2px;
+.jumbotron .citation a, .citation a:hover, .citation a:visited {
+  position: relative;
+  top: -1em;
+  font-style: italic;
+  font-size: 19px;
 }
 
-
-.jumbotron blockquote p {
-  font-size: 16px;
+.jumbotron .nav.nav-pills  {
+  position: relative;
+  top: -1em;
 }
+
+.jumbotron .nav.nav-pills li a  {
+  color: #34495E;
+  text-decoration: overline;
+}
+
+.jumbotron .nav.nav-pills li a:hover {
+  color: #34495E;
+}
+
 
 @media (max-width: 996px) {
   .jumbotron h1 {
@@ -208,13 +220,13 @@ footer {
   .jumbotron .lead {
     font-size: 18px;
   }
+  .jumbotron .citation a, .citation a:hover, .citation a:visited {
+    top: -0.7em;
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 768px) {
-  .jumbotron blockquote p {
-    font-size: 14px;
-  }
-
   .jumbotron .lead {
     font-size: 18px;
   }
@@ -229,6 +241,9 @@ footer {
 }
 /* END: JUMBOTRON */
 
+/* START: Info */
+/* END: Info */
+
 /* START: Apps */
 #apps .app {
   margin-bottom: 3em;
@@ -240,7 +255,7 @@ footer {
 
 #apps .app #pcviz-form {
   background-color: rgb(238, 238, 238);
-  padding: 15px 12% 0;
+  padding: 1em 12% 0.5em;
 }
 /* END: Apps */
 

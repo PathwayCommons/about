@@ -1,73 +1,84 @@
 $(function(){ // document ready
-    $("#pcviz-form").submit(function() {
-        var geneTxt = $("#pcviz-gene-text").val();
-        if(geneTxt.search(",") > 0) {
-            // comma separators, clean-up the spaces
-            geneTxt = geneTxt.replace(/ /g, " ");
-        } else if (geneTxt.search(" ") > 0) {
-            // space separators, replace them with commas
-            geneTxt = geneTxt.replace(/ /g, ",");
-        } else { /* nothing */ }
 
-        window.location = "http://www.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt;
-        return false;
-    });
+  $("#pcviz-form").submit(function() {
+      var geneTxt = $("#pcviz-gene-text").val();
+      if(geneTxt.search(",") > 0) {
+          // comma separators, clean-up the spaces
+          geneTxt = geneTxt.replace(/ /g, " ");
+      } else if (geneTxt.search(" ") > 0) {
+          // space separators, replace them with commas
+          geneTxt = geneTxt.replace(/ /g, ",");
+      } else { /* nothing */ }
 
-    // Google Analytics
-    // Event handler for all .ga classed elements
-    $(".ga").on('click',function(e){
-      var
-        self,
-        category = "",
-        action = "click",
-        label = "",
-        self = $(this),
-        send = true
-        ;
+      window.open("http://www.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt,"_blank");
+      return false;
+  });
 
-      if(self.hasClass("ga-publications"))
-      {
-        category = "Publications";
-        label = self.text();
-      }
-      else if(self.hasClass("ga-apps"))
-      {
-        category = "Apps";
-        label = self.text();
-      }
-      else if(self.hasClass("ga-faq"))
-      {
-        category = "FAQ";
-        label = self.children("h4").text();
-      }
-      else if(self.hasClass("ga-contact"))
-      {
-        category = "Contact";
-        self.children("i").attr("class", function(i, val){
-          //make sure the second element is classed fa-<label>...
-          if(val) label = val.split(" ")[0];
-        });
-      }
-      else
-      {
-        send = false;
-      }
+  // Google Analytics
+  // Event handler for all .ga classed elements
+  $(".ga").on('click',function(e){
+    var
+      self,
+      category = "",
+      action = "click",
+      label = "",
+      self = $(this),
+      send = true
+      ;
 
-      if(send){
-        ga('send', 'event', category, action, label);
-        //console.info("Event - Category: %s; Action: %s; Label: %s", category, action, label);
-      }
+    if(self.hasClass("ga-publications"))
+    {
+      category = "Publications";
+      label = self.text();
+    }
+    else if(self.hasClass("ga-apps"))
+    {
+      category = "Apps";
+      label = self.text();
+    }
+    else if(self.hasClass("ga-data"))
+    {
+      category = "Data";
+      label = self.children("h3").text();
+    }
+    else if(self.hasClass("ga-tools"))
+    {
+      category = "Tools";
+      label = self.find(".pc-list-group-item-text .pc-list-group-item-title").text();
+    }
+    else if(self.hasClass("ga-faq"))
+    {
+      category = "FAQ";
+      label = self.find(".faq-question").text();
+    }
+    else if(self.hasClass("ga-contact"))
+    {
+      category = "Contact";
+      self.children("i").attr("class", function(i, val){
+        //make sure the second element is classed fa-<label>...
+        if(val) label = val.split(" ")[0];
+      });
+    }
+    else
+    {
+      send = false;
+    }
 
-    });
+    if(send){
+      ga('send', 'event', category, action, label);
+      //console.info("Event - Category: %s; Action: %s; Label: %s", category, action, label);
+    }
 
-    // Google Analytics depth tracking plugin (scrolldepth.parsnip.io/)
-    jQuery.scrollDepth({
-      minHeight: 0,
-      elements: ["#apps", "#faq", "#publications", "#contact"],
-      percentage: false,
-      userTiming: false,
-      pixelDepth: false,
-      nonInteraction: false
-    });
+  });
+
+  // Google Analytics depth tracking plugin (scrolldepth.parsnip.io/)
+  jQuery.scrollDepth({
+    minHeight: 0,
+    elements: ["#apps", "#faq", "#publications", "#contact"],
+    percentage: false,
+    userTiming: false,
+    pixelDepth: false,
+    nonInteraction: false
+  });
 
 });

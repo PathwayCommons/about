@@ -260,7 +260,7 @@ footer {
 #apps .app {
   margin-bottom: 3em;
 }
-#apps .app-name {
+#apps .app .app-name {
   margin: 2px;
   font-size: 21px;
 }

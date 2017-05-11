@@ -78,7 +78,7 @@ $(function(){ // document ready
   // Google Analytics depth tracking plugin (scrolldepth.parsnip.io/)
   jQuery.scrollDepth({
     minHeight: 0,
-    elements: ["#apps", "#faq", "#publications", "#contact"],
+    elements: ["#apps", "#data", "#tools", "#faq", "#contact"],
     percentage: false,
     userTiming: false,
     pixelDepth: false,

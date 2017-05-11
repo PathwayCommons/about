@@ -39,7 +39,7 @@ $(function(){ // document ready
     else if(self.hasClass("ga-data"))
     {
       category = "Data";
-      label = self.children("h3").text();
+      label = self.text();
     }
     else if(self.hasClass("ga-tools"))
     {
@@ -54,10 +54,14 @@ $(function(){ // document ready
     else if(self.hasClass("ga-contact"))
     {
       category = "Contact";
-      self.children("i").attr("class", function(i, val){
-        //make sure the second element is classed fa-<label>...
-        if(val) label = val.split(" ")[0];
-      });
+
+      if(self.hasClass("ga-social")){
+        self.children("i").attr("class", function(i, val){
+          if(val) label = val.split(" ")[0];
+        });
+      } else {
+        label = self.text();
+      }
     }
     else
     {
@@ -66,7 +70,7 @@ $(function(){ // document ready
 
     if(send){
       ga('send', 'event', category, action, label);
-      //console.info("Event - Category: %s; Action: %s; Label: %s", category, action, label);
+      console.info("Event - Category: %s; Action: %s; Label: %s", category, action, label);
     }
 
   });

@@ -71,6 +71,8 @@ footer {
   background-color: rgba(44, 62, 80, 0.9);
   border-color: rgba(44, 62, 80, 0.8);
   opacity: 0.9;
+  margin: 2px;
+  font-size: 21px;
 }
 
 .pc-btn-anchor h3,h4 {
@@ -259,10 +261,6 @@ footer {
 /* START: Apps */
 #apps .app {
   margin-bottom: 3em;
-}
-#apps .app .app-name {
-  margin: 2px;
-  font-size: 21px;
 }
 
 #apps .app #pcviz-form {

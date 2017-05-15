@@ -154,86 +154,102 @@
           <h2>Data <small></small></h2>
         </div>
 
-        <div class="panel panel-default">
+        <div class="data-section">
           <a href="http://beta.pathwaycommons.org/archives/PC2/current/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor ga ga-data">
             File Downloads
           </a>
 
+          <div class="text-left">
+            <a class="btn btn-default pc-btn-detail" role="button" data-toggle="collapse" href="#collapse-data-file-downloads" aria-expanded="false" aria-controls="collapse-data-file-downloads">
+              Show details
+            </a>
+          </div>
+
           <div class="list-group">
-            <a href="http://www.biopax.org/" target="_blank" class="list-group-item">
-              <h4 class="list-group-item-heading">
-                Biological Pathway Exchange (xml)
-              </h4>
-              <p class="list-group-item-text">
-                Rich descriptions of pathways and interactions.
-              </p>
-              <p class="list-group-item-text">
-                For archival and exchange.
-              </p>
-            </a>
-            <a href="http://wiki.cytoscape.org/Cytoscape_User_Manual/Network_Formats" target="_blank" class="list-group-item">
-              <h4 class="list-group-item-heading">
-                Simple Interaction Format (sif)
-              </h4>
-              <p class="list-group-item-text">
-                List of gene-pair relationships for pathways.
-              </p>
-              <p class="list-group-item-text">
-                For use in visualization and analysis software (e.g. Cytoscape)
-              </p>
-            </a>
-            <a href="http://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GMT:_Gene_Matrix_Transposed_file_format_.28.2A.gmt.29" target="_blank" class="list-group-item">
-              <h4 class="boost list-group-item-heading">
-                Gene Set Database (gmt)
-              </h4>
-              </p>
-              <p class="list-group-item-text">
-                List of genes names for pathways.
-              </p>
-              <p class="list-group-item-text">
-                For use in Gene Set Enrichment Analysis (GSEA)
-              </p>
-            </a>
+            <div class="collapse" id="collapse-data-file-downloads">
+              <a href="http://www.biopax.org/" target="_blank" class="list-group-item">
+                <h4 class="list-group-item-heading">
+                  Biological Pathway Exchange (xml)
+                </h4>
+                <p class="list-group-item-text">
+                  Rich descriptions of pathways and interactions.
+                </p>
+                <p class="list-group-item-text">
+                  For archival and exchange.
+                </p>
+              </a>
+              <a href="http://wiki.cytoscape.org/Cytoscape_User_Manual/Network_Formats" target="_blank" class="list-group-item">
+                <h4 class="list-group-item-heading">
+                  Simple Interaction Format (sif)
+                </h4>
+                <p class="list-group-item-text">
+                  List of gene-pair relationships for pathways.
+                </p>
+                <p class="list-group-item-text">
+                  For use in visualization and analysis software (e.g. Cytoscape)
+                </p>
+              </a>
+              <a href="http://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GMT:_Gene_Matrix_Transposed_file_format_.28.2A.gmt.29" target="_blank" class="list-group-item">
+                <h4 class="boost list-group-item-heading">
+                  Gene Set Database (gmt)
+                </h4>
+                </p>
+                <p class="list-group-item-text">
+                  List of genes names for pathways.
+                </p>
+                <p class="list-group-item-text">
+                  For use in Gene Set Enrichment Analysis (GSEA)
+                </p>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="panel panel-default">
+        <div class="data-section">
           <a href="http://beta.pathwaycommons.org/pc2/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor ga ga-data">
               Web Services
           </a>
 
+          <div class="text-left">
+            <a class="btn btn-default pc-btn-detail" role="button" data-toggle="collapse" href="#collapse-data-web-services" aria-expanded="false" aria-controls="collapse-data-web-services">
+              Show details
+            </a>
+          </div>
+
           <div class="list-group">
-            <a href="http://beta.pathwaycommons.org/pc2/#search" target="_blank" class="list-group-item">
-              <h4 class="list-group-item-heading">Search</h4>
-              <p class="list-group-item-text">
-                A full-text search of the BioPAX database.
-              </p>
-              <p class="list-group-item-text">
-                Apache Lucene syntax support; Filter by datasource and BioPAX class
-              </p>
-            </a>
-            <a href="http://beta.pathwaycommons.org/pc2/#get" target="_blank" class="list-group-item">
-              <h4 class="list-group-item-heading">Get</h4>
-              <p class="list-group-item-text">
-                Retrieves a particular object model in Pathway Commons by URI.
-              </p>
-              <p class="list-group-item-text">
-                SBGN for visualization; GMT for enrichment analysis; SIF, BioPAX and JSON-LD
-              </p>
-            </a>
-            <div class="list-group-item">
-              <h4 class="list-group-item-heading">
-                <a href="http://beta.pathwaycommons.org/pc2/#graph" target="_blank" >Graph</a>, <a href="http://beta.pathwaycommons.org/pc2/#traverse" target="_blank" >Traverse</a> and <a href="http://beta.pathwaycommons.org/pc2/#top_pathways" target="_blank" >Top Pathways</a>
-              </h4>
-              <p class="list-group-item-text">
-                Graph searches identify connections and neighborhoods of elements.
-              </p>
-              <p class="list-group-item-text">
-                Traverse provides XPath-like access to this BioPAX database.
-              </p>
-              <p class="list-group-item-text">
-                Top Pathways returns those that are not a component of another biological process.
-              </p>
+            <div class="collapse" id="collapse-data-web-services">
+              <a href="http://beta.pathwaycommons.org/pc2/#search" target="_blank" class="list-group-item">
+                <h4 class="list-group-item-heading">Search</h4>
+                <p class="list-group-item-text">
+                  A full-text search of the BioPAX database.
+                </p>
+                <p class="list-group-item-text">
+                  Apache Lucene syntax support; Filter by datasource and BioPAX class
+                </p>
+              </a>
+              <a href="http://beta.pathwaycommons.org/pc2/#get" target="_blank" class="list-group-item">
+                <h4 class="list-group-item-heading">Get</h4>
+                <p class="list-group-item-text">
+                  Retrieves a particular object model in Pathway Commons by URI.
+                </p>
+                <p class="list-group-item-text">
+                  SBGN for visualization; GMT for enrichment analysis; SIF, BioPAX and JSON-LD
+                </p>
+              </a>
+              <div class="list-group-item">
+                <h4 class="list-group-item-heading">
+                  <a href="http://beta.pathwaycommons.org/pc2/#graph" target="_blank" >Graph</a>, <a href="http://beta.pathwaycommons.org/pc2/#traverse" target="_blank" >Traverse</a> and <a href="http://beta.pathwaycommons.org/pc2/#top_pathways" target="_blank" >Top Pathways</a>
+                </h4>
+                <p class="list-group-item-text">
+                  Graph searches identify connections and neighborhoods of elements.
+                </p>
+                <p class="list-group-item-text">
+                  Traverse provides XPath-like access to this BioPAX database.
+                </p>
+                <p class="list-group-item-text">
+                  Top Pathways returns those that are not a component of another biological process.
+                </p>
+              </div>
             </div>
           </div>
         </div>

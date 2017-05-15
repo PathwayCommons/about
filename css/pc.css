@@ -56,7 +56,7 @@ footer {
 
 /* alert */
 .alert-pc {
-  background-color: #2980B9;  
+  background-color: #2980B9;
   color: #ECF0F1;
 }
 
@@ -72,6 +72,11 @@ footer {
   opacity: 0.9;
   margin: 2px;
   font-size: 21px;
+}
+
+.pc-btn-detail {
+  margin: 0.5em auto;
+  background-color: #ECF0F1;
 }
 
 .pc-btn-anchor h3,h4 {

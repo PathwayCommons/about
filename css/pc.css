@@ -268,8 +268,8 @@ footer {
 }
 
 #apps .app #pcviz-form {
-  background-color: rgb(238, 238, 238);
-  padding: 1em 12% 0.5em;
+  background-color: #ECF0F1;
+  padding: 1em 1em 0.2em 1em;
 }
 /* END: Apps */
 

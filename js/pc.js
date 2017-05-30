@@ -14,6 +14,12 @@ $(function(){ // document ready
       return false;
   });
 
+  $("#pathway-search-form").submit(function() {
+      var geneTxt = $("#pathway-search-query-text").val();
+      window.open("http://beta.pathwaycommons.org/pathways/#/search?gt=3&lt=250&type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
+      return false;
+  });
+
   // Google Analytics
   // Event handler for all .ga classed elements
   $(".ga").on('click',function(e){

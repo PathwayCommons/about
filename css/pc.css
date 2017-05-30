@@ -267,9 +267,19 @@ footer {
   margin-bottom: 3em;
 }
 
-#apps .app #pcviz-form {
+#apps .app .app-form {
   background-color: #ECF0F1;
-  padding: 1em 1em 0.2em 1em;
+  padding: 1em 1em 0.2em;
+}
+
+#apps .app .app-form .glyphicon {
+  font-size: 1.5em;
+}
+
+#apps .app .app-form button {
+  padding: 0;
+  border: none;
+  background-color: #ECF0F1;
 }
 /* END: Apps */
 

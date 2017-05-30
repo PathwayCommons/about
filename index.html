@@ -74,32 +74,45 @@
         </div>
 
         <div class="app">
-          <a href="http://beta.pathwaycommons.org/pathways/#/search" target="_blank" class="btn btn-primary btn-block pc-btn-anchor app-name ga ga-apps">
+          <a href="http://beta.pathwaycommons.org/pathways/#/search" target="_blank" class="btn btn-default btn-block pc-btn-anchor app-name ga ga-apps">
               Pathway Search
           </a>
-          <iframe id="pathway-search-app-embed"
-            title="pathway-search-app-embed"
-            width="100%"
-            height="80"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="http://beta.pathwaycommons.org/pathways/#/search/embed">
-          </iframe>
+          <form id="pathway-search-form" class="app-form">
+            <div class="form-group">
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="pathway-search-query-text"
+                  class="form-control input-lg"
+                  placeholder="Search pathways by name (e.g. glycolysis)" />
+                <span class="input-group-addon">
+                  <button type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </form>
         </div>
 
         <div class="app">
           <a href="http://www.pathwaycommons.org/pcviz/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor app-name ga ga-apps">
             PCViz
           </a>
-          <form id="pcviz-form">
+          <form id="pcviz-form" class="app-form">
             <div class="form-group ">
-              <input
-                type="text"
-                id="pcviz-gene-text"
-                class="form-control input-lg"
-                placeholder="Search interactions by gene name (e.g. MDM2 TP53)" />
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="pcviz-gene-text"
+                  class="form-control input-lg"
+                  placeholder="Search interactions by gene name (e.g. MDM2 TP53)" />
+                <span class="input-group-addon">
+                  <button type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
             </div>
           </form>
         </div>

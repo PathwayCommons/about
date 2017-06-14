@@ -1,5 +1,12 @@
 $(function(){ // document ready
 
+  // URL prefix for PC resource links on the main page:
+  var pcBaseUrl = "http://beta.pathwaycommons.org/";
+  $(".pc-url").each(function(i, a) {
+    var e = $(a);
+    e.attr('href', pcBaseUrl+e.attr('href'));
+  });
+
   $("#pcviz-form").submit(function() {
       var geneTxt = $("#pcviz-gene-text").val();
       if(geneTxt.search(",") > 0) {
@@ -10,13 +17,13 @@ $(function(){ // document ready
           geneTxt = geneTxt.replace(/ /g, ",");
       } else { /* nothing */ }
 
-      window.open("http://www.pathwaycommons.org/pcviz/#neighborhood/" + geneTxt,"_blank");
+      window.open(pcBaseUrl + "pcviz/#neighborhood/" + geneTxt, "_blank");
       return false;
   });
 
   $("#pathway-search-form").submit(function() {
       var geneTxt = $("#pathway-search-query-text").val();
-      window.open("http://beta.pathwaycommons.org/pathways/#/search?gt=3&lt=250&type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
+      window.open(pcBaseUrl + "pathways/#/search?gt=3&lt=250&type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
       return false;
   });
 

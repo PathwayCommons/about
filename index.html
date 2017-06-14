@@ -39,7 +39,7 @@
           <div class="col-xs-12 col-sm-10">
             <h1>Pathway Commons</h1>
             <p class="lead">
-              Access and discover data from <a href="http://www.pathwaycommons.org/pc2/datasources" target="_blank">public pathway and interactions databases</a>.
+              Access and discover data from <a class="pc-url" href="pc2/datasources" target="_blank">public pathway and interactions databases</a>.
             </p>
           </div>
         </div>
@@ -61,9 +61,9 @@
         </ul>
 
           <!-- comment before merging into 'master' -->
-          <!-- <p style="font-family: Courier; color: red; font-size: large; margin-top: 2em;">
-            *This is a development site - visit the stable version <a href="http://www.pathwaycommons.org/">here</a>
-          </p> -->
+          <p style="font-family: Courier; color: red; font-size: large; margin-top: 2em;">
+            *This is a development site - visit the stable version <a class="pc-url" href="">here</a>
+          </p>
       </div>
       <!-- END: jumbotron -->
 
@@ -74,7 +74,7 @@
         </div>
 
         <div class="app">
-          <a href="http://www.pathwaycommons.org/pathways/#/search" target="_blank" class="btn btn-default btn-block pc-btn-anchor app-name ga ga-apps">
+          <a href="pathways/#/search" target="_blank" class="btn btn-default btn-block pc-btn-anchor app-name ga ga-apps pc-url">
               Pathway Search
           </a>
           <form id="pathway-search-form" class="app-form">
@@ -96,7 +96,7 @@
         </div>
 
         <div class="app">
-          <a href="http://www.pathwaycommons.org/pcviz/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor app-name ga ga-apps">
+          <a href="pcviz/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor app-name ga ga-apps pc-url">
             PCViz
           </a>
           <form id="pcviz-form" class="app-form">
@@ -219,7 +219,7 @@
         </div>
 
         <div class="data-section">
-          <a href="http://www.pathwaycommons.org/pc2/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor ga ga-data">
+          <a href="pc2/" target="_blank" class="btn btn-primary btn-block pc-btn-anchor ga ga-data pc-url">
               Web Services
           </a>
 
@@ -231,7 +231,7 @@
 
           <div class="list-group">
             <div class="collapse" id="collapse-data-web-services">
-              <a href="http://www.pathwaycommons.org/pc2/#search" target="_blank" class="list-group-item">
+              <a href="pc2/#search" target="_blank" class="list-group-item pc-url">
                 <h4 class="list-group-item-heading">Search</h4>
                 <p class="list-group-item-text">
                   A full-text search of the BioPAX database.
@@ -240,7 +240,7 @@
                   Apache Lucene syntax support; Filter by datasource and BioPAX class
                 </p>
               </a>
-              <a href="http://www.pathwaycommons.org/pc2/#get" target="_blank" class="list-group-item">
+              <a href="pc2/#get" target="_blank" class="list-group-item pc-url">
                 <h4 class="list-group-item-heading">Get</h4>
                 <p class="list-group-item-text">
                   Retrieves a particular object model in Pathway Commons by URI.
@@ -251,7 +251,9 @@
               </a>
               <div class="list-group-item">
                 <h4 class="list-group-item-heading">
-                  <a href="http://www.pathwaycommons.org/pc2/#graph" target="_blank" >Graph</a>, <a href="http://www.pathwaycommons.org/pc2/#traverse" target="_blank" >Traverse</a> and <a href="http://www.pathwaycommons.org/pc2/#top_pathways" target="_blank" >Top Pathways</a>
+                  <a href="pc2/#graph" target="_blank" class="pc-url">Graph</a>, 
+                  <a class="pc-url" href="pc2/#traverse" target="_blank" >Traverse</a> and 
+                  <a class="pc-url" href="pc2/#top_pathways" target="_blank" >Top Pathways</a>
                 </h4>
                 <p class="list-group-item-text">
                   Graph searches identify connections and neighborhoods of elements.
@@ -424,7 +426,12 @@
             <div class="collapse" id="faq-1">
               <div class="well">
                 <p class="faq-answer">
-                  Pathway Commons aims to collect and disseminate biological pathway and interaction data.  Data is collected from <a href="http://www.pathwaycommons.org/pc2/datasources" target="_blank">partner databases</a> and is represented in the <a href="http://www.biopax.org/" target="_blank">BioPAX</a> standard. By representing data in BioPAX, Pathway Commons is able to provide a detailed representation of a variety of biological concepts including: Biochemical reactions; gene regulatory networks; and genetic interactions; transport and catalysis events; and physical interactions involving proteins, DNA, RNA and small molecules and complexes.
+                  Pathway Commons aims to collect and disseminate biological pathway and interaction data.  Data is collected from 
+<a class="pc-url" href="pc2/datasources" target="_blank">partner databases</a> and is represented in the 
+<a href="http://www.biopax.org/" target="_blank">BioPAX</a> standard. By representing data in BioPAX, 
+Pathway Commons is able to provide a detailed representation of a variety of biological concepts including: 
+Biochemical reactions; gene regulatory networks; and genetic interactions; transport and catalysis events; 
+and physical interactions involving proteins, DNA, RNA and small molecules and complexes.
                 </p>
               </div>
             </div>
@@ -453,7 +460,9 @@
                   <li>Researchers</li>
                   <ul>
                     <li>
-                      A common practice is to identify pathways that are enriched in gene expression data. To this end, Pathway Commons provides <a href="http://www.pathwaycommons.org/archives/" target="_blank">gene set database file downloads</a> for direct use in <a href="http://software.broadinstitute.org/gsea/index.jsp" target="_blank">Gene Set Enrichement Analysis (GSEA)</a>.
+                      A common practice is to identify pathways that are enriched in gene expression data. To this end, 
+                      Pathway Commons provides <a href="http://www.pathwaycommons.org/archives/" target="_blank">gene set database file downloads</a> 
+                      for direct use in <a href="http://software.broadinstitute.org/gsea/index.jsp" target="_blank">Gene Set Enrichement Analysis (GSEA)</a>.
                     </li>
                   </ul>
                   <li>Softare developers</li>
@@ -477,10 +486,10 @@
                   <li>Web</li>
                   <ul>
                     <li>
-                      <a href="http://www.pathwaycommons.org/pathways/#/search" target="_blank">Search and view</a> pathways
+                      <a class="pc-url" href="pathways/#/search" target="_blank">Search and view</a> pathways
                     </li>
                     <li>
-                      <a href="http://www.pathwaycommons.org/pcviz/" target="_blank">Search and view</a> interactions
+                      <a class="pc-url" href="pcviz/" target="_blank">Search and view</a> interactions
                     </li>
                   </ul>
                   <li>Desktop software</li>
@@ -494,7 +503,7 @@
                   </ul>
                   <li>Programmatically</li>
                   <ul>
-                    <li>Search, retrieve and navigate over Pathway Commons data using our set of <a href="http://www.pathwaycommons.org/pc2/" target="_blank">web services</a>
+                    <li>Search, retrieve and navigate over Pathway Commons data using our set of <a class="pc-url" href="pc2/" target="_blank">web services</a>
                     </li>
                     <li>Use semantic queries for Pathway Commons data at our <a href="http://rdf.pathwaycommons.org/" target="_blank">SPARQL endpoint</a>
                     </li>
@@ -565,7 +574,7 @@
             <div class="collapse" id="faq-8">
               <div class="well">
                 <p>
-                  The <a href="http://www.pathwaycommons.org/pc/" target="_blank">legacy site</a> has not been updated since 2011 and is not actively maintained.
+                  The <a class="pc-url" href="pc/" target="_blank">legacy site</a> has not been updated since 2011 and is not actively maintained.
                 </p>
               </div>
             </div>

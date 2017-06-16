@@ -49,10 +49,15 @@ $(function(){ // document ready
       category = "Apps";
       label = self.text();
     }
+    else if(self.hasClass("ga-training"))
+    {
+      category = "Training";
+      label = self.find(".pc-list-group-item-text .pc-list-group-item-title").text();
+    }
     else if(self.hasClass("ga-data"))
     {
       category = "Data";
-      label = self.text();
+      label = self.find(".pc-list-group-item-text .pc-list-group-item-title").text();
     }
     else if(self.hasClass("ga-tools"))
     {
@@ -91,7 +96,7 @@ $(function(){ // document ready
   // Google Analytics depth tracking plugin (scrolldepth.parsnip.io/)
   jQuery.scrollDepth({
     minHeight: 0,
-    elements: ["#apps", "#data", "#tools", "#faq", "#contact"],
+    elements: ["#apps", "#training", "#data", "#tools", "#faq", "#contact"],
     percentage: false,
     userTiming: false,
     pixelDepth: false,

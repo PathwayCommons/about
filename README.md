@@ -1,4 +1,4 @@
-Need information about [Pathway Commons](http://www.pathwaycommons.org/)? You've come to the right place. Here's where you'll find information about tools, tutorials, and other helpful resources that are available.  
+Need information about [Pathway Commons](http://www.pathwaycommons.org/)? You've come to the right place. Here's where you'll find information about tools, tutorials, and other helpful resources that are available.
 
 # Contents
 * [Overview](#overview)
@@ -48,6 +48,13 @@ This section contains teaching materials that we've collected which will help ki
       * Organizer
         * Augustin Luna, Research Fellow, Department of Biostatistics and Computational Biology, Dana-Farber Cancer Institute - [@cannin](https://github.com/cannin)
 
+
+# Developer Resources
+
+## Developer Links
+
+- [PCAPI](http://beta.pathwaycommons.org/pcapi/): A graphical user interface for the Pathway Commons [web services API](http://www.pathwaycommons.org/pc2/)
+- [cPath2-client](https://www.npmjs.com/package/pathway-commons): A JavaScript client (NPM) for the Pathway Commons [web services API](http://www.pathwaycommons.org/pc2/)
 
 
 

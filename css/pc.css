@@ -67,8 +67,8 @@ footer {
 
 .pc-btn-anchor {
   color: #ecf0f1;
-  background-color: rgba(44, 62, 80, 0.9);
-  border-color: rgba(44, 62, 80, 0.8);
+  background-color: rgba(36, 50, 66, 0.9);
+  border-color: rgba(36, 50, 66, 0.8);
   opacity: 0.9;
   margin: 2px;
   font-size: 21px;
@@ -93,7 +93,7 @@ footer {
 .pc-list-group .pc-list-group-item .pc-list-group-item-text {
   position: absolute;
   color: #ECF0F1;
-  background: rgba(44, 62, 80, 0.8);
+  background: rgba(36, 50, 66, 0.85);
   z-index: 1;
   top: 0;
   bottom: 0;
@@ -110,9 +110,8 @@ footer {
 }
 .pc-list-group .pc-list-group-item .pc-list-group-item-text .pc-list-group-item-description {
   text-align: left;
-  color: #BDC3C7;
-  font-size: 15px;
-  font-weight: 200;
+  color: #ECF0F1;
+  font-size: 16px;
 }
 .pc-list-group .pc-list-group-item .pc-list-group-item-text .pc-list-group-item-description-footer {
   position: absolute;
@@ -264,22 +263,42 @@ footer {
 
 /* START: Apps */
 #apps .app {
-  margin-bottom: 3em;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#apps .app .app-form {
-  background-color: #ECF0F1;
-  padding: 1em 1em 0.2em;
+#apps .app .app-panel {
+  background-color: #2c3e50;
+  border-radius: 8px;
 }
 
-#apps .app .app-form .glyphicon {
+#apps .app .app-panel h3 {
+  padding-top: 1em;
+}
+
+#apps .app .app-panel h3 a {
+  color: #ECF0F1;
+  text-decoration: underline;
+}
+
+#apps .app .app-panel .app-form {
+  padding: 1.1em 1em 1em;  
+}
+
+#apps .app .app-panel .app-form .glyphicon {
   font-size: 1.5em;
 }
 
-#apps .app .app-form button {
+#apps .app .app-panel .app-form button {
   padding: 0;
   border: none;
   background-color: #ECF0F1;
+}
+@media (max-width: 768px) {
+  #apps .app {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 /* END: Apps */
 

@@ -8,6 +8,10 @@ a:hover {
   color: #34495E;
 }
 
+.modal-trigger {
+  cursor: pointer;
+}
+
 .site-wrapper {
   min-width: 350px;
   max-width: 992px;
@@ -26,7 +30,7 @@ a:hover {
 }
 
 .splash {
-  margin: 1.5em auto 3em;
+  margin: 1.5em auto;
   display: block;
 }
 
@@ -54,35 +58,6 @@ footer {
   padding: 10px 2px 0;
 }
 
-/* alert */
-.alert-pc {
-  background-color: #2980B9;
-  color: #ECF0F1;
-}
-
-.alert-pc a, .alert-pc a:hover, .alert-pc a:visited{
-  color: #ECF0F1;
-  text-decoration: underline;
-}
-
-.pc-btn-anchor {
-  color: #ecf0f1;
-  background-color: rgba(36, 50, 66, 0.9);
-  border-color: rgba(36, 50, 66, 0.8);
-  opacity: 0.9;
-  margin: 2px;
-  font-size: 21px;
-}
-
-.pc-btn-detail {
-  margin: 0.5em auto;
-  background-color: #ECF0F1;
-}
-
-.pc-btn-anchor h3,h4 {
-  margin: 0;
-}
-
 /* pc-list-group */
 .pc-list-group .pc-list-group-item {
   margin-top: 1.5em;
@@ -93,7 +68,7 @@ footer {
 .pc-list-group .pc-list-group-item .pc-list-group-item-text {
   position: absolute;
   color: #ECF0F1;
-  background: rgba(36, 50, 66, 0.85);
+  background: rgba(44, 62, 80, 0.90);
   z-index: 1;
   top: 0;
   bottom: 0;
@@ -156,10 +131,6 @@ footer {
 
   .boost {
     font-size: 16px;
-  }
-
-  .splash {
-    display: none;
   }
 
   /* alert */
@@ -255,6 +226,15 @@ footer {
     opacity: 0.15;
     max-height: 150px;
   }
+
+}
+
+@media (max-width: 480px) {
+
+  #version-info{
+    position: absolute;
+    vertical-align: super;
+  }
 }
 /* END: JUMBOTRON */
 
@@ -263,26 +243,32 @@ footer {
 
 /* START: Apps */
 #apps .app {
+  color: #ECF0F1;
+  font-size: 16px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
 #apps .app .app-panel {
   background-color: #2c3e50;
-  border-radius: 8px;
 }
 
-#apps .app .app-panel h3 {
-  padding-top: 1em;
+#apps .app .app-panel .app-panel-heading {
+  font-size: 21px;
+  padding-top: 0.5em;
 }
 
-#apps .app .app-panel h3 a {
+#apps .app .app-panel .app-panel-heading > a {
   color: #ECF0F1;
   text-decoration: underline;
 }
 
+#apps .app .app-panel .app-panel-subheading {
+  margin: 0;
+}
+
 #apps .app .app-panel .app-form {
-  padding: 1.1em 1em 1em;  
+  padding: 0.25em 1em 1px;
 }
 
 #apps .app .app-panel .app-form .glyphicon {
@@ -298,6 +284,11 @@ footer {
   #apps .app {
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 1em;
+  }
+
+  #apps .app .app-panel .app-form {
+    padding: 0.2em 0.2em 1px;
   }
 }
 /* END: Apps */

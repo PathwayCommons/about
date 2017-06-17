@@ -25,6 +25,25 @@
     <!-- BEGIN: site-wrapper -->
     <div class="container site-wrapper">
 
+      <!-- BEGIN: Splash -->
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModal">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title text-center">What's inside version 9</h3>
+              </div>
+              <div class="modal-body">
+                <img src="images/splash.png" class="img-responsive splash" alt="splash">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- END: Splash -->
+
       <!-- BEGIN: jumbotron -->
       <div class="jumbotron">
 
@@ -37,7 +56,16 @@
           </div>
 
           <div class="col-xs-12 col-sm-10">
-            <h1>Pathway Commons</h1>
+            <h1>
+              Pathway Commons
+              <small>
+                <span id="version-info">
+                  <a class="modal-trigger" data-toggle="modal" data-target="#infoModal">
+                    v9
+                  </a>
+                </span>
+              </small>
+            </h1>
             <p class="lead">
               Access and discover data from <a class="pc-url" href="pc2/datasources" target="_blank">public pathway and interactions databases</a>.
             </p>
@@ -75,11 +103,14 @@
         <div class="row">
           <div class="app col-xs-12 col-sm-6">
             <div class="app-panel">
-              <h3 class="text-center">
+              <p class="app-panel-heading text-center">
                 <a href="pathways/#/search" target="_blank" class="app-name ga ga-apps pc-url">
-                  Pathway Search
+                  Search
                 </a>
-              </h3>
+              </p>
+              <p class="app-panel-subheading text-center">
+                Search the entire collection of pathways
+              </p>
               <form id="pathway-search-form" class="app-form">
                 <div class="form-group">
                   <div class="input-group">
@@ -87,7 +118,7 @@
                       type="text"
                       id="pathway-search-query-text"
                       class="form-control input-lg"
-                      placeholder="Search by name (e.g. 'glycolysis')" />
+                      placeholder="Names or gene IDs (e.g. 'glycolysis', 'TP53')" />
                     <span class="input-group-addon">
                       <button type="submit" class="btn btn-default">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -101,11 +132,14 @@
 
           <div class="app col-xs-12 col-sm-6">
             <div class="app-panel">
-              <h3 class="text-center">
+              <p class="app-panel-heading text-center">
                 <a href="pcviz/" target="_blank" class="app-name ga ga-apps pc-url">
                   PCViz
                 </a>
-              </h3>
+              </p>
+              <p class="app-panel-subheading text-center">
+                Get details about genes and their interactions
+              </p>
               <form id="pcviz-form" class="app-form">
                 <div class="form-group ">
                   <div class="input-group">
@@ -113,7 +147,7 @@
                       type="text"
                       id="pcviz-gene-text"
                       class="form-control input-lg"
-                      placeholder="Search for iteractions (e.g. 'MDM2 TP53')" />
+                      placeholder="Gene IDs (e.g. 'MDM2 TP53')" />
                     <span class="input-group-addon">
                       <button type="submit" class="btn btn-default">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -127,16 +161,6 @@
         </div>
       </div>
       <!-- END: Apps -->
-
-      <!-- BEGIN: Info -->
-      <!-- <div id="info" class="section">
-        <div class="page-header">
-          <h3 class="hidden-xs text-center text-muted">What's Inside?</h3>
-        </div>
-        <img src="images/splash.png" class="img-responsive splash" alt="splash">
-
-      </div> -->
-      <!-- END: Info -->
 
       <!-- BEGIN: Training -->
       <div id="training" class="section">
@@ -175,7 +199,7 @@
 
         <div class="pc-list-group">
           <div class="pc-list-group-item">
-            <a href="http://www.pathwaycommons.org/archives/PC2/current/" target="_blank" class="ga ga-data">
+            <a href="pc2/downloads" target="_blank" class="pc-url ga ga-data">
               <div class="pc-list-group-item-text">
                 <p class="pc-list-group-item-title text-center">File Downloads</p>
                 <p class="pc-list-group-item-description hidden-xs">

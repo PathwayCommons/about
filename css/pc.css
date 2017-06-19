@@ -105,8 +105,8 @@ footer {
   display: inline;
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 50%;
+  top: -5%;
+  right: 60%;
   bottom: auto;
   left: auto;
   padding: 1em;
@@ -124,8 +124,7 @@ footer {
     width: 60%;
   }
   .pc-list-group .pc-list-group-item .pc-list-group-item-meta {
-    top: 0;
-    right: 30%;
+    right: 40%;
   }
 }
 
@@ -163,6 +162,10 @@ footer {
 .jumbotron {
   background-color: white;
   padding: 25px;
+}
+
+.jumbotron p {
+  font-weight: normal;
 }
 
 .jumbotron h1 {

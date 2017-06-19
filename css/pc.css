@@ -176,7 +176,6 @@ footer {
 .jumbotron .citation a, .citation a:hover, .citation a:visited {
   position: relative;
   top: -1em;
-  font-style: italic;
   font-size: 19px;
 }
 

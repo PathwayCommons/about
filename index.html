@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/datasources.css">
     <link rel="stylesheet" href="css/pc.css">
 
     <script>
@@ -93,6 +94,18 @@
         </ul>
       </div>
       <!-- END: jumbotron -->
+
+      <div id="statistics" class="section">
+        <div class="page-header">
+          <h2>Statistics <small></small></h2>
+        </div>
+        <div id="datasources">
+          <div class="form-wrapper col-md-2">
+            <form role="form" ></form>
+          </div>
+          <div class="graph-wrapper col-md-10"></div>
+        </div>
+      </div>
 
       <!-- BEGIN: Apps -->
       <div id="apps" class="section">
@@ -592,9 +605,11 @@ and physical interactions involving proteins, DNA, RNA and small molecules and c
     <!-- End: site-wrapper   -->
 
     <!-- Load JS here for greater good =============================-->
+    <script src="lib/d3/d3.min.js"></script>
     <script src="lib/jquery-3.2.1.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="lib/jquery-scrolldepth/jquery.scrolldepth.min.js"></script>
     <script src="js/pc.js"></script>
+    <script src="js/datasources.js"></script>
   </body>
 </html>

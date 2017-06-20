@@ -1,10 +1,18 @@
 .axis {
   font: 16px sans-serif;
+  stroke-width: 2px;
+}
+
+.axis .label {
+  font: 21px sans-serif;  
 }
 
 .legend {
-  font: 16px sans-serif;
+  font: 18px sans-serif;
 }
 
-#datasources .form-wrapper{
+
+
+#datasources .form-wrapper .form-inline > * {
+   margin: 1em 1em;
 }

@@ -26,7 +26,8 @@
     height      : null,
     margin      : null,
     data        : null,
-    transitionDuration: 250
+    maxDataValue: 0,
+    transitionDuration: 250,
   },
 
   d3Map = {
@@ -67,16 +68,27 @@
 
   setScales = function( data, choices ){
     var choice_keys = choices || keys;
+    var max = d3.max(data, function(d) { return d3.max(choice_keys, function(key) { return d[key]; }); } );
+
+    // dynamically set the scale used log or linear
+    if( max > 5000 ){
+      d3Map.x = d3.scaleLog();
+    } else {
+      d3Map.x = d3.scaleLinear();
+    }
+    d3Map.x.rangeRound([0, stateMap.width]);
+    d3Map.xAxis = d3.axisBottom(d3Map.x).tickFormat(function(d){ return d3Map.x.tickFormat(4,d3.format(",d"))(d); });
+
     // Set the scale bounds based on data
     d3Map.y0.domain( data.map(function(d) { return d.name[0]; }) );
     d3Map.y1.domain( keys ).rangeRound([0, d3Map.y0.bandwidth()]);
-    d3Map.x.domain([1, d3.max(data, function(d) { return d3.max(choice_keys, function(key) { return d[key]; }); } )]).nice();
+    d3Map.x.domain([1, max]).nice();
   };
 
   updateAxes = function( data, choices ){
     setScales( data, choices );
-    d3Map.g_axis_y.transition().duration(500).call( d3Map.yAxis );
-    d3Map.g_axis_x.transition().duration(500).call( d3Map.xAxis );
+    d3Map.g_axis_y.transition().duration(stateMap.transitionDuration).call( d3Map.yAxis );
+    d3Map.g_axis_x.transition().duration(stateMap.transitionDuration).call( d3Map.xAxis );
   };
 
   renderAxes = function( data ){
@@ -96,11 +108,35 @@
     d3Map.g_axis_x.append("text")
         .attr("x", d3Map.x(d3Map.x.ticks().pop()) / 1.8)
         .attr("y", 2)
-        .attr("dy", "3em")
+        .attr("dy", "1.8em")
         .attr("fill", "#000")
         .attr("font-weight", "bold")
         .attr("text-anchor", "end")
+        .attr("class", "label")
         .text("Counts");
+  };
+
+  renderLegend = function(selection, categories){
+    var legend = selection.append("g")
+        .attr("class", "legend")
+        .attr("font-family", "sans-serif")
+        .attr("text-anchor", "end")
+      .selectAll("g")
+      .data( categories.slice() )
+      .enter().append("g")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+    legend.append("rect")
+        .attr("x", stateMap.width - 19)
+        .attr("width", 19)
+        .attr("height", 19)
+        .attr("fill", d3Map.colorScale);
+
+    legend.append("text")
+        .attr("x", stateMap.width - 24)
+        .attr("y", 9.5)
+        .attr("dy", "0.32em")
+        .text(function(d) { return d.substring(3); }); //assuming label is num*
   };
 
 
@@ -109,6 +145,7 @@
       remove()
     } else {
       renderAxes( data );
+      renderLegend( d3Map.g_panel, keys );
     }
     update();
   };
@@ -127,7 +164,6 @@
 
     var choices = getChoices();
     var choiceData = filterData(stateMap.data, choices);
-    console.log(choiceData[0]);
     updateAxes( choiceData, choices );
 
     //update
@@ -151,7 +187,9 @@
       .data(function(d) {
         return choices.map(function(k){ return {key: k, value: d[k] } })
       }, function(d) { return d.key; })
-      .attr("height", d3Map.y1.bandwidth());
+      .attr("width", function(d) { return d.value ? d3Map.x( d.value ) : 0; })
+      .attr("height", d3Map.y1.bandwidth())
+      .attr("y", function( d ) { return d3Map.y1( d.key ); });
 
     // enter
     bars.enter().append("rect")
@@ -168,27 +206,6 @@
         .duration(stateMap.transitionDuration)
       .attr("width", 0)
       .remove();
-
-    // var legend = g.append("g")
-    //     .attr("class", "legend")
-    //     .attr("font-family", "sans-serif")
-    //     .attr("text-anchor", "end")
-    //   .selectAll("g")
-    //   .data(keys.slice())
-    //   .enter().append("g")
-    //     .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-    //
-    // legend.append("rect")
-    //     .attr("x", width - 19)
-    //     .attr("width", 19)
-    //     .attr("height", 19)
-    //     .attr("fill", z);
-    //
-    // legend.append("text")
-    //     .attr("x", width - 24)
-    //     .attr("y", 9.5)
-    //     .attr("dy", "0.32em")
-    //     .text(function(d) { return d.substring(3); }); //assuming label is num*
   };
 
 
@@ -196,8 +213,8 @@
     d3Map.container = d3.select("#datasources");
     d3Map.svg_panel = d3Map.container.select(".graph-wrapper")
       .append("svg")
-      .attr("width", 750)
-      .attr("height", 900);
+      .attr("width", 1000)
+      .attr("height", 700);
     stateMap.margin = { top: 20, right: 40, bottom: 50, left: 110 };
     stateMap.width = d3.max([+$("svg").parent().width() - stateMap.margin.left - stateMap.margin.right, 250]);
     stateMap.height = +d3Map.svg_panel.attr("height") - stateMap.margin.top - stateMap.margin.bottom;
@@ -210,9 +227,9 @@
       .data( keys )
       .enter()
         .append('div')
-        .attr('class', 'checkbox')
+        .attr('class', 'checkbox form-group')
         .append('label').html(function(id, index) {
-          return '<input id="' + id + '" type="checkbox" class="checkbox" value="' + id +  '"' + (id === "numPathways" ? ' checked':' ')  + '>' + keyNames[index];
+          return '<input id="' + id + '" type="checkbox" class="checkbox" value="' + id +  '"' + (id === "numPathways" ? ' checked':' ')  + '>  ' + keyNames[index];
         })
       .on("change", update);
 
@@ -224,14 +241,14 @@
         .padding(0.05);
 
     // Category data values
-    d3Map.x = d3.scaleLog()
-        .rangeRound([0, stateMap.width]);
+    // d3Map.x = d3.scaleLinear()
+    //     .rangeRound([0, stateMap.width]);
+
+    // d3Map.xAxis = d3.axisBottom(d3Map.x).tickFormat(function(d){ return d3Map.x.tickFormat(4,d3.format(",d"))(d); });
+    d3Map.yAxis = d3.axisLeft(d3Map.y0);
 
     d3Map.colorScale = d3.scaleOrdinal()
       .range([ "#2980b9", "#16a085", "#bdc3c7", "#2c3e50", "#c0392b", "#d35400", "#8e44ad"]);
-
-    d3Map.xAxis = d3.axisBottom(d3Map.x).tickFormat(function(d){ return d3Map.x.tickFormat(4,d3.format(",d"))(d); });
-    d3Map.yAxis = d3.axisLeft(d3Map.y0);
 
     fetchData( renderGraph );
   };

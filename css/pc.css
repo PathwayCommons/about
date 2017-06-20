@@ -190,6 +190,7 @@ footer {
 .jumbotron .nav.nav-pills li a  {
   color: #34495E;
   text-decoration: overline;
+  padding: 14px;
 }
 
 .jumbotron .nav.nav-pills li a:hover {
@@ -224,6 +225,10 @@ footer {
     top: 5em;
     opacity: 0.15;
     max-height: 150px;
+  }
+
+  .jumbotron .nav.nav-pills li a  {
+    padding: 0.5em;
   }
 
 }

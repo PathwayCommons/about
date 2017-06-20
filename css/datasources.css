@@ -1,18 +1,26 @@
-.axis {
+svg .axis {
   font: 16px sans-serif;
   stroke-width: 2px;
 }
 
-.axis .label {
-  font: 21px sans-serif;  
+svg .axis .label {
+  font: 21px sans-serif;
 }
 
-.legend {
+svg  .legend {
   font: 18px sans-serif;
 }
 
-
+svg rect:hover {
+  cursor: pointer;
+}
 
 #datasources .form-wrapper .form-inline > * {
-   margin: 1em 1em;
+   margin: auto 0.4em;
+}
+
+@media (max-width: 768px) {
+  #datasources .form-wrapper .form-inline > * {
+     margin: auto auto;
+  }
 }

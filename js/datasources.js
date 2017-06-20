@@ -12,13 +12,13 @@
   keys = [
     "numPathways"
     , "numInteractions"
-    // , "numPhysicalEntities"
+    , "numPhysicalEntities"
   ],
 
   keyNames = [
     "Pathways"
     , "Interactions"
-    // , "Physical Entities"
+    , "Physical Entities"
   ],
 
   stateMap = {
@@ -182,10 +182,11 @@
         .duration(stateMap.transitionDuration)
       .remove();
 
+
     // update
     var bars = d3Map.g_panel.selectAll(".source").selectAll("rect")
       .data(function(d) {
-        return choices.map(function(k){ return {key: k, value: d[k] } })
+        return choices.map(function(k){ return {key: k, value: d[k], data: d } })
       }, function(d) { return d.key; })
       .attr("width", function(d) { return d.value ? d3Map.x( d.value ) : 0; })
       .attr("height", d3Map.y1.bandwidth())
@@ -206,6 +207,22 @@
         .duration(stateMap.transitionDuration)
       .attr("width", 0)
       .remove();
+
+    //events
+    d3Map.g_panel.selectAll("rect").on("click", function(d){
+      var self = d3.select(this);
+      if(!self.data().length) return;
+      var data = self.data()[0].data;
+      window.open(data.urlToHomepage, "_blank");
+    });
+    //events
+    d3Map.g_panel.selectAll("rect").on("mouseover", function(d){
+      var self = d3.select(this);
+      if(!self.data().length) return;
+      var data = self.data()[0].data;
+      console.log(data.description);
+    });
+
   };
 
 

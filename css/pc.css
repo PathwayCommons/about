@@ -232,14 +232,6 @@ footer {
   }
 
 }
-
-@media (max-width: 480px) {
-
-  #version-info{
-    position: absolute;
-    vertical-align: super;
-  }
-}
 /* END: JUMBOTRON */
 
 /* START: Info */

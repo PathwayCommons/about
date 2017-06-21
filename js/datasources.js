@@ -28,6 +28,13 @@
     data        : null,
     maxDataValue: 0,
     transitionDuration: 250,
+    tip_html: function( d ){
+      console.log(d);
+      return '<h4>' + d.data.name[d.data.name.length - 1] +'</h4>' +
+      '<ul>' +
+        '<li>' + d.key + ': ' + d.value + '</li>' +
+      '</ul>';
+    }
   },
 
   d3Map = {
@@ -215,14 +222,14 @@
       var data = self.data()[0].data;
       window.open(data.urlToHomepage, "_blank");
     });
+
     //events
     d3Map.g_panel.selectAll("rect").on("mouseover", function(d){
-      var self = d3.select(this);
-      if(!self.data().length) return;
-      var data = self.data()[0].data;
-      console.log(data.description);
+      // console.log(d.data);
+      d3Map.tip.show(stateMap.tip_html(d));
     });
-
+    //events
+    d3Map.g_panel.selectAll( "rect" ).on( "mouseout", d3Map.tip.hide );
   };
 
 
@@ -257,15 +264,19 @@
     d3Map.y1 = d3.scaleBand()
         .padding(0.05);
 
-    // Category data values
-    // d3Map.x = d3.scaleLinear()
-    //     .rangeRound([0, stateMap.width]);
-
-    // d3Map.xAxis = d3.axisBottom(d3Map.x).tickFormat(function(d){ return d3Map.x.tickFormat(4,d3.format(",d"))(d); });
     d3Map.yAxis = d3.axisLeft(d3Map.y0);
 
     d3Map.colorScale = d3.scaleOrdinal()
       .range([ "#2980b9", "#16a085", "#bdc3c7", "#2c3e50", "#c0392b", "#d35400", "#8e44ad"]);
+
+    /* Initialize tooltip */
+    d3Map.tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) { return d; });
+
+    /* Invoke the tip in the context of your visualization */
+    d3Map.svg_panel.call( d3Map.tip )
 
     fetchData( renderGraph );
   };

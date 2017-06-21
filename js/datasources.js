@@ -30,10 +30,8 @@
     transitionDuration: 250,
     tip_html: function( d ){
       console.log(d);
-      return '<h4>' + d.data.name[d.data.name.length - 1] +'</h4>' +
-      '<ul>' +
-        '<li>' + d.key + ': ' + d.value + '</li>' +
-      '</ul>';
+      return '<p><u>' + d.data.name[d.data.name.length - 1] +'</u></p>' +
+      '<p>'+ d.key.substring(3) + ': ' + d.value + '</p>';
     }
   },
 

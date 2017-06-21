@@ -31,7 +31,7 @@ svg rect:hover {
 .d3-tip {
   line-height: 1;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   padding: 12px;
   background: rgba(37, 52, 67, 0.9);
   color: #f7f9f9;

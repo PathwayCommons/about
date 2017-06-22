@@ -131,8 +131,8 @@ footer {
 @media (max-width: 768px) {
 
   .site-wrapper {
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: auto;
+    padding-right: auto;
   }
 
   /* pc-list-group */
@@ -154,6 +154,13 @@ footer {
   footer {
     padding: 0;
     margin: 3em 1em;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .splash {
+    display: none;
   }
 }
 /* END: GLOBAL */

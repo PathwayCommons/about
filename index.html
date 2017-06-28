@@ -60,7 +60,7 @@
               Pathway Commons
             </h1>
             <p>
-              Access and discover data from <a class="pc-url" href="pc2/datasources" target="_blank">public pathway and interactions databases</a>.
+              Access and discover data integrated from <a class="pc-url" href="pc2/datasources" target="_blank">public pathway and interactions databases</a>.
             </p>
             <!-- comment before merging into 'master' -->
             <p style="font-family: Courier; color: red; font-size: large; margin-top: 2em;">
@@ -478,12 +478,12 @@ and physical interactions involving proteins, DNA, RNA and small molecules and c
 
           <div class="qa">
             <a class="ga ga-faq" role="button" data-toggle="collapse" href="#faq-7" aria-expanded="true" aria-controls="faq-7">
-              <p class="boost faq-question">How were the pathways collected?</p>
+              <p class="boost faq-question">How were the pathway data integrated?</p>
             </a>
             <div class="collapse" id="faq-7">
               <div class="well">
                 <p>
-                  Pathways were downloaded directly from source databases. Each source pathway database has been created differently, some by manual extraction of pathway information from the literature and some by computational prediction.
+                  Pathway data are downloaded directly from source databases. Each source has been created differently, some by manual extraction of pathway information from the literature and some by computational prediction. Warehouse data (canonical molecules, ontologies) are converted to BioPAX utility classes and saved as the initial BioPAX model, which forms the foundation for integrating data and for id-mapping. Pathway and binary interaction data (interactions, participants) are normalized next and merged into the database. Original reference molecules are replaced with the corresponding BioPAX warehouse objects.
                 </p>
               </div>
             </div>

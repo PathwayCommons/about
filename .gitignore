@@ -2,4 +2,6 @@
 _tmp
 pathways
 pcapi
+*.iml
+.DS_Store
 

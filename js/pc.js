@@ -1,7 +1,7 @@
 $(function(){ // document ready
 
   // URL prefix for PC resource links on the main page:
-  var pcBaseUrl = "http://beta.pathwaycommons.org/";
+  var pcBaseUrl = "http://www.pathwaycommons.org/";
   $(".pc-url").each(function(i, a) {
     var e = $(a);
     e.attr('href', pcBaseUrl+e.attr('href'));

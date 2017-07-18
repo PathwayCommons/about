@@ -56,7 +56,13 @@ Pathway Commons brand materials to help you include PC on your web site or publi
 
 ### Logos
 
-[Download all our logos](images/brand/pc_logo.zip) or select individual formats/images below. 
+[Download all our logos](images/brand/pc_logo.zip) or select individual formats/images.
+
+To include one of the logos on your web page, you can simply link to one of the resources in the `images/brand` directory. For example, to include the PC logo with background:
+
+```html
+  <img src="http://pathwaycommons.github.io/about/images/brand/pc_logo_background.png" />
+```
 
 #### No background
 

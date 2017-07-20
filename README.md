@@ -47,7 +47,7 @@ This section contains teaching materials that we've collected which will help ki
 
 ### JavaScript
 
-- [PCAPI](http://beta.pathwaycommons.org/pcapi/): A graphical user interface for the Pathway Commons [web services API](http://www.pathwaycommons.org/pc2/)
+- [PCAPI](http://www.pathwaycommons.org/pcapi/): A graphical user interface for the Pathway Commons [web services API](http://www.pathwaycommons.org/pc2/)
 - [cPath2-client](https://www.npmjs.com/package/pathway-commons): A JavaScript client (NPM) for the Pathway Commons [web services API](http://www.pathwaycommons.org/pc2/)
 
 ## Brand

@@ -23,7 +23,7 @@ $(function(){ // document ready
 
   $("#pathway-search-form").submit(function() {
       var geneTxt = $("#pathway-search-query-text").val();
-      window.open(pcBaseUrl + "pathways/#/search?gt=3&lt=250&type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
+      window.open("http://apps.pathwaycommons.org/#/search?gt=0&lt=250&type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
       return false;
   });
 

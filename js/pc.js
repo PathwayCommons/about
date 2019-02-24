@@ -1,7 +1,7 @@
 $(function(){ // document ready
 
   // URL prefix for PC resource links on the main page:
-  var pcBaseUrl = "http://beta.pathwaycommons.org/";
+  var pcBaseUrl = "https://www.pathwaycommons.org/";
   $(".pc-url").each(function(i, a) {
     var e = $(a);
     e.attr('href', pcBaseUrl+e.attr('href'));
@@ -23,7 +23,7 @@ $(function(){ // document ready
 
   $("#pathway-search-form").submit(function() {
       var geneTxt = $("#pathway-search-query-text").val();
-      window.open("http://appsbeta.pathwaycommons.org/search?type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
+      window.open("https://apps.pathwaycommons.org/search?type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
       return false;
   });
 

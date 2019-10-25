@@ -67,82 +67,33 @@
 
         <p class="citation text-right">
           <a class="ga ga-publications hidden-xs"
-          href="http://www.ncbi.nlm.nih.gov/pubmed/21071392"
-          target="_blank">Pathway Commons, a web resource for biological pathway data.</a>
+          href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz946/5606621"
+          target="_blank">Pathway Commons 2019 Update: integration, analysis and exploration of pathway data.</a>
           <a class="ga ga-publications visible-xs"
-          href="http://www.ncbi.nlm.nih.gov/pubmed/21071392"
-          target="_blank">Cerami et al. NAR (2011).</a>
+          href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz946/5606621"
+          target="_blank">Rodchenkov et al. NAR (2019).</a>
         </p>
       </div>
       <!-- END: jumbotron -->
 
-      <!-- BEGIN: Apps -->
-      <div id="apps" class="section">
-        <div class="page-header">
-          <h2>Apps <small></small></h2>
-        </div>
-
-        <div class="row">
-          <div class="app col-xs-12 col-sm-6">
-            <div class="app-panel">
-              <p class="app-panel-heading item-title text-center">
-                <a href="https://apps.pathwaycommons.org/search" target="_blank" class="app-name ga ga-apps">
-                  Search
-                </a>
-              </p>
-              <p class="text-center">
-                Search the entire collection of pathways
-              </p>
-              <form id="pathway-search-form" class="app-form">
-                <div class="form-group">
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      id="pathway-search-query-text"
-                      class="form-control input-lg"
-                      placeholder="Names or gene IDs (e.g. 'glycolysis', 'TP53')" />
-                    <span class="input-group-addon">
-                      <button type="submit" class="btn btn-default">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </button>
-                    </span>
-                  </div>
-                </div>
-              </form>
-            </div>
+      <!-- BEGIN: Search -->
+      <div id="search">
+        <form id="pathway-search-form">
+          <div class="input-group">
+            <input
+              type="text"
+              id="pathway-search-query-text"
+              class="form-control input-lg"
+              placeholder="Search the database by keywords or genes" />
+            <span class="input-group-addon">
+              <button type="submit" class="no-style">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              </button>
+            </span>
           </div>
-
-          <div class="app col-xs-12 col-sm-6">
-            <div class="app-panel">
-              <p class="app-panel-heading item-title text-center">
-                <a href="pcviz/" target="_blank" class="app-name ga ga-apps pc-url">
-                  PCViz
-                </a>
-              </p>
-              <p class="text-center">
-                Get details about genes and their interactions
-              </p>
-              <form id="pcviz-form" class="app-form">
-                <div class="form-group ">
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      id="pcviz-gene-text"
-                      class="form-control input-lg"
-                      placeholder="Gene IDs (e.g. 'MDM2 TP53')" />
-                    <span class="input-group-addon">
-                      <button type="submit" class="btn btn-default">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </button>
-                    </span>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
-      <!-- END: Apps -->
+      <!-- END: Search -->
 
       <!-- BEGIN: Training -->
       <div id="training" class="section">
@@ -256,6 +207,27 @@
         <div class="page-header">
           <h2>Tools <small></small></h2>
         </div>
+
+        <!-- BEGIN: PCViz -->
+        <h3 class="subtitle">PCViz</h3>
+        <div id="pcviz">
+          <form id="pcviz-form">
+            <div class="input-group">
+              <input
+                type="text"
+                id="pcviz-gene-text"
+                class="form-control input-lg"
+                placeholder="Get details about genes and their interactions (e.g. 'MDM2 TP53')" />
+              <span class="input-group-addon">
+                <button type="submit" class="no-style">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <!-- END: PCViz -->
+
 
         <h3 class="subtitle">Data visualization and analysis</h3>
         <div class="pc-list-group">

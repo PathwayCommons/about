@@ -49,6 +49,13 @@ a:hover {
   font-size: 24px;
 }
 
+.no-style {
+  background:none;
+  border:none;
+  padding:0;
+  outline:none;
+}
+
 /* Typography */
 .boost {
   font-size: 18px;
@@ -242,62 +249,6 @@ footer {
 }
 /* END: JUMBOTRON */
 
-/* START: Info */
-/* END: Info */
-
-/* START: Apps */
-#apps {
-  margin-top: 0;
-}
-
-#apps .app {
-  color: rgb(37, 52, 67);
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#apps .app .app-panel {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #95a5a6;
-  background: rgba(236, 240, 241, 0.90);
-}
-
-#apps .app .app-panel .app-panel-heading {
-  padding-top: 0.5em;
-}
-
-#apps .app .app-panel .app-panel-heading > a {
-  color: rgb(37, 52, 67);
-  text-decoration: underline;
-}
-
-#apps .app .app-panel .app-form {
-  padding: 0.25em 1em 1px;
-}
-
-#apps .app .app-panel .app-form .glyphicon {
-  font-size: 1.5em;
-}
-
-#apps .app .app-panel .app-form button {
-  padding: 0;
-  border: none;
-  background-color: #ECF0F1;
-}
-@media (max-width: 768px) {
-  #apps .app {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 1em;
-  }
-
-  #apps .app .app-panel .app-form {
-    padding: 0.2em 0.2em 1px;
-  }
-}
-/* END: Apps */
-
 /* START: FAQ */
 .qa {
     margin-bottom: 20px;
@@ -311,7 +262,3 @@ footer {
     margin-top: 2em;
 }
 /* END: FAQ */
-
-
-/* START: CONTACT */
-/* END CONTACT */

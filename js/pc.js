@@ -1,11 +1,56 @@
 $(function(){ // document ready
 
-  // URL prefix for PC resource links on the main page:
+  var env = 'beta';
+
+  // URL for PC resource links
   var pcBaseUrl = "https://www.pathwaycommons.org/";
+  var pcBaseUrlBeta = "https://beta.pathwaycommons.org/";
+  var pcAppsBaseUrl = "https://apps.pathwaycommons.org/";
+  var pcAppsBaseUrlBeta = "https://appsbeta.pathwaycommons.org/";
+
   $(".pc-url").each(function(i, a) {
     var e = $(a);
-    e.attr('href', pcBaseUrl+e.attr('href'));
+    var baseUrl = pcBaseUrl;
+    if( e.hasClass( 'has-beta' ) && env != 'production' ) {
+        baseUrl = pcBaseUrlBeta;
+    }
+    e.attr('href', baseUrl+e.attr('href'));
   });
+
+  $(".apps-url").each(function(i, a) {
+    var e = $(a);
+    var baseUrl = pcAppsBaseUrl;
+    if( e.hasClass( 'has-beta' ) && env != 'production' ) {
+        baseUrl = pcAppsBaseUrlBeta;
+    }
+    e.attr('href', baseUrl+e.attr('href'));
+  });
+
+  $(".on-beta").each(function(i, a) {
+    if( env == 'production' ) $(a).css("display", "none");
+  });
+
+  function getPCDatasources(){
+    var baseUrl = env != 'production' ? pcBaseUrlBeta: pcBaseUrl;
+    var datasourcesUrl = `${baseUrl}pc2/metadata/datasources`;
+    return fetch(datasourcesUrl)
+        .then( response => response.json() )
+        .then( sources => sources.filter( s => s.notPathwayData == false ) );
+  }
+
+  (function(){
+    var sum = ( prev, curr ) => prev + curr;
+    getPCDatasources()
+      .then( sources => {
+        var numSources = sources.length;
+        var numPathways = sources.map( s => s.numPathways ).reduce( sum, 0 );
+        var numInteractions = sources.map( s => s.numInteractions ).reduce( sum, 0 );
+        if( numSources && numPathways && numInteractions ){
+          $("#pc-stats")
+            .text(`${numPathways} Pathways -- ${numInteractions} Interactions -- ${numSources} Databases`);
+        }
+      });
+  }());
 
   $("#pcviz-form").submit(function() {
       var geneTxt = $("#pcviz-gene-text").val();
@@ -23,7 +68,8 @@ $(function(){ // document ready
 
   $("#pathway-search-form").submit(function() {
       var geneTxt = $("#pathway-search-query-text").val();
-      window.open("https://apps.pathwaycommons.org/search?type=Pathway&q=" + encodeURIComponent(geneTxt), "_blank");
+      var baseUrl = env != 'production' ? pcAppsBaseUrlBeta : pcAppsBaseUrl;
+      window.open(`${baseUrl}search?type=Pathway&q=` + encodeURIComponent(geneTxt), "_blank");
       return false;
   });
 

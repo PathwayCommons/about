@@ -30,6 +30,27 @@ $(function(){ // document ready
     if( env == 'production' ) $(a).css("display", "none");
   });
 
+  function getPCDatasources(){
+    var baseUrl = env != 'production' ? pcBaseUrlBeta: pcBaseUrl;
+    var datasourcesUrl = `${baseUrl}pc2/metadata/datasources`;
+    return fetch(datasourcesUrl)
+        .then( response => response.json() )
+        .then( sources => sources.filter( s => s.notPathwayData == false ) );
+  }
+
+  (function(){
+    var sum = ( prev, curr ) => prev + curr;
+    getPCDatasources()
+      .then( sources => {
+        var numSources = sources.length;
+        var numPathways = sources.map( s => s.numPathways ).reduce( sum, 0 );
+        var numInteractions = sources.map( s => s.numInteractions ).reduce( sum, 0 );
+        if( numSources && numPathways && numInteractions ){
+          $("#pc-stats")
+            .text(`${numPathways} Pathways -- ${numInteractions} Interactions -- ${numSources} Databases`);
+        }
+      });
+  }());
 
   $("#pcviz-form").submit(function() {
       var geneTxt = $("#pcviz-gene-text").val();

@@ -1,6 +1,6 @@
 $(function(){ // document ready
 
-  var env = 'production';
+  var env = 'beta';
 
   // URL for PC resource links
   var pcBaseUrl = "https://www.pathwaycommons.org/";
@@ -25,6 +25,11 @@ $(function(){ // document ready
     }
     e.attr('href', baseUrl+e.attr('href'));
   });
+
+  $(".on-beta").each(function(i, a) {
+    if( env == 'production' ) $(a).css("display", "none");
+  });
+
 
   $("#pcviz-form").submit(function() {
       var geneTxt = $("#pcviz-gene-text").val();

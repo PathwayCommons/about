@@ -90,6 +90,11 @@ $(function(){ // document ready
       category = "Publications";
       label = self.text();
     }
+    else if(self.hasClass("ga-search"))
+    {
+      category = "Search";
+      label = self.val();
+    }
     else if(self.hasClass("ga-apps"))
     {
       category = "Apps";

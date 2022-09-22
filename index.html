@@ -73,7 +73,7 @@
             <input
               type="text"
               id="pathway-search-query-text"
-              class="form-control input-lg"
+              class="form-control input-lg ga ga-search"
               placeholder="Search the database by keywords or genes" />
             <span class="input-group-addon">
               <button type="submit" class="no-style">
@@ -82,6 +82,34 @@
             </span>
           </div>
         </form>
+        <div id="search-examples" class="row">
+            <div class="search-example col-sm-6 col-md-4">
+              <a href="interactions?source=TP53" class="apps-url has-beta" target="_blank">
+                <div class="thumbnail">
+                  <img src="images/search_interactions_large.png" alt="Search Interactions">
+                  <div class="caption">
+                    <h3>Interactions</h3>
+                    <p>
+                      Explore 'TP53' interactors
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="search-example col-sm-6 col-md-8">
+              <a href="pathways?uri=http%3A%2F%2Fidentifiers.org%2Freactome%2FR-HSA-69895" class="apps-url has-beta" target="_blank">
+                <div class="thumbnail">
+                  <img src="images/search_pathways_large.png" alt="Explore Pathways">
+                  <div class="caption">
+                    <h3>Pathways</h3>
+                    <p>
+                      Explore 'Transcriptional activation of cell cycle inhibitor p21' (Reactome)
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
       </div>
       <!-- END: Search -->
 

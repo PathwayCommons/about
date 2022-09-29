@@ -1,6 +1,6 @@
 $(function(){ // document ready
 
-  var env = 'beta';
+  var env = 'production';
 
   // URL for PC resource links
   var pcBaseUrl = "https://www.pathwaycommons.org/";

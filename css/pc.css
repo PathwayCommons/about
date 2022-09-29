@@ -249,6 +249,13 @@ footer {
 }
 /* END: JUMBOTRON */
 
+
+/* START: Search */
+#search-examples {
+  margin: 1em auto;
+}
+/* END: Search */
+
 /* START: FAQ */
 .qa {
     margin-bottom: 20px;

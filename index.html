@@ -25,25 +25,6 @@
     <!-- BEGIN: site-wrapper -->
     <div class="container site-wrapper">
 
-      <!-- BEGIN: Splash -->
-        <!-- Modal -->
-        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModal">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title text-center">What's inside version 9</h3>
-              </div>
-              <div class="modal-body">
-                <img src="images/splash.png" class="img-responsive splash" alt="splash">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      <!-- END: Splash -->
-
       <!-- BEGIN: jumbotron -->
       <div class="jumbotron">
 
@@ -60,20 +41,28 @@
               Pathway Commons
             </h1>
             <p>
-              Access and discover data integrated from <a class="pc-url" href="pc2/datasources" target="_blank">public pathway and interactions databases</a>. 
-              <span class="boost">Version 12: 5,772 Pathways -- 2,424,055 Interactions -- 22 Databases</span>.
+              Access and discover data integrated from <a class="pc-url has-beta" href="pc2/datasources" target="_blank">public pathway and interactions databases</a>.
+              <span id="pc-stats" class="boost"></span>
+            </p>
+            <!-- comment before merging into 'master' -->
+            <p class="on-beta" style="font-family: Courier; color: red; font-size: large; margin-top: 2em;">
+              * Development site (current release is <a href="https://www.pathwaycommons.org">here</a>)
             </p>
           </div>
         </div>
 
-        <p class="citation text-right">
-          <a class="ga ga-publications hidden-xs"
-          href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz946/5606621"
-          target="_blank">Pathway Commons 2019 Update: integration, analysis and exploration of pathway data.</a>
-          <a class="ga ga-publications visible-xs"
-          href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz946/5606621"
-          target="_blank">Rodchenkov et al. NAR (2019).</a>
-        </p>
+        <div class="citation text-right">
+          <div>
+            <a class="ga ga-publications"
+            href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz946/5606621"
+            target="_blank">Pathway Commons 2019 Update. Nucleic Acids Res (2019)</a>
+          </div>
+          <div>
+            <a class="ga ga-publications"
+            href="https://elifesciences.org/articles/68292"
+            target="_blank">Author-sourced pathway capture using Biofactoid. eLife (2021)</a>
+          </div>
+        </div>
       </div>
       <!-- END: jumbotron -->
 
@@ -84,7 +73,7 @@
             <input
               type="text"
               id="pathway-search-query-text"
-              class="form-control input-lg"
+              class="form-control input-lg ga ga-search"
               placeholder="Search the database by keywords or genes" />
             <span class="input-group-addon">
               <button type="submit" class="no-style">
@@ -93,6 +82,34 @@
             </span>
           </div>
         </form>
+        <div id="search-examples" class="row">
+            <div class="search-example col-sm-6 col-md-4">
+              <a href="interactions?source=TP53" class="apps-url has-beta" target="_blank">
+                <div class="thumbnail">
+                  <img src="images/search_interactions_large.png" alt="Search Interactions">
+                  <div class="caption">
+                    <h3>Interactions</h3>
+                    <p>
+                      Explore 'TP53' interactors
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="search-example col-sm-6 col-md-8">
+              <a href="pathways?uri=http%3A%2F%2Fidentifiers.org%2Freactome%2FR-HSA-69895" class="apps-url has-beta" target="_blank">
+                <div class="thumbnail">
+                  <img src="images/search_pathways_large.png" alt="Explore Pathways">
+                  <div class="caption">
+                    <h3>Pathways</h3>
+                    <p>
+                      Explore 'Transcriptional activation of cell cycle inhibitor p21' (Reactome)
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
       </div>
       <!-- END: Search -->
 
@@ -137,7 +154,7 @@
 
         <div class="pc-list-group">
           <div class="pc-list-group-item">
-            <a href="archives/" target="_blank" class="ga ga-data pc-url">
+            <a href="archives/" target="_blank" class="ga ga-data pc-url has-beta">
               <div class="pc-list-group-item-text">
                 <p class="pc-list-group-item-title item-title text-center">File Downloads</p>
                 <p class="pc-list-group-item-description hidden-xs">
@@ -158,7 +175,7 @@
 
         <div class="pc-list-group">
           <div class="pc-list-group-item">
-            <a href="pc2/" target="_blank" class="ga ga-data pc-url">
+            <a href="pc2/" target="_blank" class="ga ga-data pc-url has-beta">
               <div class="pc-list-group-item-text">
                 <p class="pc-list-group-item-title item-title text-center">BioPAX Web Services</p>
                 <p class="pc-list-group-item-description hidden-xs">
@@ -179,11 +196,11 @@
 
         <div class="pc-list-group">
           <div class="pc-list-group-item">
-            <a href="sifgraph/swagger-ui.html" target="_blank" class="ga ga-data pc-url">
+            <a href="sifgraph/swagger-ui.html" target="_blank" class="ga ga-data pc-url has-beta">
               <div class="pc-list-group-item-text">
                 <p class="pc-list-group-item-title item-title text-center">SIF Web Services</p>
                 <p class="pc-list-group-item-description hidden-xs">
-                  Run fast neighborhood, common stream, etc. graph-theoretical queries on (inferred from the BioPAX model) 
+                  Run fast neighborhood, common stream, etc. graph-theoretical queries on (inferred from the BioPAX model)
                   our simple genes products and chemicals binary interactions network (using HGNC Symbols and ChEBI IDs).
                 </p>
                 <p class="pc-list-group-item-description hidden-sm hidden-md hidden-lg">
@@ -333,7 +350,7 @@
               <div class="well">
                 <p class="faq-answer">
                   Pathway Commons aims to collect and disseminate biological pathway and interaction data.  Data is collected from
-<a class="pc-url" href="pc2/datasources" target="_blank">partner databases</a> and is represented in the
+<a class="pc-url has-beta" href="pc2/datasources" target="_blank">partner databases</a> and is represented in the
 <a href="https://www.biopax.org/" target="_blank">BioPAX</a> standard. By representing data in BioPAX,
 Pathway Commons is able to provide a detailed representation of a variety of biological concepts including:
 Biochemical reactions; gene regulatory networks; and genetic interactions; transport and catalysis events;
@@ -392,10 +409,7 @@ and physical interactions involving proteins, DNA, RNA and small molecules and c
                   <li>Web</li>
                   <ul>
                     <li>
-                      <a href="https://apps.pathwaycommons.org/search" target="_blank">Search and view</a> pathways
-                    </li>
-                    <li>
-                      <a class="pc-url" href="pcviz/" target="_blank">Search and view</a> interactions
+                      <a class="apps-url has-beta" href="search/" target="_blank">Search and view</a> pathways and interactions
                     </li>
                   </ul>
                   <li>Desktop software</li>
@@ -409,7 +423,7 @@ and physical interactions involving proteins, DNA, RNA and small molecules and c
                   </ul>
                   <li>Programmatically</li>
                   <ul>
-                    <li>Search, retrieve and navigate over Pathway Commons data using our set of <a class="pc-url" href="pc2/" target="_blank">web services</a>
+                    <li>Search, retrieve and navigate over Pathway Commons data using our set of <a class="pc-url has-beta" href="pc2/" target="_blank">web services</a>
                     </li>
                     <li>Use semantic queries for Pathway Commons data at our <a href="https://rdf.pathwaycommons.org/" target="_blank">SPARQL endpoint</a>
                     </li>

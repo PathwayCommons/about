@@ -61,6 +61,10 @@ a:hover {
   font-size: 18px;
 }
 
+.diminish {
+  color: #676767;
+}
+
 footer {
   padding: 1em;
   margin: 7em 3em;
@@ -252,7 +256,7 @@ footer {
 
 /* START: Search */
 #search-examples {
-  margin: 1em auto;
+  padding: 1em;
 }
 /* END: Search */
 

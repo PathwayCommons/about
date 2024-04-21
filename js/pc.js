@@ -35,20 +35,16 @@ $(function(){ // document ready
     var datasourcesUrl = `${baseUrl}pc2/metadata/datasources`;
     return fetch(datasourcesUrl)
         .then( response => response.json() )
-        .then( sources => sources.filter( s => s.notPathwayData == false ) );
+        .then( sources => sources.filter( s => s.type != 'WAREHOUSE' && s.type != 'MAPPING' ) );
   }
 
   (function(){
     var sum = ( prev, curr ) => prev + curr;
-    getPCDatasources()
-      .then( sources => {
+    getPCDatasources().then( sources => {
         var numSources = sources.length;
         var numPathways = sources.map( s => s.numPathways ).reduce( sum, 0 );
         var numInteractions = sources.map( s => s.numInteractions ).reduce( sum, 0 );
-        if( numSources && numPathways && numInteractions ){
-          $("#pc-stats")
-            .text(`${numPathways} Pathways -- ${numInteractions} Interactions -- ${numSources} Databases`);
-        }
+        $("#pc-stats").text(`${numPathways} Pathways -- ${numInteractions} Interactions -- ${numSources} Databases`);
       });
   }());
 

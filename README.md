@@ -45,14 +45,15 @@ This section contains teaching materials that we've collected which will help ki
 
 ## Developer Resources
 
-### JavaScript
-
-- [PCAPI](http://www.pathwaycommons.org/pcapi/): A graphical user interface for the Pathway Commons [web services API](http://www.pathwaycommons.org/pc2/)
-- [cPath2-client](https://www.npmjs.com/package/pathway-commons): A JavaScript client (NPM) for the Pathway Commons [web services API](http://www.pathwaycommons.org/pc2/)
+- [cPath2 API](https://www.pathwaycommons.org/pc2/swagger-ui.html): OpenAPI/Swagger UI for Pathway Commons [web services](http://www.pathwaycommons.org/pc2/)
+- [cPath2 client](https://www.npmjs.com/package/pathway-commons): A JavaScript client (NPM) for Pathway Commons web services
+- [biopax-validator service](https://www.pathwaycommons.org/validate/ws): BioPAX Validator webservice info 
+- [SIF graph API](https://www.pathwaycommons.org/sifgraph/): Sifgraph webservice API docs
+- [factoid-converters API](https://www.pathwaycommons.org/convert/): still an experimental, internal use app
 
 ## Brand
 
-Pathway Commons brand materials to help you include PC on your web site or publication.
+Pathway Commons brand materials to help you include PC on your website or publication.
 
 ### Logos
 

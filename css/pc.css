@@ -273,3 +273,7 @@ footer {
     margin-top: 2em;
 }
 /* END: FAQ */
+
+#info img {
+  width: 55%;
+}
